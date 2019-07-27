@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-07-26T23:51:12+00:00</updated><id>/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="/jekyll/update/2019/07/26/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2019-07-26T23:49:55+00:00</published><updated>2019-07-26T23:49:55+00:00</updated><id>/jekyll/update/2019/07/26/welcome-to-jekyll</id><content type="html" xml:base="/jekyll/update/2019/07/26/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-07-27T09:30:34+00:00</updated><id>/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="/jekyll/update/2019/07/26/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2019-07-26T23:49:55+00:00</published><updated>2019-07-26T23:49:55+00:00</updated><id>/jekyll/update/2019/07/26/welcome-to-jekyll</id><content type="html" xml:base="/jekyll/update/2019/07/26/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 
 &lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
 
@@ -10,4 +10,109 @@
 &lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry><entry><title type="html">나의 Jekyll 여행기 (1)</title><link href="/jekyll/update/blog/2019/07/26/%EB%82%98%EC%9D%98-Jekyll-%EC%97%AC%ED%96%89%EA%B8%B0.html" rel="alternate" type="text/html" title="나의 Jekyll 여행기 (1)" /><published>2019-07-26T00:00:00+00:00</published><updated>2019-07-26T00:00:00+00:00</updated><id>/jekyll/update/blog/2019/07/26/%EB%82%98%EC%9D%98%20Jekyll%20%EC%97%AC%ED%96%89%EA%B8%B0</id><content type="html" xml:base="/jekyll/update/blog/2019/07/26/%EB%82%98%EC%9D%98-Jekyll-%EC%97%AC%ED%96%89%EA%B8%B0.html">&lt;p&gt;블로그를 시작하려고 한다. 아마 나의 이런저런 생각들, 그리고 내가 했던 것들을 기록하기 위한 용도로 사용할 것 같다.&lt;/p&gt;
+
+&lt;p&gt;이것저것 알아보고 나서, Jekyll을 사용해 보기로 했다.
+일반 포털 사이트에서 제공하는 블로그는 자유도가 낮아 새로운 것을 시도해보기 어렵기 때문에 별로 생각이 없었다.
+그리고 다음으로 생각했던 것은 전에도 써 본 적이 있었던 설치형 워드프레스였는데, 워드프레스는 장점도 많지만 단점도 여럿 있다.
+좀 찾아보니 Jekyll이라는 것을 통해 정적 웹사이트를 만들 수 있다는데, 이 Jekyll이 나의 호기심을 자극했다. 그래서 한 번 Jekyll을 사용해 보기로 했다.&lt;/p&gt;
+
+&lt;p&gt;솔직히 말하자면 블로그를 해야겠다고 생각한 것보다 Jekyll을 써 보고 싶다는 생각이 먼저였다.
+블로그는 Jekyll을 써먹어보기 위해 하는 것에 가깝다.
+대부분의 개발자는 나의 생각을 이해할 것이다.&lt;/p&gt;
+
+&lt;p&gt;블로그를 하는 목적이랄까. 블로그를 시작하며 내가 생각한 바는 있는데 이 포스팅은 아니고 아마 다른 기회에 그것을 쓰면 좋을 것 같다.&lt;/p&gt;
+
+&lt;h1 id=&quot;jekyll-설치-그리고-첫-번째-실패&quot;&gt;Jekyll 설치, 그리고 첫 번째 실패&lt;/h1&gt;
+&lt;p&gt;나는 Windows 환경에서 cygwin을 사용하고 있었기 때문에 여기에 jekyll을 설치해서 사용하려고 했다.
+Jekyll의 설치는 &lt;a href=&quot;https://jekyllrb.com/docs/&quot;&gt;Jekyll github 공식 홈페이지&lt;/a&gt;를 참고했다.&lt;/p&gt;
+
+&lt;p&gt;Cygwin 설치 파일을 실행하면 package list가 주르륵 나온다.
+그 중에서 이미 설치되어 있는 package를 찾아서 삭제할 수도 있고 설치되어 있지 않는 package를 찾아서 새로 설치할 수도 있다.
+여기에서 나는 ruby, ruby-devel을 설치했다.
+원래 공식 홈페이지에는 ubuntu linux에서 설치할 때 ruby, ruby-dev, build-essential를 설치하라고 되어 있었는데 cygwin package list에서는 ruby-dev가 없는 대신 ruby-devel이 있었고, build-essential은 아예 없었다.
+그것을 대체할만한 다른 package가 있겠지만 잘 모르니까 일단 위의 2개만 설치해 보았다.&lt;/p&gt;
+
+&lt;p&gt;그렇게 순조롭게 설치한 후 Jekyll을 설치하다가 아래와 같은 문제에 봉착했다.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ gem install jekyll
+Building native extensions.  This could take a while...
+      1 [main] ruby 6344 child_info_fork::abort: C:\cygwin\bin\cyggmp-10.dll: Loaded to different address: parent(0x690000) != child(0xE30000)
+      1 [main] ruby 11208 child_info_fork::abort: C:\cygwin\bin\cyggmp-10.dll: Loaded to different address: parent(0x690000) != child(0xE40000)
+      1 [main] ruby 20176 child_info_fork::abort: C:\cygwin\bin\cyggmp-10.dll: Loaded to different address: parent(0x690000) != child(0xE40000)
+      2 [main] ruby 18388 child_info_fork::abort: C:\cygwin\bin\cyggmp-10.dll: Loaded to different address: parent(0x690000) != child(0xDF0000)
+      2 [main] ruby 10036 child_info_fork::abort: C:\cygwin\bin\cyggmp-10.dll: Loaded to different address: parent(0x690000) != child(0xE00000)
+      1 [main] ruby 17064 child_info_fork::abort: C:\cygwin\bin\cyggmp-10.dll: Loaded to different address: parent(0x690000) != child(0x650000)
+      2 [main] ruby 10300 child_info_fork::abort: C:\cygwin\bin\cyggmp-10.dll: Loaded to different address: parent(0x690000) != child(0xC30000)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;위와 같은 abort가 발생했다.
+당연히 Jekyll의 설치는 제대로 되지 않았다.&lt;/p&gt;
+
+&lt;p&gt;Cygwin에서 제대로 작동하지 않는 것일까? 그건 아닐 거라고 생각했다.
+Cygwin에 처음 ruby 및 그와 관련된 package를 설치했는데, cygwin은 워낙 사용자가 많아서 package 자체에 문제가 있는 것은 아닐 것이고, 어떤 이유로 인해 내가 기존에 쓰던 환경에서 꼬이지 않았을까 생각했다.&lt;/p&gt;
+
+&lt;p&gt;그래서 나는 &lt;em&gt;과감하게&lt;/em&gt; cygwin을 재설치했다.
+Cygwin에는 내가 그동안 개발해 오면서 많은 것들을 설치하고 나에 맞게끔 설정했기 때문에 그것은 매우 과감한 결정이었다.
+이것 역시 개발자들은 이해할 것이다. 환경을 바꾸는 것이 얼마나 과감한 일인지.
+Cygwin 설치에 대한 것은 조금 자세하게 다음에 포스팅해야겠다.&lt;/p&gt;
+
+&lt;h1 id=&quot;두-번째-실패&quot;&gt;두 번째 실패&lt;/h1&gt;
+&lt;p&gt;어쨌든, cygwin을 삭제 후 다시 설치했다.
+이번에는 cygwin 설치 파일을 실행했을 때 나오는 package list에서 설치하지 않고, cygwin에 package manager를 설치한 후 그 package manager에서 ruby를 설치해 보기로 했다.&lt;/p&gt;
+
+&lt;p&gt;이 &lt;a href=&quot;https://brunch.co.kr/@davisasan/37&quot;&gt;블로그&lt;/a&gt;를 참고해서 apt-cyg를 설치했다.
+맨 처음 cygwin을 설치할 때에는 wget만 깔고 그 다음에 아래와 같은 명령으로 설치할 수 있다.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wget raw.github.com/transcode-open/apt-cyg/master/apt-cyg
+chmod +x apt-cyg
+mv apt-cyg /usr/local/bin
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;위와 같이 해서 apt-cyg를 설치하고 나면 apt-cyg를 통해서 다른 필요한 package를 설치할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;습관인지 아니면 본능인지 모르겠지만 뭘 하든 필수라고 할 수 있는 package들을 가장 먼저 설치했다.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;apt-cyg update
+apt-cyg install vim curl git openssh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;그 다음부터는 또 Jekyll의 설치법을 따라서 그대로 진행했다.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;apt-cyg install ruby ruby-dev build-essential
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;이렇게 하면 주르륵 길게 로그가 출력되면서 열심히 설치한다. 그런데 불길하게 그 중에 이런 문구가 나타난다.
+Installing ruby-dev
+Unable to locate package ruby-dev&lt;/p&gt;
+
+&lt;p&gt;아마도 ruby-dev가 제대로 설지되지 않았다는 말일 것 같은데… 왜 불길한 예감은 항상 틀리지 않는 것일까.&lt;/p&gt;
+
+&lt;p&gt;.bashrc에 GEM_HOME과 PATH를 설정하고 나서 gem을 통해 Jekyll을 설치해 보았다.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ gem install jekyll bundler
+Fetching: public_suffix-3.1.1.gem (100%)
+Successfully installed public_suffix-3.1.1
+Fetching: addressable-2.6.0.gem (100%)
+Successfully installed addressable-2.6.0
+Fetching: colorator-1.1.0.gem (100%)
+Successfully installed colorator-1.1.0
+Fetching: http_parser.rb-0.6.0.gem (100%)
+Building native extensions.  This could take a while...
+ERROR:  Error installing jekyll:
+        ERROR: Failed to build gem native extension.
+
+    current directory: /home/sb.lee/.gem/ruby/2.3.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+/usr/bin/ruby.exe -r ./siteconf20190727-17252-bha32i.rb extconf.rb
+mkmf.rb can't find header files for ruby at /usr/share/ruby/include/ruby.h
+
+extconf failed, exit code 1
+
+Gem files will remain installed in /home/sb.lee/.gem/ruby/2.3.0/gems/http_parser.rb-0.6.0 for inspection.
+Results logged to /home/sb.lee/.gem/ruby/2.3.0/extensions/x86-cygwin/2.3.0/http_parser.rb-0.6.0/gem_make.out
+Fetching: bundler-2.0.2.gem (100%)
+Successfully installed bundler-2.0.2
+Parsing documentation for bundler-2.0.2
+Installing ri documentation for bundler-2.0.2
+Done installing documentation for bundler after 16 seconds
+1 gem installed
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Bundler는 제대로 설치가 되었는데 Jekyll을 설치하지 못했다.
+이래서는 cygwin에서 Jekyll을 쓸 수가 없겠다.&lt;/p&gt;
+
+&lt;p&gt;이렇게 Jekyll을 설치하려고 했던 나의 첫 시도는 내가 익숙했던 개발 환경만 날린 채 아무런 결과를 내지 못했다.&lt;/p&gt;</content><author><name></name></author><summary type="html">블로그를 시작하려고 한다. 아마 나의 이런저런 생각들, 그리고 내가 했던 것들을 기록하기 위한 용도로 사용할 것 같다.</summary></entry></feed>
