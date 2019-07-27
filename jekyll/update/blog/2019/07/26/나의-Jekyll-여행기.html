@@ -48,9 +48,9 @@
     <p>블로그를 시작하려고 한다. 아마 나의 이런저런 생각들, 그리고 내가 했던 것들을 기록하기 위한 용도로 사용할 것 같다.</p>
 
 <p>이것저것 알아보고 나서, Jekyll을 사용해 보기로 했다.
-일반 포털 사이트에서 제공하는 블로그는 자유도가 낮아 새로운 것을 시도해보기 어렵기 때문에 별로 생각이 없었다.
+일반 포털 사이트에서 제공하는 블로그는 자유도가 낮아 새로운 것을 시도해보기 어렵기 때문에 처음부터 별로 생각이 없었다.
 그리고 다음으로 생각했던 것은 전에도 써 본 적이 있었던 설치형 워드프레스였는데, 워드프레스는 장점도 많지만 단점도 여럿 있다.
-좀 찾아보니 Jekyll이라는 것을 통해 정적 웹사이트를 만들 수 있다는데, 이 Jekyll이 나의 호기심을 자극했다. 그래서 한 번 Jekyll을 사용해 보기로 했다.</p>
+워드프레스를 쓸까 생각하면서 계속 찾아보니 Jekyll이라는 것을 통해 정적 웹사이트를 만들 수 있다는데, 이 Jekyll이 나의 호기심을 자극했다. 그래서 한 번 Jekyll을 사용해 보기로 했다.</p>
 
 <p>솔직히 말하자면 블로그를 해야겠다고 생각한 것보다 Jekyll을 써 보고 싶다는 생각이 먼저였다.
 블로그는 Jekyll을 써먹어보기 위해 하는 것에 가깝다.
@@ -63,33 +63,38 @@
 Jekyll의 설치는 <a href="https://jekyllrb.com/docs/">Jekyll github 공식 홈페이지</a>를 참고했다.</p>
 
 <p>Cygwin 설치 파일을 실행하면 package list가 아래처럼 주르륵 나온다.
-<img src="https://drive.google.com/uc?id=1Txs5i_3Vq_l8MLrLnJkvnneiYkHlYDvy" alt="Cygwin package list" />
-그 중에서 이미 설치되어 있는 package를 찾아서 삭제할 수도 있고 설치되어 있지 않는 package를 찾아서 새로 설치할 수도 있다.
+<img src="https://drive.google.com/uc?id=1Txs5i_3Vq_l8MLrLnJkvnneiYkHlYDvy" alt="Cygwin package list" /></p>
+
+<p>위 그림은 category 기준으로 보이는데, 잘 보면 Ruby도 발견할 수 있다.
+그 중에서 이미 설치되어 있는 package를 찾아서 삭제할 수 있고 설치되어 있지 않는 package를 찾아서 새로 설치할 수도 있다.
 여기에서 나는 ruby, ruby-devel을 설치했다.
 원래 공식 홈페이지에는 ubuntu linux에서 설치할 때 ruby, ruby-dev, build-essential를 설치하라고 되어 있었는데 cygwin package list에서는 ruby-dev가 없는 대신 ruby-devel이 있었고, build-essential은 아예 없었다.
 그것을 대체할만한 다른 package가 있겠지만 잘 모르니까 일단 위의 2개만 설치해 보았다.</p>
 
 <p>그렇게 순조롭게 설치한 후 Jekyll을 설치하다가 아래와 같은 문제에 봉착했다.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gem install jekyll
-Building native extensions.  This could take a while...
-      1 [main] ruby 6344 child_info_fork::abort: C:\cygwin\bin\cyggmp-10.dll: Loaded to different address: parent(0x690000) != child(0xE30000)
-      1 [main] ruby 11208 child_info_fork::abort: C:\cygwin\bin\cyggmp-10.dll: Loaded to different address: parent(0x690000) != child(0xE40000)
-      1 [main] ruby 20176 child_info_fork::abort: C:\cygwin\bin\cyggmp-10.dll: Loaded to different address: parent(0x690000) != child(0xE40000)
-      2 [main] ruby 18388 child_info_fork::abort: C:\cygwin\bin\cyggmp-10.dll: Loaded to different address: parent(0x690000) != child(0xDF0000)
-      2 [main] ruby 10036 child_info_fork::abort: C:\cygwin\bin\cyggmp-10.dll: Loaded to different address: parent(0x690000) != child(0xE00000)
-      1 [main] ruby 17064 child_info_fork::abort: C:\cygwin\bin\cyggmp-10.dll: Loaded to different address: parent(0x690000) != child(0x650000)
-      2 [main] ruby 10300 child_info_fork::abort: C:\cygwin\bin\cyggmp-10.dll: Loaded to different address: parent(0x690000) != child(0xC30000)
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>gem <span class="nb">install </span>jekyll
+Building native extensions.  This could take a <span class="k">while</span>...
+      1 <span class="o">[</span>main] ruby 6344 child_info_fork::abort: C:<span class="se">\c</span>ygwin<span class="se">\b</span><span class="k">in</span><span class="se">\c</span>yggmp-10.dll: Loaded to different address: parent<span class="o">(</span>0x690000<span class="o">)</span> <span class="o">!=</span> child<span class="o">(</span>0xE30000<span class="o">)</span>
+      1 <span class="o">[</span>main] ruby 11208 child_info_fork::abort: C:<span class="se">\c</span>ygwin<span class="se">\b</span><span class="k">in</span><span class="se">\c</span>yggmp-10.dll: Loaded to different address: parent<span class="o">(</span>0x690000<span class="o">)</span> <span class="o">!=</span> child<span class="o">(</span>0xE40000<span class="o">)</span>
+      1 <span class="o">[</span>main] ruby 20176 child_info_fork::abort: C:<span class="se">\c</span>ygwin<span class="se">\b</span><span class="k">in</span><span class="se">\c</span>yggmp-10.dll: Loaded to different address: parent<span class="o">(</span>0x690000<span class="o">)</span> <span class="o">!=</span> child<span class="o">(</span>0xE40000<span class="o">)</span>
+      2 <span class="o">[</span>main] ruby 18388 child_info_fork::abort: C:<span class="se">\c</span>ygwin<span class="se">\b</span><span class="k">in</span><span class="se">\c</span>yggmp-10.dll: Loaded to different address: parent<span class="o">(</span>0x690000<span class="o">)</span> <span class="o">!=</span> child<span class="o">(</span>0xDF0000<span class="o">)</span>
+      2 <span class="o">[</span>main] ruby 10036 child_info_fork::abort: C:<span class="se">\c</span>ygwin<span class="se">\b</span><span class="k">in</span><span class="se">\c</span>yggmp-10.dll: Loaded to different address: parent<span class="o">(</span>0x690000<span class="o">)</span> <span class="o">!=</span> child<span class="o">(</span>0xE00000<span class="o">)</span>
+      1 <span class="o">[</span>main] ruby 17064 child_info_fork::abort: C:<span class="se">\c</span>ygwin<span class="se">\b</span><span class="k">in</span><span class="se">\c</span>yggmp-10.dll: Loaded to different address: parent<span class="o">(</span>0x690000<span class="o">)</span> <span class="o">!=</span> child<span class="o">(</span>0x650000<span class="o">)</span>
+      2 <span class="o">[</span>main] ruby 10300 child_info_fork::abort: C:<span class="se">\c</span>ygwin<span class="se">\b</span><span class="k">in</span><span class="se">\c</span>yggmp-10.dll: Loaded to different address: parent<span class="o">(</span>0x690000<span class="o">)</span> <span class="o">!=</span> child<span class="o">(</span>0xC30000<span class="o">)</span>
 </code></pre></div></div>
 <p>위와 같은 abort가 발생했다.
-당연히 Jekyll의 설치는 제대로 되지 않았다.</p>
+당연히 Jekyll의 설치는 제대로 되지 않았다.
+Stackoverflow 등 구글링을 해 보면 다른 사람들도 이와 같은 문제를 겪었다는 것을 알 수 있다. 그런데 이렇다할 뾰족한 방법이 없었다.
+정확히 말하자면 답변으로 달린 방법은 몇 개 있었지만 내가 직접 해 보니 다 제대로 된 해결법은 아니었다.</p>
 
-<p>Cygwin에서 제대로 작동하지 않는 것일까? 그건 아닐 거라고 생각했다.
+<p>그렇다면 Jekyll은 cygwin에서 사용할 수 없는 것일까? 그건 아닐 거라고 생각했다.
 Cygwin에 처음 ruby 및 그와 관련된 package를 설치했는데, cygwin은 워낙 사용자가 많아서 package 자체에 문제가 있는 것은 아닐 것이고, 어떤 이유로 인해 내가 기존에 쓰던 환경에서 꼬이지 않았을까 생각했다.</p>
 
-<p>그래서 나는 <em>과감하게</em> cygwin을 재설치했다.
+<p>그래서 나는 <strong>과감하게</strong> cygwin을 재설치했다.
 Cygwin에는 내가 그동안 개발해 오면서 많은 것들을 설치하고 나에 맞게끔 설정했기 때문에 그것은 매우 과감한 결정이었다.
-이것 역시 개발자들은 이해할 것이다. 환경을 바꾸는 것이 얼마나 과감한 일인지.
-Cygwin 설치에 대한 것은 조금 자세하게 다음에 포스팅해야겠다.</p>
+이것 역시 개발자들은 이해할 것이다. 환경을 바꾸는 것이 얼마나 과감하고 무모한 일인지.
+Cygwin 설치에 대한 것은 조금 자세하게 다음에 포스팅할 예정이다.
+기록을 남겨서 똑같은 삽질이라도 다음번에는 더 빠르게 하기 위해서.</p>
 
 <h1 id="두-번째-실패">두 번째 실패</h1>
 <p>어쨌든, cygwin을 삭제 후 다시 설치했다.
@@ -97,20 +102,20 @@ Cygwin 설치에 대한 것은 조금 자세하게 다음에 포스팅해야겠�
 
 <p>이 <a href="https://brunch.co.kr/@davisasan/37">블로그</a>를 참고해서 apt-cyg를 설치했다.
 맨 처음 cygwin을 설치할 때에는 wget만 깔고 그 다음에 아래와 같은 명령으로 설치할 수 있다.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget raw.github.com/transcode-open/apt-cyg/master/apt-cyg
-chmod +x apt-cyg
-mv apt-cyg /usr/local/bin
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget raw.github.com/transcode-open/apt-cyg/master/apt-cyg
+<span class="nb">chmod</span> +x apt-cyg
+<span class="nb">mv </span>apt-cyg /usr/local/bin
 </code></pre></div></div>
 <p>위와 같이 해서 apt-cyg를 설치하고 나면 apt-cyg를 통해서 다른 필요한 package를 설치할 수 있다.</p>
 
 <p>습관인지 아니면 본능인지 모르겠지만 뭘 하든 필수라고 할 수 있는 package들을 가장 먼저 설치했다.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt-cyg update
-apt-cyg install vim curl git openssh
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt-cyg update
+apt-cyg <span class="nb">install </span>vim curl git openssh
 </code></pre></div></div>
 
 <p>그 다음부터는 또 Jekyll의 설치법을 따라서 그대로 진행했다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt-cyg install ruby ruby-dev build-essential
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt-cyg <span class="nb">install </span>ruby ruby-dev build-essential
 </code></pre></div></div>
 
 <p>이렇게 하면 주르륵 길게 로그가 출력되면서 열심히 설치한다. 그런데 불길하게 그 중에 이런 문구가 나타난다.
@@ -120,21 +125,21 @@ Unable to locate package ruby-dev</p>
 <p>아마도 ruby-dev가 제대로 설지되지 않았다는 말일 것 같은데… 왜 불길한 예감은 항상 틀리지 않는 것일까.</p>
 
 <p>.bashrc에 GEM_HOME과 PATH를 설정하고 나서 gem을 통해 Jekyll을 설치해 보았다.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gem install jekyll bundler
-Fetching: public_suffix-3.1.1.gem (100%)
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>gem <span class="nb">install </span>jekyll bundler
+Fetching: public_suffix-3.1.1.gem <span class="o">(</span>100%<span class="o">)</span>
 Successfully installed public_suffix-3.1.1
-Fetching: addressable-2.6.0.gem (100%)
+Fetching: addressable-2.6.0.gem <span class="o">(</span>100%<span class="o">)</span>
 Successfully installed addressable-2.6.0
-Fetching: colorator-1.1.0.gem (100%)
+Fetching: colorator-1.1.0.gem <span class="o">(</span>100%<span class="o">)</span>
 Successfully installed colorator-1.1.0
-Fetching: http_parser.rb-0.6.0.gem (100%)
-Building native extensions.  This could take a while...
+Fetching: http_parser.rb-0.6.0.gem <span class="o">(</span>100%<span class="o">)</span>
+Building native extensions.  This could take a <span class="k">while</span>...
 ERROR:  Error installing jekyll:
         ERROR: Failed to build gem native extension.
 
     current directory: /home/sb.lee/.gem/ruby/2.3.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
-/usr/bin/ruby.exe -r ./siteconf20190727-17252-bha32i.rb extconf.rb
-mkmf.rb can't find header files for ruby at /usr/share/ruby/include/ruby.h
+/usr/bin/ruby.exe <span class="nt">-r</span> ./siteconf20190727-17252-bha32i.rb extconf.rb
+mkmf.rb can<span class="s1">'t find header files for ruby at /usr/share/ruby/include/ruby.h
 
 extconf failed, exit code 1
 
@@ -146,7 +151,7 @@ Parsing documentation for bundler-2.0.2
 Installing ri documentation for bundler-2.0.2
 Done installing documentation for bundler after 16 seconds
 1 gem installed
-</code></pre></div></div>
+</span></code></pre></div></div>
 
 <p>Bundler는 제대로 설치가 되었는데 Jekyll을 설치하지 못했다.
 이래서는 cygwin에서 Jekyll을 쓸 수가 없겠다.</p>
