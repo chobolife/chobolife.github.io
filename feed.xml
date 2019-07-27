@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://chobolife.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="http://chobolife.github.io/" rel="alternate" type="text/html" /><updated>2019-07-27T10:28:06+00:00</updated><id>http://chobolife.github.io/feed.xml</id><title type="html">우당탕탕 초보라이프</title><subtitle>모든 사람의 인생은 한 번 뿐이므로 삶을 살아가는 데 있어서 초보가 아닌 사람은 없습니다. 어떤 것을 하든지 완벽함을 꿈꾸기보다는 나의 부족한 점을 인정하고 사는 것이 더 즐겁지 않을까요.</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://chobolife.github.io/blog/2019/07/26/welcome-to-jekyll" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2019-07-26T23:49:55+00:00</published><updated>2019-07-26T23:49:55+00:00</updated><id>http://chobolife.github.io/blog/2019/07/26/welcome-to-jekyll</id><content type="html" xml:base="http://chobolife.github.io/blog/2019/07/26/welcome-to-jekyll">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://chobolife.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="http://chobolife.github.io/" rel="alternate" type="text/html" /><updated>2019-07-27T10:37:44+00:00</updated><id>http://chobolife.github.io/feed.xml</id><title type="html">우당탕탕 초보라이프</title><subtitle>모든 사람의 인생은 한 번 뿐이므로 삶을 살아가는 데 있어서 초보가 아닌 사람은 없습니다. 어떤 것을 하든지 완벽함을 꿈꾸기보다는 나의 부족한 점을 인정하고 사는 것이 더 즐겁지 않을까요.</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://chobolife.github.io/blog/2019/07/26/welcome-to-jekyll" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2019-07-26T23:49:55+00:00</published><updated>2019-07-26T23:49:55+00:00</updated><id>http://chobolife.github.io/blog/2019/07/26/welcome-to-jekyll</id><content type="html" xml:base="http://chobolife.github.io/blog/2019/07/26/welcome-to-jekyll">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 
 &lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
 
@@ -20,7 +20,7 @@
 &lt;p&gt;솔직히 말하자면 블로그를 해야겠다고 생각한 것보다 Jekyll을 써 보고 싶다는 생각이 먼저였다.
 블로그는 Jekyll을 써먹어보기 위해 하는 것에 가깝다.
 대부분의 개발자는 나의 생각을 이해할 것이다.
-뭔가 하고 싶은 게 먼저 있어서 그것을 구현하기 위한 기술을 찾아보는 절차도 있지만, 역순으로 어떤 기술을 먼저 접하고 그것을 활용해 보고 싶어서 내가 해보는 절차도 있다는 것이다.&lt;/p&gt;
+뭔가 하고 싶은 게 먼저 있어서 그것을 구현하기 위한 기술을 찾아보는 절차도 있지만, 역순으로 어떤 기술을 먼저 접하고 그것을 활용해 보고 싶어서 내가 직접 해보는 절차도 있다는 것이다.&lt;/p&gt;
 
 &lt;p&gt;블로그를 하는 목적이랄까. 블로그를 시작하며 내가 생각한 바는 있는데 이 포스팅은 아니고 아마 다른 기회에 그것을 쓰면 좋을 것 같다.&lt;/p&gt;
 
@@ -54,27 +54,29 @@ Stackoverflow 등 구글링을 해 보면 다른 사람들도 이와 같은 문�
 정확히 말하자면 답변으로 달린 방법은 몇 개 있었지만 내가 직접 해 보니 다 제대로 된 해결법은 아니었다.&lt;/p&gt;
 
 &lt;p&gt;그렇다면 Jekyll은 cygwin에서 사용할 수 없는 것일까? 그건 아닐 거라고 생각했다.
-Cygwin에 처음 ruby 및 그와 관련된 package를 설치했는데, cygwin은 워낙 사용자가 많아서 package 자체에 문제가 있는 것은 아닐 것이고, 어떤 이유로 인해 내가 기존에 쓰던 환경에서 꼬이지 않았을까 생각했다.&lt;/p&gt;
+나는 이번에 cygwin에 처음 ruby 및 그와 관련된 package를 설치한 것이지만, cygwin은 워낙 사용자가 많아서 package 자체에 문제가 있는 것은 아닐 것이고, 어떤 이유로 인해 내가 기존에 쓰던 환경에서 꼬이지 않았을까 생각했다.&lt;/p&gt;
 
 &lt;p&gt;그래서 나는 &lt;strong&gt;과감하게&lt;/strong&gt; cygwin을 재설치했다.
 Cygwin에는 내가 그동안 개발해 오면서 많은 것들을 설치하고 나에 맞게끔 설정했기 때문에 그것은 매우 과감한 결정이었다.
-이것 역시 개발자들은 이해할 것이다. 환경을 바꾸는 것이 얼마나 과감하고 무모한 일인지.
+이것 역시 개발자들은 이해할 것이다. 환경을 바꾸는 것이 얼마나 과감하고 그리고 무모한 일인지.
 Cygwin 설치에 대한 것은 조금 자세하게 다음에 포스팅할 예정이다.
-기록을 남겨서 똑같은 삽질이라도 다음번에는 더 빠르게 하기 위해서.&lt;/p&gt;
+똑같은 삽질이라도 다음번에는 더 빠르게 하기 위해서 기록을 남길 필요는 있다.&lt;/p&gt;
 
 &lt;h1 id=&quot;두-번째-실패&quot;&gt;두 번째 실패&lt;/h1&gt;
 &lt;p&gt;어쨌든, cygwin을 삭제 후 다시 설치했다.
-이번에는 cygwin 설치 파일을 실행했을 때 나오는 package list에서 설치하지 않고, cygwin에 package manager를 설치한 후 그 package manager에서 ruby를 설치해 보기로 했다.&lt;/p&gt;
+이번에는 cygwin 설치 파일을 실행했을 때 나오는 package list에서 설치하지 않고, cygwin에 package manager인 apt-cyg를 설치한 후 그 package manager에서 ruby를 설치해 보기로 했다.&lt;/p&gt;
 
 &lt;p&gt;이 &lt;a href=&quot;https://brunch.co.kr/@davisasan/37&quot;&gt;블로그&lt;/a&gt;를 참고해서 apt-cyg를 설치했다.
-맨 처음 cygwin을 설치할 때에는 wget만 깔고 그 다음에 아래와 같은 명령으로 설치할 수 있다.&lt;/p&gt;
+맨 처음 cygwin을 설치할 때에는 package list 중에서 다른 것은 모두 무시하고 wget만 깔았다.
+그리고 cygwin의 설치가 다 되면 아래와 같은 명령으로 apt-cyg를 설치할 수 있다.&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wget raw.github.com/transcode-open/apt-cyg/master/apt-cyg
 chmod +x apt-cyg
 mv apt-cyg /usr/local/bin
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;위와 같이 해서 apt-cyg를 설치하고 나면 apt-cyg를 통해서 다른 필요한 package를 설치할 수 있다.&lt;/p&gt;
+&lt;p&gt;보면 알겠지만 누군가 올려 놓은 apt-cyg를 github에서 받아와서, 권한 설정한 후 &lt;code class=&quot;highlighter-rouge&quot;&gt;/usr/local/bin&lt;/code&gt; 폴더에 넣어주는 것이다.
+위와 같이 해서 apt-cyg를 설치하고 나면 apt-cyg를 통해서 다른 필요한 package를 설치할 수 있다.&lt;/p&gt;
 
-&lt;p&gt;습관인지 아니면 본능인지 모르겠지만 뭘 하든 필수라고 할 수 있는 package들을 가장 먼저 설치했다.&lt;/p&gt;
+&lt;p&gt;습관인지 아니면 본능인지 모르겠지만 command line에서 뭘 하든 필수라고 할 수 있는 package들을 가장 먼저 설치했다.&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;apt-cyg update
 apt-cyg install vim curl git openssh
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -89,9 +91,10 @@ apt-cyg install vim curl git openssh
 Unable to locate package ruby-dev
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;아마도 ruby-dev가 제대로 설지되지 않았다는 말일 것 같은데… 왜 불길한 예감은 항상 틀리지 않는 것일까.
-일단 무시하고 설치를 계속했다.
-.bashrc에 GEM_HOME과 PATH를 설정하고 나서 gem을 통해 Jekyll을 설치해 보았다.&lt;/p&gt;
+&lt;p&gt;아마도 ruby-dev가 제대로 설지되지 않았다는 말일 것 같은데… 일단 무시하고 설치를 계속했다.
+(왜 불길한 예감은 항상 틀리지 않는 것일까…)&lt;/p&gt;
+
+&lt;p&gt;.bashrc에 GEM_HOME과 PATH를 설정하고 나서 gem을 통해 Jekyll을 설치해 보았다.&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ gem install jekyll bundler
 Fetching: public_suffix-3.1.1.gem (100%)
 Successfully installed public_suffix-3.1.1
@@ -120,8 +123,8 @@ Done installing documentation for bundler after 16 seconds
 1 gem installed
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Bundler는 제대로 설치가 되었는데 Jekyll을 설치하지 못했다.
+&lt;p&gt;위 로그를 잘 보면 bundler는 제대로 설치가 되었는데 Jekyll을 설치하지 못했다.
 이래서는 cygwin에서 Jekyll을 쓸 수가 없지 않을까?
 처음 cygwin을 재설치하고 나서부터 진행했던 것이기 때문에 이번에는 package끼리 꼬인다거나 다른 문제가 발생할 소지가 없었기 때문이다.&lt;/p&gt;
 
-&lt;p&gt;이렇게 Jekyll을 설치하려고 했던 나의 첫 시도는 내가 익숙했던 개발 환경만 허망하게 날린 채 아무런 결과를 내지 못했다.&lt;/p&gt;</content><author><name></name></author><summary type="html">블로그를 시작하려고 한다. 아마 나의 이런저런 생각들, 그리고 내가 했던 것들을 기록하기 위한 용도로 사용할 것 같다.</summary></entry></feed>
+&lt;p&gt;이렇게 Jekyll을 설치하려고 했던 나의 첫 시도는 내게 익숙했던 개발 환경만 허망하게 날린 채 아무런 결과를 내지 못했다.&lt;/p&gt;</content><author><name></name></author><summary type="html">블로그를 시작하려고 한다. 아마 나의 이런저런 생각들, 그리고 내가 했던 것들을 기록하기 위한 용도로 사용할 것 같다.</summary></entry></feed>
