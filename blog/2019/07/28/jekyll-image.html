@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Jekyll post에 이미지 첨부하기 | 우당탕탕 초보라이프</title>
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="Jekyll post에 이미지 첨부하기" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Jekyll에서 이미지를 올리는 방법에 대해서 알아보았다." />
+<meta property="og:description" content="Jekyll에서 이미지를 올리는 방법에 대해서 알아보았다." />
+<link rel="canonical" href="http://chobolife.github.io/blog/2019/07/28/jekyll-image" />
+<meta property="og:url" content="http://chobolife.github.io/blog/2019/07/28/jekyll-image" />
+<meta property="og:site_name" content="우당탕탕 초보라이프" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-07-28T20:19:00+09:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","url":"http://chobolife.github.io/blog/2019/07/28/jekyll-image","headline":"Jekyll post에 이미지 첨부하기","dateModified":"2019-07-28T20:19:00+09:00","datePublished":"2019-07-28T20:19:00+09:00","description":"Jekyll에서 이미지를 올리는 방법에 대해서 알아보았다.","mainEntityOfPage":{"@type":"WebPage","@id":"http://chobolife.github.io/blog/2019/07/28/jekyll-image"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://chobolife.github.io/feed.xml" title="우당탕탕 초보라이프" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">우당탕탕 초보라이프</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Jekyll post에 이미지 첨부하기</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-07-28T20:19:00+09:00" itemprop="datePublished">Jul 28, 2019
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Jekyll에서 이미지를 올리는 방법에 대해서 알아보았다.</p>
+
+<h1 id="네이버와-워드프레스에서-이미지-관리-방법의-차이">네이버와 워드프레스에서 이미지 관리 방법의 차이</h1>
+
+<p>일단 먼저 생각해 봐야 할 점은
+포털사이트의 블로그(예를 들면 네이버 블로그)와 설치형 워드프레스의 이미지 관리 방법이 다르다는 것이다.</p>
+
+<p>무슨 말인고 하니.
+네이버 블로그에서는 포스팅을 하면서 이미지를 첨부하게 되어 있고, 그렇게 하면 포스팅별로 이미지가 관리된다.
+설치형 워드프레스에서는 미디어 라이브러리에 이미지를 올리고 나서 그 이미지를 포스팅할 때 갖다 쓰게 된다.
+이것만 보면 별 차이가 없어 보이겠지만
+하나의 이미지 파일을 여러 포스팅에서 쓰게 되는 경우를 생각해 보면 얘기가 달라진다.</p>
+
+<p>첫 번째 경우 (네이버 블로그) 같은 경우에는 분명히 똑같은 이미지이지만 포스팅마다 따로 첨부가 된다.
+포스트 2개에 같은 이미지 파일을 올리는 경우가 있다면
+당연히 서버에도 두 개의 파일이 존재하고, 사용자의 브라우저에도 두 개가 캐싱된다.
+서버 저장공간도, 네트워크 리소스도, 사용자의 캐시 메모리도 모두 2배로 필요하다.
+만약에 같은 이미지를 포함하는 포스트 3개, 4개 등등으로 더 많아진다면 계속 필요한 자원이 증가한다.</p>
+
+<p>반대로 두 번째 경우 (설치형 워드프레스)에서는 서버에 말 그대로 미디어 라이브러리가 있는 것이다.
+프로그램을 짜본 적이 있다면 library라는 말의 의미를 알 것이라고 생각한다.
+어쨌든, 라이브러리에는 라이브러리대로 이미지 파일을 올리고
+포스팅에서는 그 라이브러리에 있는 파일을 보여주기만 할 뿐이다.
+이 때는 서버에 단 하나의 파일만 있으면 된다.
+사용자도 그 이미지가 캐싱되어 있다면, 즉 그 이미지 파일을 포함하는 포스팅을 하나 본 적이 있다면
+다른 포스트에서는 이미지를 다시 다운로드하지 않는다.
+네트워크 리소스도 절약되고 로딩 속도도 빨라진다.</p>
+
+<p>이렇게만 보면 무조건 두 번째 경우처럼 관리하는 것이 좋을지도 모른다.
+하지만 두 번째 경우보다 첫 번째 경우가 직관적이다.
+첫 번째 경우는 이미지가 포스트에 종속되기 때문에 포스트를 관리하는 것이 곧 이미지를 관리하는 것이다.
+즉 포스트를 삭제하면 이미지도 같이 삭제되며 다른 신경을 쓸 필요가 없다.</p>
+
+<p>그런데 두 번째 경우에서는 이미지는 포스트에 종속되지 않는다.
+이미지와 포스트는 독립적으로 존재한다.
+그래서 포스트를 삭제해도 이미지는 삭제되지 않는다.
+당연한 얘기지만 삭제해서도 안 된다. 그 이미지를 포함하는 모든 포스트가 삭제되었다는 보장이 없으니까.
+그 이미지를 포함하는 포스트가 남아 있지 않다고 하더라도 나중에 다른 포스트에서 그 이미지를 띄울 수도 있는 것이기 때문에 미디어 라이브러리가 스스로 이미지를 지울 수는 없다.</p>
+
+<h1 id="그렇다면-jekyll은">그렇다면 Jekyll은?</h1>
+
+<p>Jekyll에서 이미지를 표시하는 방법은 네이버와는 다르다.
+워드프레스에서의 방법과 비슷하지만 그렇다고 정확히 같은 것은 또 아니다.
+Jekyll에서는 워드프레스의 미디어 라이브러리에 해당하는 것이 없다.
+우선 이미지 파일을 <strong>어떤 방법으로든</strong> 웹에 업로드한 후
+Jekyll 포스트에서는 그 이미지 파일의 주소로 이미지를 띄워주면 된다.</p>
+
+<p>이미지를 웹에 업로드하는 방법은 무궁무진하다.
+Jekyll 폴더 내에 이미지를 넣고 git commit으로 웹페이지를 올리듯이 github.io에 업로드하는 방법도 있고
+dropbox, 구글 드라이브, AWS S3 등의 서비스를 이용할 수도 있다.
+이 중에서 나는 구글 드라이브를 선택했다.</p>
+
+<p>구글 드라이브를 선택한 이유는
+인증된 기관의 계정에서는 저장 공간이 무제한이기 때문이다.
+github.io, dropbox, AWS S3 모두 저장 공간 또는 발생된 트래픽에 따라 요금이 부과된다.
+물론 일정한 수준까지는 부과되지 않으며 보통의 개인용 블로그에서는 그런 수준을 넘지 않을 가능성이 매우 높다.
+하지만 어떤 이유로 인하여 옮겨야 한다면 굉장히 번거로울 것 같았다.
+그래서 그냥 처음부터 구글 드라이브에 이미지를 올리고 거기서 가져오는 게 나을 거라고 생각했다.
+물론 이렇게 하려면 약간 귀찮은 작업이 필요하다.</p>
+
+<h1 id="이미지를-google-drive에-올리고-공유하는-방법">이미지를 Google drive에 올리고 공유하는 방법</h1>
+
+<p>우선 구글 드라이브에 로그인하고 이미지 관리를 위한 폴더를 생성하였다.
+나는 블로그 이름과 같은 chobolife라는 폴더를 만들고 그 아래에 연, 월에 해당하는 폴더를 생성하였다.
+아래 그림과 같은 구조가 생겼다.
+블로깅을 오래 하다보면 이미지 파일도 많아질텐데 업로드한 시기에 대한 정보로 폴더를 만들면 관리하기 편할 것 같아서 그렇게 만들었다.</p>
+
+<p>그리고 테스트를 위해 pixabay에서 임의의 사진을 하나 다운받았다.
+맨 앞 페이지에 탁 트인 Grand Canyon 사진이 있길래 시원하게 열릴 내 미래를 상상하며 그 사진을 받았다.
+이 사진을 아까 만들었던 폴더에 올린 후 아래와 같은 방법으로 공유할 수 있다.</p>
+
+<p>사진을 우클릭해서 나오는 메뉴 중에서 _공유 가능한 링크 가져오기_를 클릭한다.</p>
+
+<p>figure 2</p>
+
+<p>그러면 링크 공유 사용 중지됨 이라고 되어 있는데 figure 3 그 옆의 토글 스위치를 클릭하여 enable 상태로 바꿔 준다.</p>
+
+<p>figure 4</p>
+
+<p>그리고 이 과정에서 이미지의 주소가 자동으로 클립보드에 복사된다.
+하지만 이 주소를 웹브라우저에 쳐 보면 이미지가 그대로 표시되지 않는다.
+구글의 이미지 뷰어를 통해서 보인다.
+그런데 나는 Jekyll에서 웹페이지 안에 이미지를 보여주려는 것이지, 이 주소를 직접 공유하려는 것이 아니므로 문제가 생긴다.
+웹페이지 안에 이미지가 제대로 보일 수가 없다는 것이다.</p>
+
+<p>이것은 구글링을 통해 해결하였다.
+클립보드에 복사된 주소 중에서</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://drive.google.com/open?id=1g5VajRDHhN9Dxfpy_wpAtszAtoqWoi0U
+</code></pre></div></div>
+<p>google.com/ 뒤의 open?id= 부분을 uc?id= 로 바꾸어 주면 된다는 것이다.
+단순히 open을 uc로만 바꾸어 주면 된다.</p>
+
+<p>그런데 여기까지 공유 설정하고 주소를 얻었다고 해서 끝난 것은 아니다.
+공유 설정을 한 후 뜨는 메시지를 읽어보면 링크가 있는 …의 모든 사용자가 볼 수 있음 이라고 되어 있다.
+특정 기관에 속한 계정에서 뿐 아니라 모두에게 공개시켜야 이미지를 제대로 보여줄 수 있기 때문에 그 아래에 있는 공유 설정을 클릭한다.</p>
+
+<p>figure 5</p>
+
+<p>그러면 링크가 있는 모든 … 사용자가 보기 가능을 클릭하고 맨 아래에 있는 더보기를 클릭한다.</p>
+
+<p>figure 6</p>
+
+<p>그리고 나서 뜨는 창에서 첫 번째 또는 두 번째 항목을 선택하고 저장을 클릭하면 된다.</p>
+
+<p>첫 번째와 두 번째의 차이는 정확히 모르겠다.
+어차피 Jekyll에서는 이 주소의 이미지를 보여주는 것이므로 두 번째 항목만으로 충분하다.
+다만 내 추측으로는 두 번째 항목을 선택하면 구글의 이미지 검색으로는 표시되지 않을 것 같다.</p>
+
+<h1 id="jekyll에서-google-drive의-이미지-첨부하기">Jekyll에서 Google drive의 이미지 첨부하기</h1>
+<p>이제 반 이상은 끝났다.
+일단 Jekyll 공식 문서에서 제공하는 방법으로 이미지를 표시하는 방법은 아래와 같다.
+https://jekyllrb-ko.github.io/docs/posts/#이미지와-자원-삽입하기</p>
+
+<p>기본적인 syntax는 간단하다.
+<img src="image address" alt="alt text message" /></p>
+
+<p>이렇게 하면 image를 첨부할 수 있다.</p>
+
+<p>예를 들어서 아까 올린 image file을 첨부하려면 이렇게 하면 된다.</p>
+<div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">![</span><span class="nv">Grand Canyon</span><span class="p">](</span><span class="sx">https://drive.google.com/uc?id=1g5VajRDHhN9Dxfpy_wpAtszAtoqWoi0U</span><span class="p">)</span>
+</code></pre></div></div>
+<p>그러면 이 markdown을 build하면 그 부분에 아래와 같은 html 코드가 생긴다.</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;img&gt;</span>
+</code></pre></div></div>
+
+<p>아주 간단하고 편한 방법이다.
+나는 처음에 이 방법에 만족했으므로 이 방법을 계속 쓰려고 생각했다.</p>
+
+<p>하지만 한 가지 문제가 있었다.
+이미지의 캡션이 없다는 것이다.
+검색을 통해 알아보니 Jekyll 자체적으로는 이미지의 캡션을 달아주지 않는댄다.
+대신 사람들이 제안하는 여러 가지 방법은 있었다.
+캡션은 있으면 좋지만 없어도 큰 문제는 없으므로…
+나는 뭐 그냥 이대로 캡션 없어도 된다고 생각하고 쓰려고 했다.</p>
+
+<p>그런데 이미지를 몇 개 첨부하다보니 불편한 점이 하나 있었다.
+그것은 바로 이미지 주소 중 open 을 uc로 바꾸어 주어야 한다는 것이다.
+분명히 이걸 해결할 수 있는 간단한 방법이 있을 것 같았다.
+그러다가 Jekyll 공식 문서에서 찾은 방법이 바로 아래 조각파일이다.</p>
+
+<p>http://jekyllrb-ko.github.io/docs/includes/</p>
+
+<p>Jekyll에서 조각파일은 반복되는 코드를 미리 정의하고 markdown에서 이를 함수 호출하듯이 이용하는 방법인 것 같다.
+<code class="highlighter-rouge">_includes</code> 디렉토리에 아래와 같은 <code class="highlighter-rouge">i-g.html</code> 파일을 만들었다.</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;figure&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://drive.google.com/uc?id="</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;figcaption&gt;&lt;/figcaption&gt;</span>
+<span class="nt">&lt;/figure&gt;</span>
+</code></pre></div></div>
+<p>이렇게 하고 이미지 파일을 첨부하려는 곳에는 아래와 같이 입력한다.</p>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;figure&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://drive.google.com/uc?id=1g5VajRDHhN9Dxfpy_wpAtszAtoqWoi0U"</span> <span class="na">alt=</span><span class="s">"Grand Canyon"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;figcaption&gt;</span>앞으로 열릴 탁 트인 미래를 상상하자.<span class="nt">&lt;/figcaption&gt;</span>
+<span class="nt">&lt;/figure&gt;</span>
+
+</code></pre></div></div>
+
+
+  </div><a class="u-url" href="/blog/2019/07/28/jekyll-image" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">우당탕탕 초보라이프</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">우당탕탕 초보라이프</li><li><a class="u-email" href="mailto:sky.flying.caterpillar@gmail.com">sky.flying.caterpillar@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/chobolife"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">chobolife</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>모든 사람의 인생은 한 번 뿐이므로 삶을 살아가는 데 있어서 초보가 아닌 사람은 없습니다. 완벽함을 꿈꾸기보다는 나의 부족한 점을 인정한다면 어떤 것을 하든지 즐겁지 않을까요.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
