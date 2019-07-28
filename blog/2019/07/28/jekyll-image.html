@@ -158,8 +158,9 @@ github.io, dropbox, AWS S3 모두 저장 공간 또는 발생된 트래픽에 �
 일단 Jekyll 공식 문서에서 제공하는 방법으로 이미지를 표시하는 방법은 아래와 같다.
 https://jekyllrb-ko.github.io/docs/posts/#이미지와-자원-삽입하기</p>
 
-<p>기본적인 syntax는 간단하다.
-<img src="image address" alt="alt text message" /></p>
+<p>기본적인 syntax는 간단하다.</p>
+<div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">![</span><span class="nv">alt text message</span><span class="p">](</span><span class="sx">image</span> address)
+</code></pre></div></div>
 
 <p>이렇게 하면 image를 첨부할 수 있다.</p>
 
@@ -189,19 +190,19 @@ https://jekyllrb-ko.github.io/docs/posts/#이미지와-자원-삽입하기</p>
 
 <p>Jekyll에서 조각파일은 반복되는 코드를 미리 정의하고 markdown에서 이를 함수 호출하듯이 이용하는 방법인 것 같다.
 <code class="highlighter-rouge">_includes</code> 디렉토리에 아래와 같은 <code class="highlighter-rouge">i-g.html</code> 파일을 만들었다.</p>
+
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;figure&gt;</span>
-    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://drive.google.com/uc?id="</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">/&gt;</span>
-    <span class="nt">&lt;figcaption&gt;&lt;/figcaption&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://drive.google.com/uc?id={{ include.id }}"</span> <span class="na">alt=</span><span class="s">"{{ include.alt }}"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;figcaption&gt;</span>{{ include.cap }}<span class="nt">&lt;/figcaption&gt;</span>
 <span class="nt">&lt;/figure&gt;</span>
 </code></pre></div></div>
+
 <p>이렇게 하고 이미지 파일을 첨부하려는 곳에는 아래와 같이 입력한다.</p>
-<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;figure&gt;</span>
-    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://drive.google.com/uc?id=1g5VajRDHhN9Dxfpy_wpAtszAtoqWoi0U"</span> <span class="na">alt=</span><span class="s">"Grand Canyon"</span><span class="nt">/&gt;</span>
-    <span class="nt">&lt;figcaption&gt;</span>앞으로 열릴 탁 트인 미래를 상상하자.<span class="nt">&lt;/figcaption&gt;</span>
-<span class="nt">&lt;/figure&gt;</span>
 
+<div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% include i-g.html id="1g5VajRDHhN9Dxfpy_wpAtszAtoqWoi0U" alt="Grand Canyon" cap="앞으로 열릴 탁 트인 미래를 상상하자." %}
 </code></pre></div></div>
 
+<p>이렇게 했더니</p>
 
   </div><a class="u-url" href="/blog/2019/07/28/jekyll-image" hidden></a>
 </article>
