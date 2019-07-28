@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://chobolife.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="http://chobolife.github.io/" rel="alternate" type="text/html" /><updated>2019-07-28T04:58:26+00:00</updated><id>http://chobolife.github.io/feed.xml</id><title type="html">우당탕탕 초보라이프</title><subtitle>모든 사람의 인생은 한 번 뿐이므로 삶을 살아가는 데 있어서 초보가 아닌 사람은 없습니다. 완벽함을 꿈꾸기보다는 나의 부족한 점을 인정한다면 어떤 것을 하든지 즐겁지 않을까요.</subtitle><entry><title type="html">나의 Jekyll 여행기 (2)</title><link href="http://chobolife.github.io/blog/2019/07/27/start-jekyll-(2)" rel="alternate" type="text/html" title="나의 Jekyll 여행기 (2)" /><published>2019-07-27T00:00:00+00:00</published><updated>2019-07-27T00:00:00+00:00</updated><id>http://chobolife.github.io/blog/2019/07/27/start-jekyll-(2)</id><content type="html" xml:base="http://chobolife.github.io/blog/2019/07/27/start-jekyll-(2)">&lt;h1 id=&quot;aws에서-시도하다&quot;&gt;AWS에서 시도하다&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://chobolife.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="http://chobolife.github.io/" rel="alternate" type="text/html" /><updated>2019-07-28T05:25:39+00:00</updated><id>http://chobolife.github.io/feed.xml</id><title type="html">우당탕탕 초보라이프</title><subtitle>모든 사람의 인생은 한 번 뿐이므로 삶을 살아가는 데 있어서 초보가 아닌 사람은 없습니다. 완벽함을 꿈꾸기보다는 나의 부족한 점을 인정한다면 어떤 것을 하든지 즐겁지 않을까요.</subtitle><entry><title type="html">나의 Jekyll 여행기 (2)</title><link href="http://chobolife.github.io/blog/2019/07/27/start-jekyll-(2)" rel="alternate" type="text/html" title="나의 Jekyll 여행기 (2)" /><published>2019-07-27T18:00:00+00:00</published><updated>2019-07-27T18:00:00+00:00</updated><id>http://chobolife.github.io/blog/2019/07/27/start-jekyll-(2)</id><content type="html" xml:base="http://chobolife.github.io/blog/2019/07/27/start-jekyll-(2)">&lt;h1 id=&quot;aws에서-시도하다&quot;&gt;AWS에서 시도하다&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&quot;/blog/2019/07/26/start-jekyll-(1)&quot;&gt;지난 포스팅&lt;/a&gt;에서 했던 실패를 뒤로 하고 나는 계속 Jekyll을 사용할 수 있는 방법을 고민했다.
 사실 &lt;a href=&quot;https://jekyllrb.com/docs/&quot;&gt;Jekyll 공식 홈페이지&lt;/a&gt;에서는 Windows에서도 Jekyll을 사용할 수 있는 방법에 대해 나오기는 한다.
 하지만 공식적으로 지원하지 않는 플랫폼이고, 언제 어디서 무슨 문제가 발생할지도 모르는 것이었기 때문에 나는 다른 방법이 가능하면 다른 방법으로 하고 싶었다.
@@ -31,36 +31,36 @@ Jekyll은 ruby 2.1 이상의 버전이 필요한데 여기에 설치되어 있�
 
 &lt;p&gt;아까 그림에서 3번째에 있었던 Ubuntu Server 18.04 LTS (HVM), SSD Volume Type 의 EC2를 생성했다.
 EC2에 ssh로 접속하고 나서, 익숙한 명령어들을 다시 입력한다.&lt;/p&gt;
-&lt;div class=&quot;language-terminal highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;sudo apt-get update
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get update
 sudo apt-get upgrade
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;이렇게 package manager를 업데이트해 주고 나서&lt;/p&gt;
-&lt;div class=&quot;language-terminal highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;sudo apt-get install vim curl git openssh
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install vim curl git openssh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;를 입력하면 필수 package가 설치된다. 그런데 Ubuntu AMI는 이미 필요한 package가 많이 설치되어 있었다.&lt;/p&gt;
 
 &lt;p&gt;그리고 나서 이제 진짜 Jekyll에 필요한 package들을 설치했다.
 여기부터는 &lt;a href=&quot;https://jekyllrb.com/docs/&quot;&gt;Jekyll 공식 홈페이지&lt;/a&gt;에 있는 대로 한 것이다.&lt;/p&gt;
-&lt;div class=&quot;language-terminal highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;sudo apt-get install ruby ruby-dev build-essential
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install ruby ruby-dev build-essential
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;어느 정도의 저장 공간이 필요한데 동의하겠느냐고 묻는다.
-사뿐히 y를 누르고 엔터를 치면 본격적으로 설치가 된다.&lt;/p&gt;
+사뿐히 &lt;code class=&quot;highlighter-rouge&quot;&gt;y&lt;/code&gt;를 누르고 엔터를 치면 본격적으로 설치가 된다.&lt;/p&gt;
 
-&lt;p&gt;그리고 .bashrc에 GEM_HOME과 PATH를 추가해 준다.&lt;/p&gt;
-&lt;div class=&quot;language-terminal highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;echo '#&lt;/span&gt; Install Ruby Gems to ~/gems&lt;span class=&quot;s1&quot;&gt;' &amp;gt;&amp;gt; ~/.bashrc
-&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;echo 'export GEM_HOME=$&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;HOME/gems'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; ~/.bashrc
-&lt;span class=&quot;gp&quot;&gt;echo 'export PATH=$&lt;/span&gt;HOME/gems/bin:&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;' &amp;gt;&amp;gt; ~/.bashrc
-&lt;/span&gt;&lt;span class=&quot;go&quot;&gt;source ~/.bashrc
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;이렇게 하면 되는데 나는 사실 .bashrc 파일을 직접 편집했다.
+&lt;p&gt;그리고 &lt;code class=&quot;highlighter-rouge&quot;&gt;.bashrc&lt;/code&gt;에 &lt;code class=&quot;highlighter-rouge&quot;&gt;GEM_HOME&lt;/code&gt;과 &lt;code class=&quot;highlighter-rouge&quot;&gt;PATH&lt;/code&gt;를 추가해 준다.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;echo '# Install Ruby Gems to ~/gems' &amp;gt;&amp;gt; ~/.bashrc
+echo 'export GEM_HOME=$HOME/gems' &amp;gt;&amp;gt; ~/.bashrc
+echo 'export PATH=$HOME/gems/bin:$PATH' &amp;gt;&amp;gt; ~/.bashrc
+source ~/.bashrc
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;이렇게 하면 되는데 나는 사실 &lt;code class=&quot;highlighter-rouge&quot;&gt;.bashrc&lt;/code&gt; 파일을 직접 편집했다.
 특히 처음 세팅하는 환경에서는 내가 필요한 설정도 해 주어야 하기 때문에 같이 했다.&lt;/p&gt;
 
-&lt;p&gt;이렇게 .bashrc에 추가한 후 이제 gem을 이용해서 jekyll을 설치했다.&lt;/p&gt;
-&lt;div class=&quot;language-terminal highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;gem install jekyll bundler
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;이렇게 &lt;code class=&quot;highlighter-rouge&quot;&gt;.bashrc&lt;/code&gt;에 추가한 후 이제 gem을 이용해서 jekyll을 설치했다.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem install jekyll bundler
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;그런데 이와 같이 설치할 때 중간에 약간 미심쩍은 메세지가 나온다.&lt;/p&gt;
-&lt;div class=&quot;language-terminal highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;Fetching: sass-3.7.4.gem (100%)
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Fetching: sass-3.7.4.gem (100%)
 
 Ruby Sass has reached end-of-life and should no longer be used.
 
@@ -68,19 +68,19 @@ Ruby Sass has reached end-of-life and should no longer be used.
   primary implementation: https://sass-lang.com/install
 
 * If you use Sass as a plug-in for a Ruby web framework, we recommend using the
-&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;  sassc gem: https://github.com/sass/sassc-ruby#&lt;/span&gt;readme
-&lt;span class=&quot;go&quot;&gt;
+  sassc gem: https://github.com/sass/sassc-ruby#readme
+
 * For more details, please refer to the Sass blog:
   https://sass-lang.com/blog/posts/7828841
 
 Successfully installed sass-3.7.4
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;잘 읽어보면 더 이상 지원되지 않는다는 이야기인 것 같고, 그래도 설치에 실패할 정도로 치명적인 문제는 아닌 것 같다.
 마지막에는 아래와 같은 메세지가 출력되며 설치 과정이 끝났다.&lt;/p&gt;
-&lt;div class=&quot;language-terminal highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;Done installing documentation for bundler after 3 seconds
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Done installing documentation for bundler after 3 seconds
 26 gems installed
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h1 id=&quot;jekyll-설치-그-이후&quot;&gt;Jekyll 설치, 그 이후&lt;/h1&gt;
 &lt;p&gt;Jekyll 설치는 잘 되었다.
@@ -91,9 +91,8 @@ AWS S3도 정적 웹 호스팅을 쉽게 할 수 있고, 요금이 부과될 정
 엄밀히 말하면 안 해봐서 모르지만 쉽게 할 수 있을 &lt;strong&gt;것 같다&lt;/strong&gt;. IAM 역할 설정을 해 주고 AWS cli를 설치해서 이렇게 이렇게 해주면 되겠지…라고 생각만 해 봤는데 직접 해 본 건 아니다.
 분명히 그 세팅 과정에서 내 생각대로 한 번에 쭉 될 리가 없다. 어렵거나 복잡할 수도 있으니… 다음에 다른 걸로 대체할 수 없이 꼭 S3를 써야만 할 때 해 보기로 하자.&lt;/p&gt;
 
-&lt;p&gt;어쨌든 나는 github을 이용하기로 마음먹었다.&lt;/p&gt;
-
-&lt;p&gt;그러면 github에 어떻게 올릴 수 있는지 한번 부딪혀 봐야겠다.
+&lt;p&gt;어쨌든 나는 github을 이용하기로 마음먹었다.
+그러면 github에 어떻게 올릴 수 있는지 한번 부딪혀 봐야겠다.
 이것은 시도해 보고 다음 포스팅에 올려야겠다.&lt;/p&gt;
 
 &lt;p&gt;아 그 전에 방금 설치한 Jekyll이 잘 동작하는지 확인해 보자.
@@ -102,10 +101,10 @@ AWS S3도 정적 웹 호스팅을 쉽게 할 수 있고, 요금이 부과될 정
 &lt;h1 id=&quot;jekyll-동작-확인&quot;&gt;Jekyll 동작 확인&lt;/h1&gt;
 &lt;p&gt;Jekyll 공식 홈페이지에 있는 &lt;a href=&quot;https://jekyllrb-ko.github.io/docs/quickstart/&quot;&gt;빠른시작 설명서&lt;/a&gt;, &lt;a href=&quot;https://jekyllrb-ko.github.io/docs/usage/&quot;&gt;기본 사용법&lt;/a&gt;을 참고해서 진행했다.
 먼저 home 디렉토리에서 아래와 같이 입력했다.&lt;/p&gt;
-&lt;div class=&quot;language-terminal highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;jekyll new chobolife
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jekyll new chobolife
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;그러면 아래와 같은 아름다운 로그가 출력된다.&lt;/p&gt;
-&lt;div class=&quot;language-terminal highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;Running bundle install in /home/ubuntu/chobolife...
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Running bundle install in /home/ubuntu/chobolife...
   Bundler: Fetching gem metadata from https://rubygems.org/..............
   Bundler: Fetching gem metadata from https://rubygems.org/..
   Bundler: Resolving dependencies...
@@ -144,11 +143,11 @@ AWS S3도 정적 웹 호스팅을 쉽게 할 수 있고, 요금이 부과될 정
   Bundler: Bundle complete! 6 Gemfile dependencies, 29 gems now installed.
   Bundler: Use `bundle info [gemname]` to see where a bundled gem is installed.
 New jekyll site installed in /home/ubuntu/chobolife.
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;제대로 된 것일까? 일단 home 디렉토리 밑에 chobolife라는 디렉토리가 새로 생겼다.
 &lt;code class=&quot;highlighter-rouge&quot;&gt;cd chobolife&lt;/code&gt; 명령으로 새로 생긴 디렉토리에 들어가서 &lt;code class=&quot;highlighter-rouge&quot;&gt;ll&lt;/code&gt; 명령을 쳐 보면 이렇게 나온다.&lt;/p&gt;
-&lt;div class=&quot;language-terminal highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;total 40
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;total 40
 drwxrwxr-x 3 ubuntu ubuntu 4096 Jul 26 23:50 ./
 drwxr-xr-x 9 ubuntu ubuntu 4096 Jul 26 23:49 ../
 -rw-r--r-- 1 ubuntu ubuntu   35 Jul 26 23:49 .gitignore
@@ -159,15 +158,15 @@ drwxr-xr-x 9 ubuntu ubuntu 4096 Jul 26 23:49 ../
 drwxrwxr-x 2 ubuntu ubuntu 4096 Jul 26 23:49 _posts/
 -rw-r--r-- 1 ubuntu ubuntu  539 Jul 26 23:49 about.md
 -rw-r--r-- 1 ubuntu ubuntu  175 Jul 26 23:49 index.md
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;아직 Jekyll의 구조나 원리에 대해서는 아무 것도 모르지만 뭔가 잘 된 것 같다. 기분이 편안하다.
 그러면 여기서 아래 명령으로 Jekyll을 간단하게 실행해 보자.&lt;/p&gt;
-&lt;div class=&quot;language-terminal highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;jekyll build
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jekyll build
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;위와 같이 입력하니 Jekyll이 무언가 일을 한 것 같다. 이번에는 아래와 같이 출력되었다. 역시 마음이 편안하다.&lt;/p&gt;
-&lt;div class=&quot;language-terminal highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;Configuration file: /home/ubuntu/chobolife/_config.yml
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Configuration file: /home/ubuntu/chobolife/_config.yml
             Source: /home/ubuntu/chobolife
        Destination: /home/ubuntu/chobolife/_site
  Incremental build: disabled. Enable with --incremental
@@ -175,10 +174,10 @@ drwxrwxr-x 2 ubuntu ubuntu 4096 Jul 26 23:49 _posts/
        Jekyll Feed: Generating feed for posts
                     done in 0.395 seconds.
  Auto-regeneration: disabled. Use --watch to enable.
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;뭐가 달라진 게 있을까? 그러면 &lt;code class=&quot;highlighter-rouge&quot;&gt;ll&lt;/code&gt; 명령으로 다시 한번 무엇이 바뀌었는지 확인해 보았다.&lt;/p&gt;
-&lt;div class=&quot;language-terminal highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;total 48
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;total 48
 drwxrwxr-x 5 ubuntu ubuntu 4096 Jul 26 23:51 ./
 drwxr-xr-x 9 ubuntu ubuntu 4096 Jul 26 23:49 ../
 -rw-r--r-- 1 ubuntu ubuntu   35 Jul 26 23:49 .gitignore
@@ -191,7 +190,7 @@ drwxrwxr-x 2 ubuntu ubuntu 4096 Jul 26 23:49 _posts/
 drwxrwxr-x 5 ubuntu ubuntu 4096 Jul 26 23:51 _site/
 -rw-r--r-- 1 ubuntu ubuntu  539 Jul 26 23:49 about.md
 -rw-r--r-- 1 ubuntu ubuntu  175 Jul 26 23:49 index.md
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;확실히 무언가 바뀌었다.
 &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll build&lt;/code&gt; 명령 후에 &lt;code class=&quot;highlighter-rouge&quot;&gt;.sass-cache&lt;/code&gt; 디렉토리와 &lt;code class=&quot;highlighter-rouge&quot;&gt;_site&lt;/code&gt; 디렉토리가 새로 생긴 것을 알 수 있다.
@@ -199,7 +198,8 @@ drwxrwxr-x 5 ubuntu ubuntu 4096 Jul 26 23:51 _site/
 이 파일을 vim으로 열어보면 Jekyll의 설치 및 작동에는 문제가 없는 것 같다.
 Hello World를 출력해 보지는 않았지만 별다른 에러 메시지가 없고 파일이 잘 생성되는 것으로 봐서 이번에는 성공한 것 같다.&lt;/p&gt;
 
-&lt;p&gt;그러면 이제 이렇게 생성된 html 파일을 배포하는 방법을 고민해 봐야겠다.&lt;/p&gt;</content><author><name></name></author><summary type="html">AWS에서 시도하다 지난 포스팅에서 했던 실패를 뒤로 하고 나는 계속 Jekyll을 사용할 수 있는 방법을 고민했다. 사실 Jekyll 공식 홈페이지에서는 Windows에서도 Jekyll을 사용할 수 있는 방법에 대해 나오기는 한다. 하지만 공식적으로 지원하지 않는 플랫폼이고, 언제 어디서 무슨 문제가 발생할지도 모르는 것이었기 때문에 나는 다른 방법이 가능하면 다른 방법으로 하고 싶었다. 그래서 생각한 방법이 AWS EC2였다. EC2에 linux instance를 만들고 거기서 설치하면 되지 않을까? 하고 생각했던 것이었다.</summary></entry><entry><title type="html">나의 Jekyll 여행기 (1)</title><link href="http://chobolife.github.io/blog/2019/07/26/start-jekyll-(1)" rel="alternate" type="text/html" title="나의 Jekyll 여행기 (1)" /><published>2019-07-26T00:00:00+00:00</published><updated>2019-07-26T00:00:00+00:00</updated><id>http://chobolife.github.io/blog/2019/07/26/start-jekyll-(1)</id><content type="html" xml:base="http://chobolife.github.io/blog/2019/07/26/start-jekyll-(1)">&lt;p&gt;블로그를 시작하려고 한다. 아마 나의 이런저런 생각들, 그리고 내가 했던 것들을 기록하기 위한 용도로 사용할 것 같다.&lt;/p&gt;
+&lt;p&gt;그러면 이제 이렇게 생성된 html 파일을 배포하는 방법을 고민해 봐야겠다.&lt;/p&gt;</content><author><name></name></author><summary type="html">AWS에서 시도하다 지난 포스팅에서 했던 실패를 뒤로 하고 나는 계속 Jekyll을 사용할 수 있는 방법을 고민했다. 사실 Jekyll 공식 홈페이지에서는 Windows에서도 Jekyll을 사용할 수 있는 방법에 대해 나오기는 한다. 하지만 공식적으로 지원하지 않는 플랫폼이고, 언제 어디서 무슨 문제가 발생할지도 모르는 것이었기 때문에 나는 다른 방법이 가능하면 다른 방법으로 하고 싶었다. 그래서 생각한 방법이 AWS EC2였다. EC2에 linux instance를 만들고 거기서 설치하면 되지 않을까? 하고 생각했던 것이었다.</summary></entry><entry><title type="html">나의 Jekyll 여행기 (1)</title><link href="http://chobolife.github.io/blog/2019/07/26/start-jekyll-(1)" rel="alternate" type="text/html" title="나의 Jekyll 여행기 (1)" /><published>2019-07-26T18:00:00+00:00</published><updated>2019-07-26T18:00:00+00:00</updated><id>http://chobolife.github.io/blog/2019/07/26/start-jekyll-(1)</id><content type="html" xml:base="http://chobolife.github.io/blog/2019/07/26/start-jekyll-(1)">&lt;h1 id=&quot;시작&quot;&gt;시작&lt;/h1&gt;
+&lt;p&gt;블로그를 시작하려고 한다. 아마 나의 이런저런 생각들, 그리고 내가 했던 것들을 기록하기 위한 용도로 사용할 것 같다.&lt;/p&gt;
 
 &lt;p&gt;이것저것 알아보고 나서, Jekyll을 사용해 보기로 했다.
 일반 포털 사이트에서 제공하는 블로그는 자유도가 낮아 새로운 것을 시도해보기 어렵기 때문에 처음부터 별로 생각이 없었다.
@@ -284,7 +284,8 @@ Unable to locate package ruby-dev
 &lt;p&gt;아마도 ruby-dev가 제대로 설지되지 않았다는 말일 것 같은데… 일단 무시하고 설치를 계속했다.
 (왜 불길한 예감은 항상 틀리지 않는 것일까…)&lt;/p&gt;
 
-&lt;p&gt;.bashrc에 GEM_HOME과 PATH를 설정하고 나서 gem을 통해 Jekyll을 설치해 보았다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;.bashrc&lt;/code&gt;에 &lt;code class=&quot;highlighter-rouge&quot;&gt;GEM_HOME&lt;/code&gt;과 &lt;code class=&quot;highlighter-rouge&quot;&gt;PATH&lt;/code&gt;를 설정하고 나서 gem을 통해 Jekyll을 설치해 보았다.
+(Jekyll의 구체적인 설치 과정은 &lt;a href=&quot;/blog/2019/07/27/start-jekyll-(2)&quot;&gt;다음 포스팅&lt;/a&gt;에서 다루었다.)&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ gem install jekyll bundler
 Fetching: public_suffix-3.1.1.gem (100%)
 Successfully installed public_suffix-3.1.1
@@ -317,7 +318,7 @@ Done installing documentation for bundler after 16 seconds
 이래서는 cygwin에서 Jekyll을 쓸 수가 없지 않을까?
 처음 cygwin을 재설치하고 나서부터 진행했던 것이기 때문에 이번에는 package끼리 꼬인다거나 다른 문제가 발생할 소지가 없었기 때문이다.&lt;/p&gt;
 
-&lt;p&gt;이렇게 Jekyll을 설치하려고 했던 나의 첫 시도는 내게 익숙했던 개발 환경만 허망하게 날린 채 아무런 결과를 내지 못했다.&lt;/p&gt;</content><author><name></name></author><summary type="html">블로그를 시작하려고 한다. 아마 나의 이런저런 생각들, 그리고 내가 했던 것들을 기록하기 위한 용도로 사용할 것 같다.</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://chobolife.github.io/blog/2019/07/26/welcome-to-jekyll" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2019-07-26T00:00:00+00:00</published><updated>2019-07-26T00:00:00+00:00</updated><id>http://chobolife.github.io/blog/2019/07/26/welcome-to-jekyll</id><content type="html" xml:base="http://chobolife.github.io/blog/2019/07/26/welcome-to-jekyll">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+&lt;p&gt;이렇게 Jekyll을 설치하려고 했던 나의 첫 시도는 내게 익숙했던 개발 환경만 허망하게 날린 채 아무런 결과를 내지 못했다.&lt;/p&gt;</content><author><name></name></author><summary type="html">시작 블로그를 시작하려고 한다. 아마 나의 이런저런 생각들, 그리고 내가 했던 것들을 기록하기 위한 용도로 사용할 것 같다.</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://chobolife.github.io/blog/2019/07/26/welcome-to-jekyll" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2019-07-26T07:00:00+00:00</published><updated>2019-07-26T07:00:00+00:00</updated><id>http://chobolife.github.io/blog/2019/07/26/welcome-to-jekyll</id><content type="html" xml:base="http://chobolife.github.io/blog/2019/07/26/welcome-to-jekyll">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 
 &lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
 
