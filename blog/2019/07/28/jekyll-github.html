@@ -91,7 +91,10 @@ git push origin master
 
 <p>Github repository를 확인해보면 아래와 같다.</p>
 
-<p><img src="https://drive.google.com/uc?id=1cHkHmPgvvGWPW3Ko4K3Bfqfjm9AMd4jG" alt="처음으로 index.html 파일을 commit한 후 repository의 상태" /></p>
+<figure>
+    <img src="https://drive.google.com/uc?id=1cHkHmPgvvGWPW3Ko4K3Bfqfjm9AMd4jG" alt="웹에서 repository에 들어가 보면 index.html 파일이 정상적으로 commit된 것을 확인할 수 있다." title=" index.html 파일만 commit한 후의 repository" />
+    <figcaption>웹에서 repository에 들어가 보면 index.html 파일이 정상적으로 commit된 것을 확인할 수 있다.</figcaption>
+</figure>
 
 <p><code class="highlighter-rouge">index.html</code> 파일이 잘 올라간 것을 확인할 수 있다.</p>
 
@@ -99,7 +102,10 @@ git push origin master
 <p>Github repository에 파일은 바로 올라가지만 이것이 웹에 표시되기까지는 시간이 조금 걸리는 것 같다.
 잠시 후 주소를 찾아 들어와보니 이렇게 출력된다.</p>
 
-<p><img src="https://drive.google.com/uc?id=1Pg_rxdlWfYV0hW3kLDlznJ427Djl-7t3" alt="Index.html만 올렸을 때 웹브라우저에 표시되는 화면" /></p>
+<figure>
+    <img src="https://drive.google.com/uc?id=1Pg_rxdlWfYV0hW3kLDlznJ427Djl-7t3" alt="index.html 파일만 올리면 웹브라우저에는 볼품없이 표현된다." title=" index.html만 올렸을 때 웹브라우저에 표현되는 화면" />
+    <figcaption>index.html 파일만 올리면 웹브라우저에는 볼품없이 표현된다.</figcaption>
+</figure>
 
 <p><code class="highlighter-rouge">index.html</code> 파일 하나만 올린 상태이기 때문에 css 적용도 안 되어 있고 이래저래 볼품없는 디자인이긴 하다.
 하지만 우선 git으로 github에 제대로 올린 것 같다.
@@ -112,7 +118,10 @@ git push origin master
 
 <p>잠시 후 확인해보니 이렇게 표시된다.</p>
 
-<p><img src="https://drive.google.com/uc?id=1AX1AeAf128dXraPhdHhRBPzk89iJ8zvw" alt="`_site` 폴더의 모든 파일을 올린 뒤 index 페이지" /></p>
+<figure>
+    <img src="https://drive.google.com/uc?id=1AX1AeAf128dXraPhdHhRBPzk89iJ8zvw" alt="site 폴더의 모든 파일을 올리고 Internet Explorer로 보면 그나마 아까보다는 나아진다." title=" Jekyll을 build한 후 site 폴더의 모든 파일을 올린 뒤 Internet Explorer에 표현되는 첫 페이지" />
+    <figcaption>site 폴더의 모든 파일을 올리고 Internet Explorer로 보면 그나마 아까보다는 나아진다.</figcaption>
+</figure>
 
 <p>잘 된다.
 그런데 레이아웃이 조금 겹치고 깨지는 듯한 모습이다.
@@ -121,11 +130,19 @@ git push origin master
 Internet Explorer 11에서 보면 레이아웃이 위 그림처럼 약간 깨진다.
 Chrome에서 보면 아래 그림처럼 잘 보인다.</p>
 
-<p><img src="https://drive.google.com/uc?id=1ntd-LqbNo9iYocR72T8HBrTEfHOy7Me9" alt="Chrome에서 보았을 때의 초기 페이지" /></p>
+<figure>
+    <img src="https://drive.google.com/uc?id=1ntd-LqbNo9iYocR72T8HBrTEfHOy7Me9" alt="Jekyll의 기본 테마를 Chrome에 띄우고 보면 훨씬 낫다." title=" Jekyll을 build한 후 site 폴더의 모든 파일을 올린 뒤 Chrome에서 보았을 때의 첫 페이지" />
+    <figcaption>Jekyll의 기본 테마를 Chrome에 띄우고 보면 훨씬 낫다.</figcaption>
+</figure>
 
-<p>아마 Firefox나 Opera 등에서도 잘 보일 것 같다.</p>
+<p>아마 Firefox나 Opera 등에서도 잘 보일 것 같다.
+Jekyll의 기본 테마는 Edge는 어떨지 모르겠지만 적어도 IE는 지원하지 않는 것 같다.</p>
 
-<p>그럼 본격적으로 포스팅을 해 보기 위해 이미지를 올리는 방법, 링크 거는 방법, 코드 snippet 등을 알아봐야겠다.
+<p>자동으로 생성된 첫 번째 포스팅인 <a href="/blog/2019/07/26/welcome-to-jekyll">welcome-to-jekyll</a>은 삭제하지 않을 예정이다.
+스스로 Jekylling을 성공했다는 일종의 기념품이랄까?
+왠지 간직하고 싶다.</p>
+
+<p>그럼 본격적으로 포스팅을 해 보기 위해 이미지를 올리는 방법, 링크 거는 방법, 테마 적용, disqus 삽입 등을 알아봐야겠다. 써 놓고 보니 할 게 많네…
 (지금까지의 포스팅은 블로그에 직접 올리고 있는 것이 아니다. 메모장에 글을 기록하고 있다. 아마 다음 작업 이후에 글을 몰아서 올리게 되지 않을까 생각한다.)</p>
 
 
