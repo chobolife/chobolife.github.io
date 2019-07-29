@@ -206,14 +206,21 @@ github, dropbox, AWS S3 모두 저장 공간 또는 발생된 트래픽에 따�
     <figcaption></figcaption>
 </figure>
 
+<p>직접 확인하려면 이 <a href="https://drive.google.com/open?id=1L6TXwRoq0KKBREIrG385ckS33_K3YUxe">링크</a>를 클릭해도 된다.</p>
+
 <p>이렇게 되면 문제가 있다.
 이미지를 다른 사람에게 보여주기 위해 주소를 그대로 공유할 의도라면 모르겠지만 나는 웹페이지 안에서 이 이미지를 보여주려는 것이기 때문이다.
 이렇게 되면 웹페이지 안에서 이미지가 제대로 표시될 수가 없다.</p>
 
 <p>이것은 구글링을 통해 해결하였다.
 클립보드에 복사된 주소 중에서 <code class="highlighter-rouge">drive.google.com/</code> 뒤의 <code class="highlighter-rouge">open?id=</code> 부분을 <code class="highlighter-rouge">uc?id=</code> 로 바꾸어 주면 된다는 것이다.
-즉, 단순히 <code class="highlighter-rouge">open</code>을 <code class="highlighter-rouge">uc</code>로만 바꾸어 주면 된다.
-이렇게 하면 이미지가 웹브라우저에 바로 표시된다.</p>
+즉, 단순히 <code class="highlighter-rouge">open</code>을 <code class="highlighter-rouge">uc</code>로만 바꾸어 주면 되고 나머지 부분은 그대로 둔다.
+아래 code block에서 비교해 보자면 원래 클립보드에 복사된 것은 윗줄인데 그것을 아랫줄로 바꾸어 준 것이다.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://drive.google.com/open?id=1L6TXwRoq0KKBREIrG385ckS33_K3YUxe
+https://drive.google.com/uc?id=1L6TXwRoq0KKBREIrG385ckS33_K3YUxe
+</code></pre></div></div>
+<p>이렇게 하면 주소를 웹브라우저에 쳤을 때 이미지가 웹브라우저에 바로 표시된다.
+<a href="https://drive.google.com/uc?id=1L6TXwRoq0KKBREIrG385ckS33_K3YUxe">링크</a>를 클릭하여 확인할 수 있다.</p>
 
 <p>Jekyll에서 이미지를 다루는 방법을 하나의 포스팅으로 올리고 싶었는데 여기에서 끝까지 모든 과정을 올리면 너무 길어질 것 같다.
 그래서 우선 이미지를 구글 드라이브에 올리고 공유하는 방법까지만 작성하고, 이어서 구글 드라이브에 올린 이미지를 Jekyll에서 표시하는 방법은 다음 포스팅에서 설명할 예정이다.</p>
