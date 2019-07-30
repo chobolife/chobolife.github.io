@@ -62,7 +62,7 @@
 </code></pre></div></div>
 <p>위의 예시 코드에서 이미지의 주소는 이전 포스팅에 소개한 방법으로 얻어냈고, 대체 텍스트는 ‘Grand Canyon’으로 입력한 것이다.
 그리고 이 markdown을 문서에 삽입하고 <code class="highlighter-rouge">jekyll build</code>를 실행하면 그 부분에 아래와 같은 html 코드가 생긴다.</p>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://drive.google.com/uc?id=1L6TXwRoq0KKBREIrG385ckS33_K3YUxe"</span> <span class="na">alt=</span><span class="s">"Grand Canyon"</span><span class="err">)</span><span class="nt">&gt;</span>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://drive.google.com/uc?id=1L6TXwRoq0KKBREIrG385ckS33_K3YUxe"</span> <span class="na">alt=</span><span class="s">"Grand Canyon"</span><span class="nt">&gt;</span>
 </code></pre></div></div>
 
 <p>아주 간단하고 편한 방법이다.
@@ -72,7 +72,7 @@
 <p>하지만 막상 이렇게 이미지를 첨부해보니 한 가지 문제가 있었다.
 이미지의 캡션이 없다는 것이다.
 검색을 통해 알아보니 Jekyll 자체적으로는 이미지의 캡션을 달아주지 않는댄다.
-즉, markdown 문법만 가지고는 캡션을 달 방법이 없다는 것이다.</p>
+즉, markdown 문법만 가지고는 캡션을 달 방법이 없다고 한다.</p>
 
 <p>캡션은 있으면 좋지만 없어도 큰 문제는 없으므로…
 나는 뭐 그냥 이대로 캡션 없어도 된다고 생각하고 쓰려고 했다.</p>
@@ -84,19 +84,39 @@
 
 <p>이미지에 캡션을 달고 싶다는 생각, 그리고 이미지의 주소를 쉽게 변환하고 싶다는 욕심.
 꼭 이 두 가지를 해결해야겠다는 생각으로 찾아낸 것은 아니었다.
-그냥 Jekyll 공식 문서나 Jekyll 관련한 블로그의 웹서핑을 하면서 알게 된 것이 있다.
-바로 조각파일이다.</p>
+그것과는 상관없이 그냥 Jekyll 공식 문서나 Jekyll 관련한 블로그의 웹서핑을 하면서 알게 된 것이 있다.
+바로 <strong>조각파일</strong>이다.</p>
 
 <h1 id="조각파일로-이미지-첨부를-간단하게">조각파일로 이미지 첨부를 간단하게</h1>
-<p><a href="http://jekyllrb-ko.github.io/docs/includes/">Jekyll 공식 문서</a>에 나온 조각파일의 설명에 따르면 조각파일이란 반복되는 코드를 미리 정의하고 markdown에서 이를 함수 호출하듯이 이용하는 방법인 것 같다.</p>
-
-<p><code class="highlighter-rouge">_includes</code> 디렉토리에 아래와 같은 <code class="highlighter-rouge">i-g.html</code> 파일을 만들었다.</p>
+<p><a href="http://jekyllrb-ko.github.io/docs/includes/">Jekyll 공식 문서</a>에 나온 조각파일의 설명에 따르면 조각파일이란 <strong>반복되는 코드를 미리 정의하고 markdown에서 이를 함수 호출하듯이 이용하는 방법</strong>인 것 같다.
+위 Jekyll 문서를 보면 조각파일을 이용해서 이미지 첨부를 쉽게 하는 방법도 있다.
+아래와 같은 예제가 소개되어 있다.</p>
 
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;figure&gt;</span>
-    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://drive.google.com/uc?id={{ include.id }}"</span> <span class="na">alt=</span><span class="s">"{{ include.alt }}"</span><span class="nt">/&gt;</span>
-    <span class="nt">&lt;figcaption&gt;</span>{{ include.cap }}<span class="nt">&lt;/figcaption&gt;</span>
+   <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{ include.url }}"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{{ include.file }}"</span> <span class="na">style=</span><span class="s">"max-width: {{ include.max-width }};"</span> <span class="na">alt=</span><span class="s">"{{ include.alt }}"</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;figcaption&gt;</span>{{ include.caption }}<span class="nt">&lt;/figcaption&gt;</span>
 <span class="nt">&lt;/figure&gt;</span>
 </code></pre></div></div>
+
+<p>이 예제를 보면 <code class="highlighter-rouge">url</code>, <code class="highlighter-rouge">file</code>, <code class="highlighter-rouge">max-width</code>, <code class="highlighter-rouge">alt</code>, <code class="highlighter-rouge">caption</code>의 다섯 개의 파라미터를 넘겨주게 되어 있다.
+코드를 그대로 써도 무방하지만 나는 이 방법을 참고해서 아래와 같이 <code class="highlighter-rouge">_includes</code> 디렉토리에 <code class="highlighter-rouge">i-g.html</code> 파일을 만들었다.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;figure&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://drive.google.com/uc?id={{ include.id }}"</span> <span class="na">alt=</span><span class="s">"{{ include.alt }}"</span> <span class="na">title=</span><span class="s">" {{ include.title }}"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;figcaption&gt;</span>{{ include.alt }}<span class="nt">&lt;/figcaption&gt;</span>
+<span class="nt">&lt;/figure&gt;</span>
+</code></pre></div></div>
+
+<p>다섯 가지 파라미터 중에서 내가 수정한 사항들은 아래와 같다.</p>
+<ul>
+  <li>나는 이미지에 링크를 걸 필요가 없으므로 <code class="highlighter-rouge">url</code>은 필요가 없다.
+(만약에 필요하다면 그 때 다시 생각하기로 하고…)</li>
+  <li><code class="highlighter-rouge">max-width</code> 속성도 굳이 필요하지 않을 것 같아서 삭제했다.</li>
+  <li>이미지의 캡션은 대체 텍스트와 동일하게 표시되게 하기 위해 <code class="highlighter-rouge">figcaption</code> 태그 안에 있었던 <code class="highlighter-rouge">caption</code> 대신 <code class="highlighter-rouge">alt</code>를 넣어주었다.
+(사실은 대체 텍스트와 캡션을 따로 넣어주기가 귀찮아서 그랬다.)</li>
+  <li>그리고 이게 나에게 제일 중요한 부분이었는데, 이미지의 주소를 html 전체 주소를 받는 것이 아니라 구글 드라이브의 이미지 id만 사용할 수 있게 했다.</li>
+</ul>
 
 <p>이렇게 하고 이미지 파일을 첨부하려는 곳에는 아래와 같이 입력한다.</p>
 
