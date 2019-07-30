@@ -109,20 +109,35 @@
 
 <p>다섯 가지 파라미터 중에서 내가 수정한 사항들은 아래와 같다.</p>
 <ul>
-  <li>나는 이미지에 링크를 걸 필요가 없으므로 <code class="highlighter-rouge">url</code>은 필요가 없다.
+  <li>나는 이미지에 링크를 걸 필요가 없으므로 <code class="highlighter-rouge">a</code> 태그와 링크인 <code class="highlighter-rouge">url</code>파라미터는 필요가 없다.
 (만약에 필요하다면 그 때 다시 생각하기로 하고…)</li>
   <li><code class="highlighter-rouge">max-width</code> 속성도 굳이 필요하지 않을 것 같아서 삭제했다.</li>
   <li>이미지의 캡션은 대체 텍스트와 동일하게 표시되게 하기 위해 <code class="highlighter-rouge">figcaption</code> 태그 안에 있었던 <code class="highlighter-rouge">caption</code> 대신 <code class="highlighter-rouge">alt</code>를 넣어주었다.
 (사실은 대체 텍스트와 캡션을 따로 넣어주기가 귀찮아서 그랬다.)</li>
-  <li>그리고 이게 나에게 제일 중요한 부분이었는데, 이미지의 주소를 html 전체 주소를 받는 것이 아니라 구글 드라이브의 이미지 id만 사용할 수 있게 했다.</li>
+  <li>그리고 이미지의 주소 부분을 수정했다.</li>
+  <li><code class="highlighter-rouge">i-g.html</code> 조각파일 안에 <code class="highlighter-rouge">https://drive.google.com/uc?id=</code> 부분까지 hard coding 해 놓고 markdown에서 <code class="highlighter-rouge">i-g.html</code>을 호출할 때 구글 드라이브에서 따온 이미지 주소의 뒷부분인 id 속성만 사용할 수 있게 했다.</li>
+  <li>이렇게 하면 내가 처음에 의도한 대로 <code class="highlighter-rouge">open</code>과 <code class="highlighter-rouge">uc</code>를 바꾸어 주는 작업을 대체할 수 있을 뿐 아니라 중복되는 코드를 아예 조각파일 안으로 넣어버릴 수 있어서 깔끔해진다.</li>
 </ul>
 
-<p>이렇게 하고 이미지 파일을 첨부하려는 곳에는 아래와 같이 입력한다.</p>
+<p>위와 같이 <code class="highlighter-rouge">i-g.html</code> 파일을 작성했다면 이미지 파일을 첨부하려는 곳에는 아래와 같이 입력한다.</p>
 
-<div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% include i-g.html id="1g5VajRDHhN9Dxfpy_wpAtszAtoqWoi0U" alt="Grand Canyon" cap="앞으로 열릴 탁 트인 미래를 상상하자." %}
+<div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% include i-g.html id="1g5VajRDHhN9Dxfpy_wpAtszAtoqWoi0U" alt="하늘과 Grand Canyon이 만나는 드넓은 곳에서 앞으로 열릴 탁 트인 미래를 상상하자." title="Grand Canyon" %}
 </code></pre></div></div>
 
-<p>이렇게 했더니</p>
+<p>이렇게 하면 문서에는 아래와 같은 html 코드가 생긴다.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;figure&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://drive.google.com/uc?id={{ include.id }}"</span> <span class="na">alt=</span><span class="s">"{{ include.alt }}"</span> <span class="na">title=</span><span class="s">"{{ include.title }}"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;figcaption&gt;</span>{{ include.alt }}<span class="nt">&lt;/figcaption&gt;</span>
+<span class="nt">&lt;/figure&gt;</span>
+</code></pre></div></div>
+
+<p>그리고 실제 웹페이지에 표시되는 모습은 아래와 같다.</p>
+
+<figure>
+    <img src="https://drive.google.com/uc?id=1g5VajRDHhN9Dxfpy_wpAtszAtoqWoi0U" alt="하늘과 Grand Canyon이 만나는 드넓은 곳에서 앞으로 열릴 탁 트인 미래를 상상하자." title="Grand Canyon" />
+    <figcaption>하늘과 Grand Canyon이 만나는 드넓은 곳에서 앞으로 열릴 탁 트인 미래를 상상하자.</figcaption>
+</figure>
 
 
   </div><a class="u-url" href="/blog/2019/07/29/jekyll-image" hidden></a>
