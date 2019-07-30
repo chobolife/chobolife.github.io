@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://chobolife.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="http://chobolife.github.io/" rel="alternate" type="text/html" /><updated>2019-07-30T14:49:16+09:00</updated><id>http://chobolife.github.io/feed.xml</id><title type="html">우당탕탕 초보라이프</title><subtitle>모든 사람의 인생은 한 번 뿐이므로 삶을 살아가는 데 있어서 초보가 아닌 사람은 없습니다. 완벽함을 꿈꾸기보다는 나의 부족한 점을 인정한다면 어떤 것을 하든지 즐겁지 않을까요.</subtitle><entry><title type="html">Google drive에 공개 이미지 올리기</title><link href="http://chobolife.github.io/blog/2019/07/29/google-drive-image" rel="alternate" type="text/html" title="Google drive에 공개 이미지 올리기" /><published>2019-07-29T16:45:00+09:00</published><updated>2019-07-29T16:45:00+09:00</updated><id>http://chobolife.github.io/blog/2019/07/29/google-drive-image</id><content type="html" xml:base="http://chobolife.github.io/blog/2019/07/29/google-drive-image">&lt;p&gt;Jekyll에서 이미지를 올리는 방법에 대해서 찾아보았고, 코드조각이라는 것을 이용하여 나름의 방법을 구축했다.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://chobolife.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="http://chobolife.github.io/" rel="alternate" type="text/html" /><updated>2019-07-30T14:54:12+09:00</updated><id>http://chobolife.github.io/feed.xml</id><title type="html">우당탕탕 초보라이프</title><subtitle>모든 사람의 인생은 한 번 뿐이므로 삶을 살아가는 데 있어서 초보가 아닌 사람은 없습니다. 완벽함을 꿈꾸기보다는 나의 부족한 점을 인정한다면 어떤 것을 하든지 즐겁지 않을까요.</subtitle><entry><title type="html">Google drive에 공개 이미지 올리기</title><link href="http://chobolife.github.io/blog/2019/07/29/google-drive-image" rel="alternate" type="text/html" title="Google drive에 공개 이미지 올리기" /><published>2019-07-29T16:45:00+09:00</published><updated>2019-07-29T16:45:00+09:00</updated><id>http://chobolife.github.io/blog/2019/07/29/google-drive-image</id><content type="html" xml:base="http://chobolife.github.io/blog/2019/07/29/google-drive-image">&lt;p&gt;Jekyll에서 이미지를 올리는 방법에 대해서 찾아보았고, 코드조각이라는 것을 이용하여 나름의 방법을 구축했다.
 그 방법을 소개하려고 하는데 그에 앞서 우선 이번 포스팅에서는 Google drive에 이미지 파일을 올리고 웹에 공개하는 방법까지만 작성했다.
 그렇게 올린 이미지 파일을 Jekyll post에 표시하는 방법은 다음 포스팅에서 다룰 예정이다.&lt;/p&gt;
 
@@ -63,7 +63,7 @@ github, dropbox, AWS S3 모두 저장 공간 또는 발생된 트래픽에 따�
 아래 그림과 같은 구조가 생겼다.&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img src=&quot;https://drive.google.com/uc?id=14NGezpjMa57AwMIg7VSOCgVCY3x2R3p6&quot; alt=&quot;구글 드라이브에 블로그의 이미지 저장소 역할을 할 폴더를 만들었다.&quot; title=&quot; 구글 드라이브에 생성한 폴더&quot; /&gt;
+    &lt;img src=&quot;https://drive.google.com/uc?id=14NGezpjMa57AwMIg7VSOCgVCY3x2R3p6&quot; alt=&quot;구글 드라이브에 블로그의 이미지 저장소 역할을 할 폴더를 만들었다.&quot; title=&quot;구글 드라이브에 생성한 폴더&quot; /&gt;
     &lt;figcaption&gt;구글 드라이브에 블로그의 이미지 저장소 역할을 할 폴더를 만들었다.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -78,14 +78,14 @@ github, dropbox, AWS S3 모두 저장 공간 또는 발생된 트래픽에 따�
 &lt;p&gt;먼저 폴더를 우클릭해서 나오는 메뉴 중에서 &lt;strong&gt;공유&lt;/strong&gt;를 클릭한다.&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img src=&quot;https://drive.google.com/uc?id=16ohcm7sxTQMjEijZi6IwWQSnzJaDALrB&quot; alt=&quot;공개하고 싶은 폴더를 우클릭하고 공유를 선택한다.&quot; title=&quot; 구글 드라이브에서 폴더를 공개하기 위한 설정&quot; /&gt;
+    &lt;img src=&quot;https://drive.google.com/uc?id=16ohcm7sxTQMjEijZi6IwWQSnzJaDALrB&quot; alt=&quot;공개하고 싶은 폴더를 우클릭하고 공유를 선택한다.&quot; title=&quot;구글 드라이브에서 폴더를 공개하기 위한 설정&quot; /&gt;
     &lt;figcaption&gt;공개하고 싶은 폴더를 우클릭하고 공유를 선택한다.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;그러면 아래와 같은 ‘다른 사용자와 공유’라는 제목의 박스가 뜬다.&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img src=&quot;https://drive.google.com/uc?id=1CqhRpEE9z-ACFgHLTg5rNnkL2oVsvV6X&quot; alt=&quot;공유를 선택하면 '다른 사용자와 공유'라는 박스가 뜬다.&quot; title=&quot; 구글 드라이브에서 폴더를 공개하기 위한 설정: 다른 사용자와 공유&quot; /&gt;
+    &lt;img src=&quot;https://drive.google.com/uc?id=1CqhRpEE9z-ACFgHLTg5rNnkL2oVsvV6X&quot; alt=&quot;공유를 선택하면 '다른 사용자와 공유'라는 박스가 뜬다.&quot; title=&quot;구글 드라이브에서 폴더를 공개하기 위한 설정: 다른 사용자와 공유&quot; /&gt;
     &lt;figcaption&gt;공유를 선택하면 '다른 사용자와 공유'라는 박스가 뜬다.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -93,7 +93,7 @@ github, dropbox, AWS S3 모두 저장 공간 또는 발생된 트래픽에 따�
 그러면 이번에는 다시 이렇게 생긴 ‘공유 설정’이라는 제목의 박스가 뜬다.&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img src=&quot;https://drive.google.com/uc?id=1cd2BIBDdgysKE4UhYWB4qrMTQjfEbjek&quot; alt=&quot;고급을 클릭하면 '공유 설정'이라는 박스로 바뀐다.&quot; title=&quot; 구글 드라이브에서 폴더를 공개하기 위한 설정: 공유 설정 이전&quot; /&gt;
+    &lt;img src=&quot;https://drive.google.com/uc?id=1cd2BIBDdgysKE4UhYWB4qrMTQjfEbjek&quot; alt=&quot;고급을 클릭하면 '공유 설정'이라는 박스로 바뀐다.&quot; title=&quot;구글 드라이브에서 폴더를 공개하기 위한 설정: 공유 설정 이전&quot; /&gt;
     &lt;figcaption&gt;고급을 클릭하면 '공유 설정'이라는 박스로 바뀐다.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -102,7 +102,7 @@ github, dropbox, AWS S3 모두 저장 공간 또는 발생된 트래픽에 따�
 어쨌든 &lt;strong&gt;변경&lt;/strong&gt;을 클릭한다.&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img src=&quot;https://drive.google.com/uc?id=1z_xnG0URc3ks5b_P59urBpvj9q1pNCVk&quot; alt=&quot;이어서 뜨는 '링크 공유' 상자에서는 가장 위의 항목을 선택한다.&quot; title=&quot; 구글 드라이브에서 폴더를 공개하기 위한 설정: 링크 공유&quot; /&gt;
+    &lt;img src=&quot;https://drive.google.com/uc?id=1z_xnG0URc3ks5b_P59urBpvj9q1pNCVk&quot; alt=&quot;이어서 뜨는 '링크 공유' 상자에서는 가장 위의 항목을 선택한다.&quot; title=&quot;구글 드라이브에서 폴더를 공개하기 위한 설정: 링크 공유&quot; /&gt;
     &lt;figcaption&gt;이어서 뜨는 '링크 공유' 상자에서는 가장 위의 항목을 선택한다.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -116,7 +116,7 @@ github, dropbox, AWS S3 모두 저장 공간 또는 발생된 트래픽에 따�
 &lt;strong&gt;웹에 공개 - 인터넷의 모든 사용자가 찾아서 볼 수 있습니다.&lt;/strong&gt;라는 제목으로 변경되었다.&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img src=&quot;https://drive.google.com/uc?id=1vbJKJOPyoyaKccZ2OT3BTxHJvmKNcT5D&quot; alt=&quot;다시 '공유 설정' 상자로 돌아왔는데 액세스 권한이 설정이 바뀌어 있음을 알 수 있다.&quot; title=&quot; 구글 드라이브에서 폴더를 공개하기 위한 설정: 공유 설정 이후&quot; /&gt;
+    &lt;img src=&quot;https://drive.google.com/uc?id=1vbJKJOPyoyaKccZ2OT3BTxHJvmKNcT5D&quot; alt=&quot;다시 '공유 설정' 상자로 돌아왔는데 액세스 권한이 설정이 바뀌어 있음을 알 수 있다.&quot; title=&quot;구글 드라이브에서 폴더를 공개하기 위한 설정: 공유 설정 이후&quot; /&gt;
     &lt;figcaption&gt;다시 '공유 설정' 상자로 돌아왔는데 액세스 권한이 설정이 바뀌어 있음을 알 수 있다.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -132,7 +132,7 @@ github, dropbox, AWS S3 모두 저장 공간 또는 발생된 트래픽에 따�
 그렇게 했더니 아래와 같이 제대로 업로드가 되었다.&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img src=&quot;https://drive.google.com/uc?id=1aBXdG0NnnmwX0iPfW5nhyXa1w89M6wmq&quot; alt=&quot;공유 설정을 마치고 이미지 파일을 올린 모습이다.&quot; title=&quot; 구글 드라이브에 이미지 파일을 업로드한 모습&quot; /&gt;
+    &lt;img src=&quot;https://drive.google.com/uc?id=1aBXdG0NnnmwX0iPfW5nhyXa1w89M6wmq&quot; alt=&quot;공유 설정을 마치고 이미지 파일을 올린 모습이다.&quot; title=&quot;구글 드라이브에 이미지 파일을 업로드한 모습&quot; /&gt;
     &lt;figcaption&gt;공유 설정을 마치고 이미지 파일을 올린 모습이다.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -141,7 +141,7 @@ github, dropbox, AWS S3 모두 저장 공간 또는 발생된 트래픽에 따�
 그러면 이미지 파일 아래에 아래와 같은 툴팁 상자가 생김과 동시에 이미지의 주소가 자동으로 클립보드에 복사된다.&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img src=&quot;https://drive.google.com/uc?id=1z-h2twkk8xEq9oF60CXr-yD0EYLbKFrH&quot; alt=&quot;&quot; title=&quot; &quot; /&gt;
+    &lt;img src=&quot;https://drive.google.com/uc?id=1z-h2twkk8xEq9oF60CXr-yD0EYLbKFrH&quot; alt=&quot;&quot; title=&quot;&quot; /&gt;
     &lt;figcaption&gt;&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -154,7 +154,7 @@ github, dropbox, AWS S3 모두 저장 공간 또는 발생된 트래픽에 따�
 아래 그림에서 이미지를 그대로 보여주는 것이 아니라 위와 아래에 별도의 컨트롤러가 있는 것을 볼 수 있다.&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img src=&quot;https://drive.google.com/uc?id=1FSNA_H16E5yAKI21s6_j5e8JtQGHnj0y&quot; alt=&quot;클립보드에 복사된 주소를 그대로 입력하면 구글 드라이브의 자체 뷰어를 통해 이미지가 보인다.&quot; title=&quot; 구글 드라이브의 이미지 뷰어&quot; /&gt;
+    &lt;img src=&quot;https://drive.google.com/uc?id=1FSNA_H16E5yAKI21s6_j5e8JtQGHnj0y&quot; alt=&quot;클립보드에 복사된 주소를 그대로 입력하면 구글 드라이브의 자체 뷰어를 통해 이미지가 보인다.&quot; title=&quot;구글 드라이브의 이미지 뷰어&quot; /&gt;
     &lt;figcaption&gt;클립보드에 복사된 주소를 그대로 입력하면 구글 드라이브의 자체 뷰어를 통해 이미지가 보인다.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -224,7 +224,7 @@ git push origin master
 &lt;p&gt;Github repository를 확인해보면 아래와 같다.&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img src=&quot;https://drive.google.com/uc?id=1cHkHmPgvvGWPW3Ko4K3Bfqfjm9AMd4jG&quot; alt=&quot;웹에서 repository에 들어가 보면 index.html 파일이 정상적으로 commit된 것을 확인할 수 있다.&quot; title=&quot; index.html 파일만 commit한 후의 repository&quot; /&gt;
+    &lt;img src=&quot;https://drive.google.com/uc?id=1cHkHmPgvvGWPW3Ko4K3Bfqfjm9AMd4jG&quot; alt=&quot;웹에서 repository에 들어가 보면 index.html 파일이 정상적으로 commit된 것을 확인할 수 있다.&quot; title=&quot;index.html 파일만 commit한 후의 repository&quot; /&gt;
     &lt;figcaption&gt;웹에서 repository에 들어가 보면 index.html 파일이 정상적으로 commit된 것을 확인할 수 있다.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -235,7 +235,7 @@ git push origin master
 잠시 후 주소를 찾아 들어와보니 이렇게 출력된다.&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img src=&quot;https://drive.google.com/uc?id=1Pg_rxdlWfYV0hW3kLDlznJ427Djl-7t3&quot; alt=&quot;index.html 파일만 올리면 웹브라우저에는 볼품없이 표현된다.&quot; title=&quot; index.html만 올렸을 때 웹브라우저에 표현되는 화면&quot; /&gt;
+    &lt;img src=&quot;https://drive.google.com/uc?id=1Pg_rxdlWfYV0hW3kLDlznJ427Djl-7t3&quot; alt=&quot;index.html 파일만 올리면 웹브라우저에는 볼품없이 표현된다.&quot; title=&quot;index.html만 올렸을 때 웹브라우저에 표현되는 화면&quot; /&gt;
     &lt;figcaption&gt;index.html 파일만 올리면 웹브라우저에는 볼품없이 표현된다.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -251,7 +251,7 @@ git push origin master
 &lt;p&gt;잠시 후 확인해보니 이렇게 표시된다.&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img src=&quot;https://drive.google.com/uc?id=1AX1AeAf128dXraPhdHhRBPzk89iJ8zvw&quot; alt=&quot;site 폴더의 모든 파일을 올리고 Internet Explorer로 보면 그나마 아까보다는 나아진다.&quot; title=&quot; Jekyll을 build한 후 site 폴더의 모든 파일을 올린 뒤 Internet Explorer에 표현되는 첫 페이지&quot; /&gt;
+    &lt;img src=&quot;https://drive.google.com/uc?id=1AX1AeAf128dXraPhdHhRBPzk89iJ8zvw&quot; alt=&quot;site 폴더의 모든 파일을 올리고 Internet Explorer로 보면 그나마 아까보다는 나아진다.&quot; title=&quot;Jekyll을 build한 후 site 폴더의 모든 파일을 올린 뒤 Internet Explorer에 표현되는 첫 페이지&quot; /&gt;
     &lt;figcaption&gt;site 폴더의 모든 파일을 올리고 Internet Explorer로 보면 그나마 아까보다는 나아진다.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -263,7 +263,7 @@ Internet Explorer 11에서 보면 레이아웃이 위 그림처럼 약간 깨진
 Chrome에서 보면 아래 그림처럼 잘 보인다.&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img src=&quot;https://drive.google.com/uc?id=1ntd-LqbNo9iYocR72T8HBrTEfHOy7Me9&quot; alt=&quot;Jekyll의 기본 테마를 Chrome에 띄우고 보면 훨씬 낫다.&quot; title=&quot; Jekyll을 build한 후 site 폴더의 모든 파일을 올린 뒤 Chrome에서 보았을 때의 첫 페이지&quot; /&gt;
+    &lt;img src=&quot;https://drive.google.com/uc?id=1ntd-LqbNo9iYocR72T8HBrTEfHOy7Me9&quot; alt=&quot;Jekyll의 기본 테마를 Chrome에 띄우고 보면 훨씬 낫다.&quot; title=&quot;Jekyll을 build한 후 site 폴더의 모든 파일을 올린 뒤 Chrome에서 보았을 때의 첫 페이지&quot; /&gt;
     &lt;figcaption&gt;Jekyll의 기본 테마를 Chrome에 띄우고 보면 훨씬 낫다.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -286,7 +286,7 @@ EC2에 linux instance를 만들고 거기서 설치하면 되지 않을까? 하�
 &lt;p&gt;EC2를 만들 때 기존의 AMI를 기반으로 만들 수 있는데, 이 때 나오는 메뉴는 아래와 같다.&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img src=&quot;https://drive.google.com/uc?id=1ZphU8Wf-YG5Cv9rXbAvfwa1JYgnHjxcE&quot; alt=&quot;Amazon EC2를 생성할 때 이미 만들어진 템플릿인 AMI를 선택할 수 있다.&quot; title=&quot; Amazon EC2 AMI의 목록&quot; /&gt;
+    &lt;img src=&quot;https://drive.google.com/uc?id=1ZphU8Wf-YG5Cv9rXbAvfwa1JYgnHjxcE&quot; alt=&quot;Amazon EC2를 생성할 때 이미 만들어진 템플릿인 AMI를 선택할 수 있다.&quot; title=&quot;Amazon EC2 AMI의 목록&quot; /&gt;
     &lt;figcaption&gt;Amazon EC2를 생성할 때 이미 만들어진 템플릿인 AMI를 선택할 수 있다.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -500,7 +500,7 @@ Jekyll의 설치는 &lt;a href=&quot;https://jekyllrb.com/docs/&quot;&gt;Jekyll 
 &lt;p&gt;Cygwin 설치 파일을 실행하면 package list가 아래처럼 주르륵 나온다.&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img src=&quot;https://drive.google.com/uc?id=1Txs5i_3Vq_l8MLrLnJkvnneiYkHlYDvy&quot; alt=&quot;Cygwin 설치 과정에서 package list를 만나게 된다.&quot; title=&quot; Cygwin 설치 과정의 package list&quot; /&gt;
+    &lt;img src=&quot;https://drive.google.com/uc?id=1Txs5i_3Vq_l8MLrLnJkvnneiYkHlYDvy&quot; alt=&quot;Cygwin 설치 과정에서 package list를 만나게 된다.&quot; title=&quot;Cygwin 설치 과정의 package list&quot; /&gt;
     &lt;figcaption&gt;Cygwin 설치 과정에서 package list를 만나게 된다.&lt;/figcaption&gt;
 &lt;/figure&gt;
 

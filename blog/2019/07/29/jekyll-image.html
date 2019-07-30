@@ -89,8 +89,7 @@
 
 <h1 id="조각파일로-이미지-첨부를-간단하게">조각파일로 이미지 첨부를 간단하게</h1>
 <p><a href="http://jekyllrb-ko.github.io/docs/includes/">Jekyll 공식 문서</a>에 나온 조각파일의 설명에 따르면 조각파일이란 <strong>반복되는 코드를 미리 정의하고 markdown에서 이를 함수 호출하듯이 이용하는 방법</strong>인 것 같다.
-위 Jekyll 문서를 보면 조각파일을 이용해서 이미지 첨부를 쉽게 하는 방법도 있다.
-아래와 같은 예제가 소개되어 있다.</p>
+위 문서를 보면 조각파일을 이용해서 이미지 첨부를 쉽게 하는 방법으로 아래와 같은 예제가 소개되어 있다.</p>
 
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;figure&gt;</span>
    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{ include.url }}"</span><span class="nt">&gt;</span>
@@ -103,7 +102,7 @@
 코드를 그대로 써도 무방하지만 나는 이 방법을 참고해서 아래와 같이 <code class="highlighter-rouge">_includes</code> 디렉토리에 <code class="highlighter-rouge">i-g.html</code> 파일을 만들었다.</p>
 
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;figure&gt;</span>
-    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://drive.google.com/uc?id={{ include.id }}"</span> <span class="na">alt=</span><span class="s">"{{ include.alt }}"</span> <span class="na">title=</span><span class="s">" {{ include.title }}"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://drive.google.com/uc?id={{ include.id }}"</span> <span class="na">alt=</span><span class="s">"{{ include.alt }}"</span> <span class="na">title=</span><span class="s">"{{ include.title }}"</span><span class="nt">/&gt;</span>
     <span class="nt">&lt;figcaption&gt;</span>{{ include.alt }}<span class="nt">&lt;/figcaption&gt;</span>
 <span class="nt">&lt;/figure&gt;</span>
 </code></pre></div></div>
