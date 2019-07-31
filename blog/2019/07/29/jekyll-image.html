@@ -113,29 +113,34 @@
 
 <p>예제 파일에서 내가 수정한 사항들은 아래와 같다.</p>
 <ul>
-  <li>가장 먼저 이미지의 주소 부분을 수정했다.</li>
-  <li><code class="highlighter-rouge">i-g.html</code> 조각파일 안에 <code class="highlighter-rouge">https://drive.google.com/uc?id=</code> 부분까지 hard coding 으로 박아넣고 그 뒷 부분만 파라미터화하였다.</li>
-  <li>이렇게 하면 내가 처음에 의도한 대로 <code class="highlighter-rouge">open</code>과 <code class="highlighter-rouge">uc</code>를 바꾸어 주는 작업을 대체할 수 있을 뿐 아니라 중복되는 코드를 아예 조각파일 안으로 넣어버릴 수 있어서 깔끔해진다.</li>
-  <li>Markdown에서 <code class="highlighter-rouge">i-g.html</code>을 호출할 때 구글 드라이브에서 따온 이미지 주소의 뒷부분인 id 속성만 <code class="highlighter-rouge">id</code> 파라미터의 값으로 넣어 주면 된다.</li>
+  <li>가장 먼저 이미지의 주소 부분을 수정했다.
+    <ul>
+      <li><code class="highlighter-rouge">i-g.html</code> 조각파일 안에 <code class="highlighter-rouge">https://drive.google.com/uc?id=</code> 부분까지 hard coding 으로 박아넣고 그 뒷 부분만 파라미터화하였다.</li>
+      <li>이렇게 하면 내가 처음에 의도한 대로 <code class="highlighter-rouge">open</code>과 <code class="highlighter-rouge">uc</code>를 바꾸어 주는 작업을 대체할 수 있을 뿐 아니라 중복되는 코드를 아예 조각파일 안으로 넣어버릴 수 있어서 깔끔해진다.</li>
+      <li>Markdown에서 <code class="highlighter-rouge">i-g.html</code>을 include 시킬 때는 구글 드라이브에서 따온 이미지 주소의 뒷부분인 id 속성만 <code class="highlighter-rouge">id</code> 파라미터의 값으로 넣어 주면 된다.</li>
+    </ul>
+  </li>
   <li>그리고 나는 이미지에 링크를 걸 필요가 없으므로 <code class="highlighter-rouge">a</code> 태그와 <code class="highlighter-rouge">url</code> 파라미터를 삭제했다.
 (만약에 필요한 일이 생기면 이 조각파일을 쓰지 못할 것 같은데… 그건 그 때 다시 생각하기로 하자.)</li>
   <li><code class="highlighter-rouge">max-width</code> 속성도 굳이 필요하지 않을 것 같아서 삭제했다.</li>
   <li>이미지의 캡션 따로, 대체 텍스트 따로 써 주기 귀찮을 것 같았다. 그래서 캡션과 대체 텍스트가 동일하게 표시되게 하기 위해 <code class="highlighter-rouge">figcaption</code> 태그 안에 있었던 <code class="highlighter-rouge">caption</code> 대신 <code class="highlighter-rouge">alt</code>를 넣어주었다.</li>
-  <li>대신 이미지의 title 속성을 추가하였다. Title은 대체 텍스트나 캡션과는 달리 간단한 키워드 중심으로 이미지의 제목을 지정해 주기 위해 추가했다.</li>
+  <li>대신 이미지의 title 속성을 추가하였다. Title은 대체 텍스트나 캡션과는 다르게 간단한 키워드 중심으로 이미지의 제목을 지정해 주기 위해 추가했다.</li>
 </ul>
 
 <p>위와 같이 <code class="highlighter-rouge">i-g.html</code> 파일을 작성했다면 이미지 파일을 첨부하려는 곳에는 아래와 같이 입력한다.</p>
 
-<div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% include i-g.html id="1L6TXwRoq0KKBREIrG385ckS33_K3YUxe" alt="하늘과 Grand Canyon이 만나는 드넓은 곳에서 앞으로 열릴 탁 트인 미래를 상상하자." title="Grand Canyon 같은 내 미래" %}
+<div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% include i-g.html id="1L6TXwRoq0KKBREIrG385ckS33_K3YUxe" alt="하늘과 Grand Canyon이 만나는 드넓은 곳에서 앞으로 열릴 탁 트인 미래를 상상하자." title="시원하게 열릴 내 미래" %}
 </code></pre></div></div>
 
-<p>조금 길어 보이지만 사실 내용은 간단하다.
-<code class="highlighter-rouge">i-g.html</code>을 <code class="highlighter-rouge">include</code>한다는 것이고 그것을 위해 넘겨주는 파라미터는 <code class="highlighter-rouge">id</code>, <code class="highlighter-rouge">alt</code>, <code class="highlighter-rouge">title</code> 이 세 개가 끝이다.</p>
+<p>조금 길어서 복잡해 보이지만 사실 내용은 간단하다.
+<code class="highlighter-rouge">i-g.html</code> 조각파일을 <code class="highlighter-rouge">include</code>한다는 것이고 그것을 위해 넘겨주는 파라미터는 <code class="highlighter-rouge">id</code>, <code class="highlighter-rouge">alt</code>, <code class="highlighter-rouge">title</code> 이 세 개가 끝이다.</p>
 
 <p>어쨌든 위와 같은 markdown을 추가하면 생성되는 html 문서에는 아래와 같은 html 코드가 생긴다.</p>
 
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;figure&gt;</span>
-    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://drive.google.com/uc?id=1L6TXwRoq0KKBREIrG385ckS33_K3YUxe"</span> <span class="na">alt=</span><span class="s">"하늘과 Grand Canyon이 만나는 드넓은 곳에서 앞으로 열릴 탁 트인 미래를 상상하자."</span> <span class="na">title=</span><span class="s">"Grand Canyon 같은 내 미래"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://drive.google.com/uc?id=1L6TXwRoq0KKBREIrG385ckS33_K3YUxe"</span>
+         <span class="na">alt=</span><span class="s">"하늘과 Grand Canyon이 만나는 드넓은 곳에서 앞으로 열릴 탁 트인 미래를 상상하자."</span>
+         <span class="na">title=</span><span class="s">"시원하게 열릴 내 미래"</span><span class="nt">/&gt;</span>
     <span class="nt">&lt;figcaption&gt;</span>{{ include.alt }}<span class="nt">&lt;/figcaption&gt;</span>
 <span class="nt">&lt;/figure&gt;</span>
 </code></pre></div></div>
@@ -143,9 +148,19 @@
 <p>실제 웹페이지에 표시되는 모습은 아래와 같다.</p>
 
 <figure>
-    <img src="https://drive.google.com/uc?id=1L6TXwRoq0KKBREIrG385ckS33_K3YUxe" alt="하늘과 Grand Canyon이 만나는 드넓은 곳에서 앞으로 열릴 탁 트인 미래를 상상하자." title="Grand Canyon 같은 내 미래" />
+    <img src="https://drive.google.com/uc?id=1L6TXwRoq0KKBREIrG385ckS33_K3YUxe" alt="하늘과 Grand Canyon이 만나는 드넓은 곳에서 앞으로 열릴 탁 트인 미래를 상상하자." title="시원하게 열릴 내 미래" />
     <figcaption>하늘과 Grand Canyon이 만나는 드넓은 곳에서 앞으로 열릴 탁 트인 미래를 상상하자.</figcaption>
 </figure>
+
+<p>그림 위에 마우스 커서를 놓고 있으면 title 속성으로 지정한 문구가 툴팁으로 뜬다.
+이미지의 title 속성을 추가한 것은 SEO에 도움이 될까 싶어서였지 이 효과를 의도한 것은 아니다.
+하지만 어쨌든 이렇게 title 속성이 뜨는 것도 괜찮은 것 같다.</p>
+
+<p>P.S.
+실제 내가 작성한 조각파일에서는 <code class="highlighter-rouge">img</code> 태그 안에 줄바꿈을 넣지 않았다.
+이 포스팅을 작성하면서 코드가 좌우로 너무 길어져서 가독성을 해치는 것을 방지하기 위해 줄바꿈을 추가한 것이다.
+그래서 위의 code block에서는 <code class="highlighter-rouge">src</code>, <code class="highlighter-rouge">alt</code>, <code class="highlighter-rouge">title</code> 속성별로 한 행씩 차지하고 있다.
+이 포스팅의 소스를 확인하면 실제로 줄바꿈이 들어가 있지 않음을 알 수 있다.</p>
 
 
   </div><a class="u-url" href="/blog/2019/07/29/jekyll-image" hidden></a>
