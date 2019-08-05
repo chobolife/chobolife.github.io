@@ -1,15 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-08-05T14:04:51+09:00</updated><id>/feed.xml</id><title type="html">우당탕탕 초보라이프</title><subtitle>An amazing website.</subtitle><author><name>Your Name</name></author><entry><title type="html">EC2에서 S3에 접근하는 방법</title><link href="/blog/2019/08/04/ec2-s3-authority/" rel="alternate" type="text/html" title="EC2에서 S3에 접근하는 방법" /><published>2019-08-04T15:15:00+09:00</published><updated>2019-08-04T15:15:00+09:00</updated><id>/blog/2019/08/04/ec2-s3-authority</id><content type="html" xml:base="/blog/2019/08/04/ec2-s3-authority/">&lt;aside class=&quot;sidebar__right&quot;&gt;
-&lt;nav class=&quot;toc&quot;&gt;
-    &lt;header&gt;&lt;h4 class=&quot;nav__title&quot;&gt;&lt;i class=&quot;fas fa-file-alt&quot;&gt;&lt;/i&gt; On this page&lt;/h4&gt;&lt;/header&gt;
-&lt;ul class=&quot;toc__menu&quot; id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#jekyll-블로그의-초안을-aws-s3에-업로드&quot; id=&quot;markdown-toc-jekyll-블로그의-초안을-aws-s3에-업로드&quot;&gt;Jekyll 블로그의 초안을 AWS S3에 업로드&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#ubuntu에-aws-cli-설치&quot; id=&quot;markdown-toc-ubuntu에-aws-cli-설치&quot;&gt;Ubuntu에 AWS CLI 설치&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#ec2-instance에서-s3-접근을-위한-iam-설정하기&quot; id=&quot;markdown-toc-ec2-instance에서-s3-접근을-위한-iam-설정하기&quot;&gt;EC2 instance에서 S3 접근을 위한 IAM 설정하기&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#jekyll-폴더를-s3에-올리기&quot; id=&quot;markdown-toc-jekyll-폴더를-s3에-올리기&quot;&gt;Jekyll 폴더를 S3에 올리기&lt;/a&gt;&lt;/li&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-08-05T14:09:44+09:00</updated><id>/feed.xml</id><title type="html">우당탕탕 초보라이프</title><subtitle>An amazing website.</subtitle><author><name>Your Name</name></author><entry><title type="html">EC2에서 S3에 접근하는 방법</title><link href="/blog/2019/08/04/ec2-s3-authority/" rel="alternate" type="text/html" title="EC2에서 S3에 접근하는 방법" /><published>2019-08-04T15:15:00+09:00</published><updated>2019-08-04T15:15:00+09:00</updated><id>/blog/2019/08/04/ec2-s3-authority</id><content type="html" xml:base="/blog/2019/08/04/ec2-s3-authority/">&lt;ul id=&quot;my_toc&quot; class=&quot;inline_toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Your Name&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-  &lt;/nav&gt;
-&lt;/aside&gt;
 
 &lt;h1 id=&quot;jekyll-블로그의-초안을-aws-s3에-업로드&quot;&gt;Jekyll 블로그의 초안을 AWS S3에 업로드&lt;/h1&gt;
 &lt;p&gt;이전 포스팅(&lt;a href=&quot;/blog/2019/08/01/jekyll-draft/&quot;&gt;Jekyll 초안 관리에 대한 고민&lt;/a&gt;)에서 했던 고민의 결론은 _‘Jekyll 블로그의 초안을 github page에 commit하기 전에 AWS S3에 업로드해서 나만 먼저 확인해보겠다’_는 것이었다.
@@ -308,7 +299,7 @@ upload: _site/assets/main.css to s3://chobolife-draft/assets/main.css
 
 &lt;p&gt;이렇게 하면 내가 처음에 의도했던 모든 작업은 끝이 났다.
 Jekyll의 초안을 웹브라우저에서 확인해 보고 싶었는데, 이를 S3를 통해 실현하였다.
-이제 작성하던 초안이 웹에 공개되지 않아도 되고, 사소한 수정사항에도 git의 로그가 더럽혀지는 것을 막을 수 있게 되었다.&lt;/p&gt;</content><author><name>Your Name</name></author><summary type="html">On this page</summary></entry><entry><title type="html">Jekyll 초안 관리에 대한 고민</title><link href="/blog/2019/08/01/jekyll-draft/" rel="alternate" type="text/html" title="Jekyll 초안 관리에 대한 고민" /><published>2019-08-01T22:35:00+09:00</published><updated>2019-08-01T22:35:00+09:00</updated><id>/blog/2019/08/01/jekyll-draft</id><content type="html" xml:base="/blog/2019/08/01/jekyll-draft/">&lt;h1 id=&quot;문제의식&quot;&gt;문제의식&lt;/h1&gt;
+이제 작성하던 초안이 웹에 공개되지 않아도 되고, 사소한 수정사항에도 git의 로그가 더럽혀지는 것을 막을 수 있게 되었다.&lt;/p&gt;</content><author><name>Your Name</name></author><summary type="html"></summary></entry><entry><title type="html">Jekyll 초안 관리에 대한 고민</title><link href="/blog/2019/08/01/jekyll-draft/" rel="alternate" type="text/html" title="Jekyll 초안 관리에 대한 고민" /><published>2019-08-01T22:35:00+09:00</published><updated>2019-08-01T22:35:00+09:00</updated><id>/blog/2019/08/01/jekyll-draft</id><content type="html" xml:base="/blog/2019/08/01/jekyll-draft/">&lt;h1 id=&quot;문제의식&quot;&gt;문제의식&lt;/h1&gt;
 &lt;p&gt;Jekyll을 이용한 블로깅은 그 자체로 재미가 있었다.
 게다가 포스팅이 쉽기까지 했다.
 (일단 Jekyll을 설치할 때까지는 약간 험난했지만 말이다.)
