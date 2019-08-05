@@ -35,7 +35,7 @@ var store = [{
         "url": "/blog/2019/08/01/jekyll-draft/",
         "teaser":null},{
         "title": "EC2에서 S3에 접근하는 방법",
-        "excerpt":"Jekyll 블로그의 초안을 AWS S3에 업로드 이전 포스팅(Jekyll 초안 관리에 대한 고민)에서 했던 고민의 결론은 _‘Jekyll 블로그의 초안을 github page에 commit하기 전에 AWS S3에 업로드해서 나만 먼저 확인해보겠다’_는 것이었다. 그리고 그것을 위해 약간의 삽질을 했지만 결국 AWS CLI를 이용하여 ubuntu에서 S3에 업로드하는 방법을 찾았다. 이번 포스팅에서는 그 방법을 정리해 두려고...","categories": ["블로그"],
+        "excerpt":"On this page Jekyll 블로그의 초안을 AWS S3에 업로드 Ubuntu에 AWS CLI 설치 EC2 instance에서 S3 접근을 위한 IAM 설정하기 Jekyll 폴더를 S3에 올리기 Jekyll 블로그의 초안을 AWS S3에 업로드 이전 포스팅(Jekyll 초안 관리에 대한 고민)에서 했던 고민의 결론은 _‘Jekyll 블로그의 초안을 github page에 commit하기 전에 AWS S3에 업로드해서 나만...","categories": ["블로그"],
         "tags": [],
         "url": "/blog/2019/08/04/ec2-s3-authority/",
         "teaser":null}]
