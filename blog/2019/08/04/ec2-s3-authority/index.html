@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>EC2에서 S3에 접근하는 방법 - 우당탕탕 초보라이프</title>
-<meta name="description" content="Jekyll 블로그의 초안을 AWS S3에 업로드이전 포스팅(Jekyll 초안 관리에 대한 고민)에서 했던 고민의 결론은 ‘Jekyll 블로그의 초안을 github page에 commit하기 전에 AWS S3에 업로드해서 나만 먼저 확인해보겠다’는 것이었다.그리고 그것을 위해 약간의 삽질을 했지만 결국 AWS CLI를 이용하여 ubuntu에서 S3에 업로드하는 방법을 찾았다.이번 포스팅에서는 그 방법을 정리해 두려고 한다.">
+<meta name="description" content="약간의 삽질을 했지만 결국 AWS CLI를 이용하여 ubuntu에서 S3에 업로드하는 방법을 찾았다.이번 포스팅에서는 그 방법을 정리해 두려고 한다.">
 
 
 
@@ -21,7 +21,7 @@
 <meta property="og:url" content="/blog/2019/08/04/ec2-s3-authority/">
 
 
-  <meta property="og:description" content="Jekyll 블로그의 초안을 AWS S3에 업로드이전 포스팅(Jekyll 초안 관리에 대한 고민)에서 했던 고민의 결론은 ‘Jekyll 블로그의 초안을 github page에 commit하기 전에 AWS S3에 업로드해서 나만 먼저 확인해보겠다’는 것이었다.그리고 그것을 위해 약간의 삽질을 했지만 결국 AWS CLI를 이용하여 ubuntu에서 S3에 업로드하는 방법을 찾았다.이번 포스팅에서는 그 방법을 정리해 두려고 한다.">
+  <meta property="og:description" content="약간의 삽질을 했지만 결국 AWS CLI를 이용하여 ubuntu에서 S3에 업로드하는 방법을 찾았다.이번 포스팅에서는 그 방법을 정리해 두려고 한다.">
 
 
 
@@ -259,25 +259,19 @@
     
       <h1 id="page-title" class="page__title">EC2에서 S3에 접근하는 방법</h1>
     
-    <ul id="my_toc" class="toc">
-  <li><a href="#jekyll-블로그의-초안을-aws-s3에-업로드">Jekyll 블로그의 초안을 AWS S3에 업로드</a></li>
-  <li><a href="#ubuntu에-aws-cli-설치">Ubuntu에 AWS CLI 설치</a></li>
-  <li><a href="#ec2-instance에서-s3-접근을-위한-iam-설정하기">EC2 instance에서 S3 접근을 위한 IAM 설정하기</a></li>
-  <li><a href="#jekyll-폴더를-s3에-올리기">Jekyll 폴더를 S3에 올리기</a></li>
-</ul>
-
-<h1 id="jekyll-블로그의-초안을-aws-s3에-업로드">Jekyll 블로그의 초안을 AWS S3에 업로드</h1>
-<p>이전 포스팅(<a href="/blog/2019/08/01/jekyll-draft/">Jekyll 초안 관리에 대한 고민</a>)에서 했던 고민의 결론은 <em>‘Jekyll 블로그의 초안을 github page에 commit하기 전에 AWS S3에 업로드해서 나만 먼저 확인해보겠다’</em>는 것이었다.
-그리고 그것을 위해 약간의 삽질을 했지만 결국 AWS CLI를 이용하여 ubuntu에서 S3에 업로드하는 방법을 찾았다.
+    <p>약간의 삽질을 했지만 결국 AWS CLI를 이용하여 ubuntu에서 S3에 업로드하는 방법을 찾았다.
 이번 포스팅에서는 그 방법을 정리해 두려고 한다.</p>
 
-<p>참고로 Jekyll 블로그를 S3에서 호스팅하는 것이 목적이라면 <code class="highlighter-rouge">s3_website</code>라는 package로 아주 쉽게 할 수 있다.
-하지만 지금 나는 Jekyll에서 생성한 블로그를 github pages에 호스팅하고 있으며, S3에는 초안 또는 수정사항만 공개하기 전에 내가 확인하려는 것이 목적이다.
+<h2 id="jekyll-블로그의-초안을-aws-s3에-업로드">Jekyll 블로그의 초안을 AWS S3에 업로드</h2>
+<p>이전 포스팅(<a href="/blog/2019/08/01/jekyll-draft/">Jekyll 초안 관리에 대한 고민</a>)에서 했던 고민의 결론은 <em>‘Jekyll 블로그의 초안을 github page에 commit하기 전에 AWS S3에 업로드해서 나만 먼저 확인해보겠다’</em>는 것이었다.
+참고로 Jekyll 블로그를 S3에서 호스팅하는 것이 목적이라면 <code class="highlighter-rouge">s3_website</code>라는 package로 아주 쉽게 할 수 있다.</p>
+
+<p>하지만 지금 나는 Jekyll에서 생성한 블로그를 github pages에 호스팅하고 있으며, S3에는 초안 또는 수정사항만 공개하기 전에 내가 확인하려는 것이 목적이다.
 그래서 <code class="highlighter-rouge">_site</code> 디렉토리 밑에 <code class="highlighter-rouge">.git</code> 디렉토리가 있고, 여기에는 꽤 많은 폴더와 파일이 있는 상태이다.
 이 상태에서 <code class="highlighter-rouge">s3_website</code>를 이용해서 S3 버킷에 올리면 <code class="highlighter-rouge">.git</code> 폴더에 있는 모든 폴더와 파일도 업로드되는데, 이는 S3에 상당한 용량을 차지할 뿐 아니라 많은 수의 PUT request를 발생시키게 된다.
 그래서 나는 <code class="highlighter-rouge">s3_website</code>를 사용하지 않고 아래와 같이 awscli를 사용하는 것이다.</p>
 
-<h1 id="ubuntu에-aws-cli-설치">Ubuntu에 AWS CLI 설치</h1>
+<h2 id="ubuntu에-aws-cli-설치">Ubuntu에 AWS CLI 설치</h2>
 <p>가장 먼저 해야 할 일은 ubuntu에 AWS CLI를 설치하는 것이다.
 <a href="https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/cli-chap-install.html">Amazon docs</a>를 참고하면, <strong>사전 요구 사항</strong>으로 Python을 설치해야 한다고 한다.
 먼저 <code class="highlighter-rouge">python --version</code> 또는 <code class="highlighter-rouge">python3 --version</code>을 실행하여 파이썬이 설치되어 있는지 확인해 보고, 설치되어 있지 않다면 아래의 명령으로 파이썬을 설치하면 된다.</p>
@@ -370,7 +364,7 @@ aws-cli/1.16.209 Python/3.6.8 Linux/4.15.0-1044-aws botocore/1.12.199
 <p>방금 설치한 awscli의 버전을 출력하는 것인데 잘 실행된다.
 정상적으로 설치된 것을 알 수 있다.</p>
 
-<h1 id="ec2-instance에서-s3-접근을-위한-iam-설정하기">EC2 instance에서 S3 접근을 위한 IAM 설정하기</h1>
+<h2 id="ec2-instance에서-s3-접근을-위한-iam-설정하기">EC2 instance에서 S3 접근을 위한 IAM 설정하기</h2>
 <p>위와 같이 awscli를 설치해 주고 나면 이제는 현재 사용 중인 EC2 instance에서 S3에 접근할 수 있도록 IAM 설정을 해 주어야 한다.
 awscli를 설치했다고 해서 아무나 내 S3 버킷에 접근하면 안 되므로 당연히 필요한 절차다.
 사실 이번 포스팅에서 가장 중요한 절차가 아닐까 생각한다.</p>
@@ -497,7 +491,7 @@ upload: ./test.txt to s3://chobolife-test/test.txt
 아마 <code class="highlighter-rouge">aws s3 mb</code> 명령으로 버킷을 생성하면서 리전을 지정하는 방법이 있을 것 같은데, 지정하지 않으면 임의의 리전에 생성되는 것 같다.
 어쨌든 이렇게 EC2 instance에서 ubuntu 터미널에서 S3에 접근할 수 있다는 점은 확인하였다.</p>
 
-<h1 id="jekyll-폴더를-s3에-올리기">Jekyll 폴더를 S3에 올리기</h1>
+<h2 id="jekyll-폴더를-s3에-올리기">Jekyll 폴더를 S3에 올리기</h2>
 <p>이제 마지막 단계에 왔다.
 터미널에서 S3에 접근할 수 있는 package도 설치했고, EC2 instance에서 S3에 접근할 수 있는 권한도 얻었다.
 이제는 Jekyll에서 만든 사이트를 S3에 올리는 일만 남았다.</p>
@@ -606,9 +600,10 @@ Jekyll의 초안을 웹브라우저에서 확인해 보고 싶었는데, 이를 
   8 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">Jekyll 블로그의 초안을 AWS S3에 업로드
-이전 포스팅(Jekyll 초안 관리에 대한 고민)에서 했던 고민의 결론은 ‘Jekyll 블로그의 초안을 github page에 commit하기 전에 AWS S3에 업로드해서 나만 먼저 확인해보겠다’는 것이었다.
-그리고 그것을 위해 ...</p>
+    <p class="archive__item-excerpt" itemprop="description">약간의 삽질을 했지만 결국 AWS CLI를 이용하여 ubuntu에서 S3에 업로드하는 방법을 찾았다.
+이번 포스팅에서는 그 방법을 정리해 두려고 한다.
+
+</p>
   </article>
 </div>
 
@@ -635,12 +630,9 @@ Jekyll의 초안을 웹브라우저에서 확인해 보고 싶었는데, 이를 
   3 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">문제의식
-Jekyll을 이용한 블로깅은 그 자체로 재미가 있었다.
+    <p class="archive__item-excerpt" itemprop="description">Jekyll을 이용한 블로깅은 그 자체로 재미가 있었다.
 게다가 포스팅이 쉽기까지 했다.
 (일단 Jekyll을 설치할 때까지는 약간 험난했지만 말이다.)
-그런데 쓰다보니 한 가지 불편한 점이 있었다.
-바로 초안을 관리하는 것이었다.
 
 </p>
   </article>
@@ -728,11 +720,10 @@ Jekyll을 이용한 블로깅은 그 자체로 재미가 있었다.
   2 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">일단 commit
-지난 포스팅 (나의 Jekyll 여행기 (2))에서 Jekyll을 설치하고 jekyll build까지 실행해 보았다.
+    <p class="archive__item-excerpt" itemprop="description">지난 포스팅 (나의 Jekyll 여행기 (2))에서 Jekyll을 설치하고 jekyll build까지 실행해 보았다.
 그리고 결과가 _site 폴더에 생성되는 것을 확인하였다.
 그러면 이제는 _site 폴더에 생긴 사이트를 웹에 올리는 일만 남았다.
-나는 gith...</p>
+나는 github hosting...</p>
   </article>
 </div>
 
@@ -759,10 +750,9 @@ Jekyll을 이용한 블로깅은 그 자체로 재미가 있었다.
   6 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">AWS에서 시도하다
-지난 포스팅 (나의 Jekyll 여행기 (1))에서 했던 실패를 뒤로 하고 나는 계속 Jekyll을 사용할 수 있는 방법을 고민했다.
+    <p class="archive__item-excerpt" itemprop="description">지난 포스팅 (나의 Jekyll 여행기 (1))에서 했던 실패를 뒤로 하고 나는 계속 Jekyll을 사용할 수 있는 방법을 고민했다.
 사실 Jekyll 홈페이지에는 Windows에서도 Jekyll을 사용할 수 있는 방법에 대해 나오기는 한다.
-하지만 공식적으로 ...</p>
+하지만 공식적으로 지원하지는 않는 플랫...</p>
   </article>
 </div>
 
@@ -789,9 +779,7 @@ Jekyll을 이용한 블로깅은 그 자체로 재미가 있었다.
   4 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">Jekyll의 시작
-블로그를 시작하려고 한다. 아마 나의 이런저런 생각들, 그리고 내가 했던 것들을 기록하기 위한 용도로 사용할 것 같다.
-그리고 나는 여러 가지 방법을 알아보고 나서, Jekyll을 사용해 보기로 했다.
+    <p class="archive__item-excerpt" itemprop="description">블로그를 시작하려고 한다. 아마 나의 이런저런 생각들, 그리고 내가 했던 것들을 기록하기 위한 용도로 사용할 것 같다.
 
 </p>
   </article>

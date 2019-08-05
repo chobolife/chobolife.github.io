@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>나의 Jekyll 여행기 (1) - 우당탕탕 초보라이프</title>
-<meta name="description" content="Jekyll의 시작블로그를 시작하려고 한다. 아마 나의 이런저런 생각들, 그리고 내가 했던 것들을 기록하기 위한 용도로 사용할 것 같다.그리고 나는 여러 가지 방법을 알아보고 나서, Jekyll을 사용해 보기로 했다.">
+<meta name="description" content="블로그를 시작하려고 한다. 아마 나의 이런저런 생각들, 그리고 내가 했던 것들을 기록하기 위한 용도로 사용할 것 같다.">
 
 
 
@@ -21,7 +21,7 @@
 <meta property="og:url" content="/blog/2019/07/26/start-jekyll-1/">
 
 
-  <meta property="og:description" content="Jekyll의 시작블로그를 시작하려고 한다. 아마 나의 이런저런 생각들, 그리고 내가 했던 것들을 기록하기 위한 용도로 사용할 것 같다.그리고 나는 여러 가지 방법을 알아보고 나서, Jekyll을 사용해 보기로 했다.">
+  <meta property="og:description" content="블로그를 시작하려고 한다. 아마 나의 이런저런 생각들, 그리고 내가 했던 것들을 기록하기 위한 용도로 사용할 것 같다.">
 
 
 
@@ -259,17 +259,11 @@
     
       <h1 id="page-title" class="page__title">나의 Jekyll 여행기 (1)</h1>
     
-    <ul id="my_toc" class="toc">
-  <li><a href="#jekyll의-시작">Jekyll의 시작</a></li>
-  <li><a href="#jekyll-설치-그리고-첫-번째-실패">Jekyll 설치, 그리고 첫 번째 실패</a></li>
-  <li><a href="#두-번째-실패">두 번째 실패</a></li>
-</ul>
+    <p>블로그를 시작하려고 한다. 아마 나의 이런저런 생각들, 그리고 내가 했던 것들을 기록하기 위한 용도로 사용할 것 같다.</p>
 
-<h1 id="jekyll의-시작">Jekyll의 시작</h1>
-<p>블로그를 시작하려고 한다. 아마 나의 이런저런 생각들, 그리고 내가 했던 것들을 기록하기 위한 용도로 사용할 것 같다.
-그리고 나는 여러 가지 방법을 알아보고 나서, Jekyll을 사용해 보기로 했다.</p>
-
-<p>일반 포털 사이트에서 제공하는 블로그는 자유도가 낮아 새로운 것을 시도해보기 어렵기 때문에 처음부터 별로 생각이 없었다.
+<h2 id="jekyll의-시작">Jekyll의 시작</h2>
+<p>나는 여러 가지 방법을 알아보고 나서, Jekyll을 사용해 보기로 했다.
+일반 포털 사이트에서 제공하는 블로그는 자유도가 낮아 새로운 것을 시도해보기 어렵기 때문에 처음부터 별로 생각이 없었다.
 그리고 다음으로 생각했던 것은 전에도 써 본 적이 있었던 설치형 워드프레스였는데, 워드프레스는 장점도 많지만 단점도 여럿 있다.
 결국 워드프레스인가… 하고 생각하면서 계속 찾아보니 Jekyll이라는 것을 통해 정적 웹사이트를 만들 수 있다는데, 이 Jekyll이 나의 호기심을 자극했다. 그래서 한 번 Jekyll을 사용해 보기로 했다.</p>
 
@@ -280,7 +274,7 @@
 
 <p>블로그를 하는 목적이랄까. 블로그를 시작하며 내가 생각한 바는 있는데 이 포스팅은 아니고 아마 다른 기회에 그것을 쓰면 좋을 것 같다.</p>
 
-<h1 id="jekyll-설치-그리고-첫-번째-실패">Jekyll 설치, 그리고 첫 번째 실패</h1>
+<h2 id="jekyll-설치-그리고-첫-번째-실패">Jekyll 설치, 그리고 첫 번째 실패</h2>
 <p>나는 Windows 환경에서 cygwin을 사용하고 있었기 때문에 여기에 Jekyll을 설치해서 사용하려고 했다.
 Jekyll의 설치는 <a href="https://jekyllrb.com/docs/">Jekyll 공식 홈페이지</a>를 참고했다.</p>
 
@@ -322,7 +316,7 @@ Cygwin에는 내가 그동안 개발해 오면서 많은 것들을 설치하고 
 Cygwin 설치에 대한 것은 조금 자세하게 다음에 포스팅할 예정이다.
 똑같은 삽질이라도 다음번에는 더 빠르게 하기 위해서 기록을 남길 필요는 있다.</p>
 
-<h1 id="두-번째-실패">두 번째 실패</h1>
+<h2 id="두-번째-실패">두 번째 실패</h2>
 <p>어쨌든, cygwin을 삭제 후 다시 설치했다.
 이번에는 cygwin 설치 파일을 실행했을 때 나오는 package list에서 설치하지 않고, cygwin에 package manager인 apt-cyg를 설치한 후 그 package manager에서 ruby를 설치해 보기로 했다.
 어차피 cygwin의 자체 package list를 통해서 설치한다면 아까와 동일하게 ruby, ruby-devel을 설치하게 될 텐데, 그러면 결과도 왠지 똑같을 것 같았기 때문이다.</p>
@@ -432,9 +426,10 @@ Done installing documentation for bundler after 16 seconds
   9 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">Jekyll 블로그의 초안을 AWS S3에 업로드
-이전 포스팅(Jekyll 초안 관리에 대한 고민)에서 했던 고민의 결론은 ‘Jekyll 블로그의 초안을 github page에 commit하기 전에 AWS S3에 업로드해서 나만 먼저 확인해보겠다’는 것이었다.
-그리고 그것을 위해 ...</p>
+    <p class="archive__item-excerpt" itemprop="description">약간의 삽질을 했지만 결국 AWS CLI를 이용하여 ubuntu에서 S3에 업로드하는 방법을 찾았다.
+이번 포스팅에서는 그 방법을 정리해 두려고 한다.
+
+</p>
   </article>
 </div>
 
@@ -461,12 +456,9 @@ Done installing documentation for bundler after 16 seconds
   3 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">문제의식
-Jekyll을 이용한 블로깅은 그 자체로 재미가 있었다.
+    <p class="archive__item-excerpt" itemprop="description">Jekyll을 이용한 블로깅은 그 자체로 재미가 있었다.
 게다가 포스팅이 쉽기까지 했다.
 (일단 Jekyll을 설치할 때까지는 약간 험난했지만 말이다.)
-그런데 쓰다보니 한 가지 불편한 점이 있었다.
-바로 초안을 관리하는 것이었다.
 
 </p>
   </article>
@@ -554,11 +546,10 @@ Jekyll을 이용한 블로깅은 그 자체로 재미가 있었다.
   2 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">일단 commit
-지난 포스팅 (나의 Jekyll 여행기 (2))에서 Jekyll을 설치하고 jekyll build까지 실행해 보았다.
+    <p class="archive__item-excerpt" itemprop="description">지난 포스팅 (나의 Jekyll 여행기 (2))에서 Jekyll을 설치하고 jekyll build까지 실행해 보았다.
 그리고 결과가 _site 폴더에 생성되는 것을 확인하였다.
 그러면 이제는 _site 폴더에 생긴 사이트를 웹에 올리는 일만 남았다.
-나는 gith...</p>
+나는 github hosting...</p>
   </article>
 </div>
 
@@ -585,10 +576,9 @@ Jekyll을 이용한 블로깅은 그 자체로 재미가 있었다.
   6 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">AWS에서 시도하다
-지난 포스팅 (나의 Jekyll 여행기 (1))에서 했던 실패를 뒤로 하고 나는 계속 Jekyll을 사용할 수 있는 방법을 고민했다.
+    <p class="archive__item-excerpt" itemprop="description">지난 포스팅 (나의 Jekyll 여행기 (1))에서 했던 실패를 뒤로 하고 나는 계속 Jekyll을 사용할 수 있는 방법을 고민했다.
 사실 Jekyll 홈페이지에는 Windows에서도 Jekyll을 사용할 수 있는 방법에 대해 나오기는 한다.
-하지만 공식적으로 ...</p>
+하지만 공식적으로 지원하지는 않는 플랫...</p>
   </article>
 </div>
 
@@ -615,9 +605,7 @@ Jekyll을 이용한 블로깅은 그 자체로 재미가 있었다.
   4 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">Jekyll의 시작
-블로그를 시작하려고 한다. 아마 나의 이런저런 생각들, 그리고 내가 했던 것들을 기록하기 위한 용도로 사용할 것 같다.
-그리고 나는 여러 가지 방법을 알아보고 나서, Jekyll을 사용해 보기로 했다.
+    <p class="archive__item-excerpt" itemprop="description">블로그를 시작하려고 한다. 아마 나의 이런저런 생각들, 그리고 내가 했던 것들을 기록하기 위한 용도로 사용할 것 같다.
 
 </p>
   </article>

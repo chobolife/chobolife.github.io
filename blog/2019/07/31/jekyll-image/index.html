@@ -259,17 +259,10 @@
     
       <h1 id="page-title" class="page__title">Jekyll post에 이미지 첨부하기</h1>
     
-    <ul id="my_toc" class="toc">
-  <li><a href="#이미지를-표현하는-markdown-기본-문법">이미지를 표현하는 markdown 기본 문법</a></li>
-  <li><a href="#쓰다보니-보이는-문제">쓰다보니 보이는 문제</a></li>
-  <li><a href="#조각파일로-이미지-첨부를-간단하게">조각파일로 이미지 첨부를 간단하게</a></li>
-  <li><a href="#알아두어야-할-점">알아두어야 할 점</a></li>
-</ul>
-
-<p><a href="/blog/2019/07/29/google-drive-image/">이전 포스팅 (Google drive에 공개 이미지 올리기)</a>에서 구글 드라이브에 이미지 파일을 올리고 공개하는 방법을 소개했다.
+    <p><a href="/blog/2019/07/29/google-drive-image/">이전 포스팅 (Google drive에 공개 이미지 올리기)</a>에서 구글 드라이브에 이미지 파일을 올리고 공개하는 방법을 소개했다.
 이번 포스팅은 그렇게 올린 이미지 파일을 Jekyll에서 웹페이지에 포함시키는 방법에 대한 포스팅이다.</p>
 
-<h1 id="이미지를-표현하는-markdown-기본-문법">이미지를 표현하는 markdown 기본 문법</h1>
+<h2 id="이미지를-표현하는-markdown-기본-문법">이미지를 표현하는 markdown 기본 문법</h2>
 <p>우선 <a href="https://jekyllrb-ko.github.io/docs/posts/#이미지와-자원-삽입하기">Jekyll 공식 문서</a>에 나와 있는 이미지 첨부 방법은 아래와 같다.
 기본적인 syntax는 간단하다.</p>
 <div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">![</span><span class="nv">alt-text-message</span><span class="p">](</span><span class="sx">image-link</span><span class="p">)</span>
@@ -289,7 +282,7 @@
 <p>아주 간단하고 편한 방법이다.
 나는 처음에 이 방법만으로 매우 만족했으므로 이 방법을 계속 쓰려고 생각했다.</p>
 
-<h1 id="쓰다보니-보이는-문제">쓰다보니 보이는 문제</h1>
+<h2 id="쓰다보니-보이는-문제">쓰다보니 보이는 문제</h2>
 <p>하지만 막상 이렇게 이미지를 첨부해보니 한 가지 문제가 있었다.
 이미지의 캡션이 없다는 것이다.
 검색을 통해 알아보니 Jekyll 자체적으로는 이미지의 캡션을 달아주지 않는댄다.
@@ -308,7 +301,7 @@
 그것과는 상관없이 그냥 Jekyll 공식 문서나 Jekyll 관련한 블로그의 웹서핑을 하면서 알게 된 것이 있다.
 바로 <strong>조각파일</strong>이다.</p>
 
-<h1 id="조각파일로-이미지-첨부를-간단하게">조각파일로 이미지 첨부를 간단하게</h1>
+<h2 id="조각파일로-이미지-첨부를-간단하게">조각파일로 이미지 첨부를 간단하게</h2>
 <p><a href="http://jekyllrb-ko.github.io/docs/includes/">Jekyll 공식 문서</a>에 나온 조각파일의 설명에 따르면 조각파일이란 <strong>반복되는 코드를 미리 정의하고 markdown에서 이를 함수 호출하듯이 이용하는 방법</strong>인 것 같다.
 위 문서를 보면 조각파일을 이용해서 이미지 첨부를 쉽게 하는 방법으로 아래와 같은 예제가 소개되어 있다.</p>
 
@@ -377,7 +370,7 @@
 이미지의 <code class="highlighter-rouge">title</code> 속성을 추가한 것은 SEO에 도움이 될까 싶어서였지 이 효과를 의도한 것은 아니다.
 하지만 어쨌든 이렇게 <code class="highlighter-rouge">title</code> 속성이 뜨는 것도 괜찮은 것 같다.</p>
 
-<h1 id="알아두어야-할-점">알아두어야 할 점</h1>
+<h2 id="알아두어야-할-점">알아두어야 할 점</h2>
 <p>조각파일에 대한 Jekyll 문서를 보고 일단 필요한 것은 했는데…
 문서를 계속 읽다보면 아래와 같은 언급이 나온다.</p>
 
@@ -439,9 +432,10 @@
   9 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">Jekyll 블로그의 초안을 AWS S3에 업로드
-이전 포스팅(Jekyll 초안 관리에 대한 고민)에서 했던 고민의 결론은 ‘Jekyll 블로그의 초안을 github page에 commit하기 전에 AWS S3에 업로드해서 나만 먼저 확인해보겠다’는 것이었다.
-그리고 그것을 위해 ...</p>
+    <p class="archive__item-excerpt" itemprop="description">약간의 삽질을 했지만 결국 AWS CLI를 이용하여 ubuntu에서 S3에 업로드하는 방법을 찾았다.
+이번 포스팅에서는 그 방법을 정리해 두려고 한다.
+
+</p>
   </article>
 </div>
 
@@ -468,12 +462,9 @@
   3 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">문제의식
-Jekyll을 이용한 블로깅은 그 자체로 재미가 있었다.
+    <p class="archive__item-excerpt" itemprop="description">Jekyll을 이용한 블로깅은 그 자체로 재미가 있었다.
 게다가 포스팅이 쉽기까지 했다.
 (일단 Jekyll을 설치할 때까지는 약간 험난했지만 말이다.)
-그런데 쓰다보니 한 가지 불편한 점이 있었다.
-바로 초안을 관리하는 것이었다.
 
 </p>
   </article>
@@ -561,11 +552,10 @@ Jekyll을 이용한 블로깅은 그 자체로 재미가 있었다.
   2 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">일단 commit
-지난 포스팅 (나의 Jekyll 여행기 (2))에서 Jekyll을 설치하고 jekyll build까지 실행해 보았다.
+    <p class="archive__item-excerpt" itemprop="description">지난 포스팅 (나의 Jekyll 여행기 (2))에서 Jekyll을 설치하고 jekyll build까지 실행해 보았다.
 그리고 결과가 _site 폴더에 생성되는 것을 확인하였다.
 그러면 이제는 _site 폴더에 생긴 사이트를 웹에 올리는 일만 남았다.
-나는 gith...</p>
+나는 github hosting...</p>
   </article>
 </div>
 
@@ -592,10 +582,9 @@ Jekyll을 이용한 블로깅은 그 자체로 재미가 있었다.
   6 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">AWS에서 시도하다
-지난 포스팅 (나의 Jekyll 여행기 (1))에서 했던 실패를 뒤로 하고 나는 계속 Jekyll을 사용할 수 있는 방법을 고민했다.
+    <p class="archive__item-excerpt" itemprop="description">지난 포스팅 (나의 Jekyll 여행기 (1))에서 했던 실패를 뒤로 하고 나는 계속 Jekyll을 사용할 수 있는 방법을 고민했다.
 사실 Jekyll 홈페이지에는 Windows에서도 Jekyll을 사용할 수 있는 방법에 대해 나오기는 한다.
-하지만 공식적으로 ...</p>
+하지만 공식적으로 지원하지는 않는 플랫...</p>
   </article>
 </div>
 
@@ -622,9 +611,7 @@ Jekyll을 이용한 블로깅은 그 자체로 재미가 있었다.
   4 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">Jekyll의 시작
-블로그를 시작하려고 한다. 아마 나의 이런저런 생각들, 그리고 내가 했던 것들을 기록하기 위한 용도로 사용할 것 같다.
-그리고 나는 여러 가지 방법을 알아보고 나서, Jekyll을 사용해 보기로 했다.
+    <p class="archive__item-excerpt" itemprop="description">블로그를 시작하려고 한다. 아마 나의 이런저런 생각들, 그리고 내가 했던 것들을 기록하기 위한 용도로 사용할 것 같다.
 
 </p>
   </article>
