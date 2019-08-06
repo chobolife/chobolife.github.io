@@ -16,7 +16,7 @@ var store = [{
         "teaser":null},{
         "title": "Jekyll로 만든 사이트를 github에 올리기",
         "excerpt":"지난 포스팅 (나의 Jekyll 여행기 (2))에서 Jekyll을 설치하고 jekyll build까지 실행해 보았다. 그리고 결과가 _site 폴더에 생성되는 것을 확인하였다. 그러면 이제는 _site 폴더에 생긴 사이트를 웹에 올리는 일만 남았다. 나는 github hosting을 이용하려고 생각하였다. Github에 올리면 git commit 명령으로 쉽게 올릴 수도 있고, 도메인도 해결이 되며 어느 정도까지는 무료이다. 일단...","categories": [],
-        "tags": ["블로그","jekyll"],
+        "tags": ["블로그","jekyll","github"],
         "url": "https://chobolife.github.io/blog/2019/07/28/jekyll-github/",
         "teaser":null},{
         "title": "Google drive에 공개 이미지 올리기",
@@ -36,6 +36,11 @@ var store = [{
         "teaser":null},{
         "title": "EC2에서 S3에 접근하는 방법",
         "excerpt":"약간의 삽질을 했지만 결국 AWS CLI를 이용하여 ubuntu에서 S3에 업로드하는 방법을 찾았다. 이번 포스팅에서는 그 방법을 정리해 두려고 한다. Jekyll 블로그의 초안을 AWS S3에 업로드 이전 포스팅(Jekyll 초안 관리에 대한 고민)에서 했던 고민의 결론은 ‘Jekyll 블로그의 초안을 github page에 commit하기 전에 AWS S3에 업로드해서 나만 먼저 확인해보겠다’는 것이었다. 참고로 Jekyll...","categories": [],
-        "tags": ["블로그","jekyll"],
+        "tags": ["블로그","jekyll","AWS"],
         "url": "https://chobolife.github.io/blog/2019/08/04/ec2-s3-authority/",
+        "teaser":null},{
+        "title": "EC2에서 웹서버 구동하기",
+        "excerpt":"지난 포스팅(EC2에서 S3에 접근하는 방법)에서는 EC2에서 만든 정적 웹사이트를 S3에 업로드했다. 그 작업의 목적은 내가 Jekyll을 통해 만든 웹사이트를 github을 통해 배포하기 전에 확인하기 위한 것이었다. 문제 발생 지난 포스트(나의 Jekyll 여행기 (2))를 보면 알겠지만 나는 내 작업 컴퓨터에서 Jekyll을 돌리고 있지 않다. EC2에 만들어 놓은 ubuntu에 ssh로 접속해서 Jekyll을...","categories": [],
+        "tags": ["블로그","AWS"],
+        "url": "https://chobolife.github.io/blog/2019/08/06/ec2-web-server/",
         "teaser":null}]

@@ -9,34 +9,34 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Jekyll 초안 관리에 대한 고민 - 우당탕탕 초보라이프</title>
-<meta name="description" content="Jekyll을 이용한 블로깅은 그 자체로 재미가 있었다.게다가 포스팅이 쉽기까지 했다.(일단 Jekyll을 설치할 때까지는 약간 험난했지만 말이다.)">
+<!-- begin _includes/seo.html --><title>EC2에서 웹서버 구동하기 - 우당탕탕 초보라이프</title>
+<meta name="description" content="지난 포스팅(EC2에서 S3에 접근하는 방법)에서는 EC2에서 만든 정적 웹사이트를 S3에 업로드했다.그 작업의 목적은 내가 Jekyll을 통해 만든 웹사이트를 github을 통해 배포하기 전에 확인하기 위한 것이었다.">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko">
 <meta property="og:site_name" content="우당탕탕 초보라이프">
-<meta property="og:title" content="Jekyll 초안 관리에 대한 고민">
-<meta property="og:url" content="https://chobolife.github.io/blog/2019/08/01/jekyll-draft/">
+<meta property="og:title" content="EC2에서 웹서버 구동하기">
+<meta property="og:url" content="https://chobolife.github.io/blog/2019/08/06/ec2-web-server/">
 
 
-  <meta property="og:description" content="Jekyll을 이용한 블로깅은 그 자체로 재미가 있었다.게다가 포스팅이 쉽기까지 했다.(일단 Jekyll을 설치할 때까지는 약간 험난했지만 말이다.)">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2019-08-01T22:35:00+09:00">
+  <meta property="og:description" content="지난 포스팅(EC2에서 S3에 접근하는 방법)에서는 EC2에서 만든 정적 웹사이트를 S3에 업로드했다.그 작업의 목적은 내가 Jekyll을 통해 만든 웹사이트를 github을 통해 배포하기 전에 확인하기 위한 것이었다.">
 
 
 
 
 
 
-<link rel="canonical" href="https://chobolife.github.io/blog/2019/08/01/jekyll-draft/">
+
+  <meta property="article:published_time" content="2019-08-06T22:15:00+09:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://chobolife.github.io/blog/2019/08/06/ec2-web-server/">
 
 
 
@@ -152,77 +152,121 @@
 
   <div class="archive">
     
-      <h1 id="page-title" class="page__title">Jekyll 초안 관리에 대한 고민</h1>
+      <h1 id="page-title" class="page__title">EC2에서 웹서버 구동하기</h1>
     
-    <p>Jekyll을 이용한 블로깅은 그 자체로 재미가 있었다.
-게다가 포스팅이 쉽기까지 했다.
-(일단 Jekyll을 설치할 때까지는 약간 험난했지만 말이다.)</p>
+    <p>지난 포스팅(<a href="/blog/2019/08/04/ec2-s3-authority/">EC2에서 S3에 접근하는 방법</a>)에서는 EC2에서 만든 정적 웹사이트를 S3에 업로드했다.
+그 작업의 목적은 내가 Jekyll을 통해 만든 웹사이트를 github을 통해 배포하기 전에 확인하기 위한 것이었다.</p>
 
-<h2 id="문제의식">문제의식</h2>
-<p>그런데 쓰다보니 한 가지 불편한 점이 있었다.
-바로 초안을 관리하는 것이었다.</p>
+<h2 id="문제-발생">문제 발생</h2>
+<p>지난 포스트(<a href="/blog/2019/07/27/start-jekyll-2/">나의 Jekyll 여행기 (2)</a>)를 보면 알겠지만 나는 내 작업 컴퓨터에서 Jekyll을 돌리고 있지 않다.
+EC2에 만들어 놓은 ubuntu에 ssh로 접속해서 Jekyll을 수행하고 있었기 때문에 내가 수정하고 있는 것을 바로 확인할 수가 없었다.
+그래서 S3에 업로드해서 웹브라우저에서 확인하고, 다시 터미널에서 수정하고 S3에 업로드하고, 하는 식으로 작업했던 것이다.</p>
 
-<p>나는 사진이든 동영상이든 트위터같은 짧은 글이든 아니면 엄청나게 긴 길이든, 어떤 형태로든지 인터넷에 자료를 올리는 것은 publish, 즉 출판이라는 생각을 갖고 있다.
-그래서 가급적 완성된 포스트만 공개하고 싶고, 한 번 publish한 이후로는 내용에 큰 오류가 있지 않은 이상 수정도 하고 싶지 않다.</p>
+<p>그런데 문제는 새로운 테마를 시도해보면서 발생했다.
+내가 포스팅의 초안을 발행하고 확인하는 작업만 했으면 문제가 늦게 발생했을지도 모르겠다.
+이것저것 테마를 깔아서 S3에 올리고 웹브라우저에서 다시 확인해보는 작업을 얼마 하지도 않았는데, AWS의 프리 티어를 소진했다는 메일이 왔다.
+AWS의 결제 화면에 들어가서 보니 다른 건 문제가 안 되는데 PUT request가 2천회를 초과했다.</p>
 
 <figure>
-    <img src="https://drive.google.com/uc?id=139mSbzwwbNY2J2pFEXV5ImB4E_UnKj9f" alt="인터넷에 정보를 '공개'하는 것은 '출판'과 유사하다." title="출판물" />
-    <figcaption>인터넷에 정보를 '공개'하는 것은 '출판'과 유사하다.</figcaption>
+    <img src="https://drive.google.com/uc?id=14KsFo5AqGFVo_CV4Kisz1KorejPNAimC" alt="AWS 프리 티어를 초과했다는 메일을 받고 부랴부랴 결제 페이지에 들어가 보았다. AWS S#의 Put request가 프리 티어 제공량을 초과했다." title="AWS 프리 티어의 기본 제공량을 초과한 결제 화면" />
+    <figcaption>AWS 프리 티어를 초과했다는 메일을 받고 부랴부랴 결제 페이지에 들어가 보았다. AWS S#의 Put request가 프리 티어 제공량을 초과했다.</figcaption>
 </figure>
 
-<p>초안은 아직 완성되지도 않았을 뿐 아니라, 초안 작성 당시에는 실제로 이걸 포스팅을 할 것인지, 말 것인지조차도 결정하지 못한 것이 많을 것이라고 예상한다.
-그래서 나는 <strong>초안이 다른 포스팅과 함께 공개되지 않으면서도 나만 확인할 수 있는 방법</strong>을 찾기 시작했다.</p>
+<p>테마마다 생성되는 파일이 많기 때문에 그런 것 같다.
+각 파일의 용량은 작을지라도 숫자 자체가 많은 건 어쩔 수 없다.</p>
 
-<h2 id="jekyll의-초안-작성-방법">Jekyll의 초안 작성 방법</h2>
-<p><a href="https://jekyllrb-ko.github.io/docs/drafts/">Jekyll 홈페이지</a>에는 초안을 이렇게 관리하면 된다고 나와 있다.
-작성하고 있는 초안은 <code class="highlighter-rouge">_drafts</code> 디렉토리에 넣으면 되고 그 파일명은 연, 월, 일에 대한 정보 없이 <code class="highlighter-rouge">title.md</code>와 같은 식으로 지정하면 된다.
-이렇게 하고 <code class="highlighter-rouge">jekyll build --drafts</code>를 실행하면 초안이 빌드되고 가장 최신 포스트로 표시된다고 한다.
-내가 해보니 <code class="highlighter-rouge">drafts</code> 대신 s를 빼고 <code class="highlighter-rouge">draft</code>까지만 쳐도 문제가 없는 것 같다.
-<code class="highlighter-rouge">jekyll build --draft</code>를 실행해도 동일하게 초안까지 포함해서 빌드된다.</p>
+<p>그래서 S3에 업로드하고 확인하는 것을 중단하고 그냥 테마를 바꾸는 것도 그냥 github pages에 올려서 확인하였다.
+Github pages에 파일을 올리면 웹서버에 반영되기까지 약간 딜레이가 있다.
+불편하긴 하지만 어쩔 수 없는 것이라고 생각했다.
+참고 써야지 뭐…</p>
 
-<p>AWS EC2에 ssh로 접속해서 Jekylling을 하는 나에게 Jekyll 문서에서 이야기하는 위 방법은 도움이 되긴 하지만 또 어떤 면에서는 도움이 별로 되지 못한다.
-현재까지 작성한 초안을 빌드해서 웹브라우저에서 확인할 수 있는 것은 좋다.
-하지만 문제는 <code class="highlighter-rouge">jekyll build --draft</code>를 실행하게 되면 <code class="highlighter-rouge">_site</code> 디렉토리에 초안을 포함한 사이트가 발행되므로 이걸 확인하려면 Github Pages에 commit해야 하며, 그렇게 되면 <strong>초안이 블로그에 공개되어 버린다는 것이다</strong>.</p>
-
-<p>보통 다른 사람들은 windows, ubuntu 등 OS에 관계없이 로컬에서 <code class="highlighter-rouge">jekyll serve</code>를 실행해서 빌드하고 웹브라우저로 <code class="highlighter-rouge">http://localhost:4000/</code>에 접속하여 확인하는 것 같다.
-그렇게 하면 commit하기 전에 확인 후 수정이 필요한 부분을 변경할 수 있다.
-하지만 나는 cygwin에서 EC2 instance에 ssh로 접속하여 Jekylling을 하고 있으므로 다른 방법을 찾아야 했다.</p>
-
-<p>물론 나도 <code class="highlighter-rouge">jekyll serve</code>를 실행하여 확인할 수 있는 방법은 있다.
-EC2에 <strong>vnc</strong>로 접속하면 가능하다.
-그런데 나는 그 방법은 쓰고 싶지 않았다.
-왜냐하면 우선 EC2에 vnc server를 설치해야 하는데 그 용량이 꽤 크다고 알고 있다.
-뿐만 아니라 현재는 free tier에서 무료로 사용이 가능한 intsance인 t2.micro를 이용하고 있는데 다른 t2.micro가 필요하거나 free tier가 끝나는 시점이 되면 t2.nano로 옮기게 될 수도 있다.
-그러면 vnc server 구동은 시스템에 부담이 되어 사용하기 어려울 것이다.
-또 한 가지 문제는 너무 복잡할 것이라는 점이다.
-Cygwin으로 접속해서 vim으로 내용을 입력하고 포스팅하는 것이 지금까지는 굉장히 가벼운 작업이었는데, 초안을 확인하겠다고 옆에 다른 vnc viewer 프로그램을 띄워놓고 그 안에 Firefox 같은 웹브라우저를 실행하는 것은 생각만 해도 번거롭고 복잡한 일이었다.</p>
-
-<h2 id="고민-끝에-s3">고민 끝에 S3</h2>
-<p><code class="highlighter-rouge">_site</code> 디렉토리에 git repository가 만들어져 있으므로 버전 관리가 되고 있는데 혹시 git의 branch를 이용한 방법이 없을까 하는 생각도 해 보았다.
-그런데 branch를 활용할 수 있는 뾰족한 방법이 떠오르지 않았다.
-그 외에도 여러 가지 고민을 더 해 보았는데 괜찮은 방법이 없는 것 같았다.</p>
-
-<p>그러다가 생각한 방법은 이것이다.</p>
+<p>마음에 드는 테마도 설치하고 Jekyll에 익숙해지다보니 Jekyll을 이용해서 다른 웹사이트도 만들어보고 싶다는 생각이 들었다.
+그런데 또 다시 고민이 생겼다.</p>
 <blockquote>
-  <p>어차피 작성하던 초안이 웹브라우저에 어떻게 표시되는지 확인하기 위해서는 <code class="highlighter-rouge">jekyll build --drafts</code>를 해서 발행을 해야 한다. 그렇다면 그것을 블로그가 공개되는 Github Pages 말고 <strong>나만 아는 곳</strong>에 올려두고 확인하면 되지 않을까?</p>
+  <p>호스팅을 어디에 할 것인가?
+Github pages는 이미 내가 쓰고 있고, AWS S3는 요금이 발생하게 된다.
+물론 방법은 있지…
+다른 무료 호스팅을 제공하는 서비스를 찾아도 되고, github이나 AWS 계정을 새로 만들어도 된다.</p>
 </blockquote>
 
-<p>생각할수록 괜찮은 방법인 것 같았다.
-포스팅을 완성하기 전의 작성 및 수정 단계에서는 Github Pages에만 올리지 않으면 내 블로그를 통해 공개되지 않는 것이고, 그 때에 바로 그 <strong>나만 아는 곳</strong>에 올려서 확인해보는 건 아무 문제가 없으니까.
-그렇게 확인하면서 수정하다가 포스트가 완성되고 나면 md 파일을 <code class="highlighter-rouge">_drafts</code> 디렉토리에서 <code class="highlighter-rouge">_posts</code> 디렉토리로 옮기면서 Github Pages에도 commit하면 될 것 같다.
-그런 절차를 생각하고 보니 초안을 처음부터 굳이 <code class="highlighter-rouge">_drafts</code> 디렉토리에 넣을 것 없이 <code class="highlighter-rouge">_posts</code> 디렉토리에서 시작을 해도 될 것 같기는 하다.
-하지만 우선은 정석대로 초안은 <code class="highlighter-rouge">_drafts</code> 디렉토리에서만 작성할 생각이다.</p>
+<p>하지만 문득 이런 생각이 들었다.</p>
+<blockquote>
+  <p>내가 지금 쓰고 있는 EC2 instace를 웹서버로 만들면 되잖아?</p>
+</blockquote>
 
-<p>그 <strong>나만 아는 곳</strong>은 AWS S3에 구축하려고 한다.
-AWS S3가 편할 것 같기도 하고… 사실 다른 마땅한 곳이 생각이 안 난다.
-정적 웹 호스팅을 제공하는 곳은 여러 군데 있기는 한데 거의 다 생소한 곳들이라서…
-처음에 Jekyll을 시작하면서 정적 웹 호스팅을 어디에 할지를 놓고 <a href="https://pages.github.com/">Github Pages</a>와 <a href="https://aws.amazon.com/s3/">AWS S3</a> 사이에서 고민했었다.
-(<a href="/blog/2019/07/27/start-jekyll-2/">나의 Jekyll 여행기 (2)</a> 참고)
-둘을 놓고 고민하다가 S3보다 간단할 것 같아서 github을 쓴 것이었는데…
-이렇게 둘 다 쓰게 될 줄이야.</p>
+<p>도대체 왜 이 생각을 못했던 거지?
+어차피 뭐 대단한 사이트 만들 것도 아니고 이용자도 나 말고는 없을텐데…</p>
 
-<p>그렇다면 이제 앞으로 해야 할 일은 ubuntu에 AWS CLI를 설치하고 <code class="highlighter-rouge">_site</code> 폴더에 있는 파일들을 S3 버킷에 업로드하는 것인데, 한 번도 해 보지 않은 일이라서 약간 험난한 과정이 예상된다.
-이 방법을 시도해 보고 다음 포스팅에 업로드할 예정이다.</p>
+<p>바로 실행에 옮겨보기로 했다.</p>
+
+<h2 id="ec2-instance에-apache2-설치">EC2 instance에 apache2 설치</h2>
+<p>과정은 간단하다.
+Apache2를 설치하고 보안 설정을 해 주면 된다.
+먼저 apache2를 설치하려면 터미널에서 다음과 같이 입력한다.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install apache2
+</code></pre></div></div>
+
+<p>그러면 주르륵 로그가 출력되며 apache2가 설치된다.
+Apache2의 설치 과정은 어렵지도 않고 중간에 문제가 발생할 일도 거의 없으므로 더 설명할 것이 없다.</p>
+
+<h2 id="보안-설정하기">보안 설정하기</h2>
+<p>웹서버를 구동할 수 있는 apache2를 설치했다면, 다음으로는 이 EC2 instace에 대한 접근을 열어주어야 한다.
+AWS EC2에서는 이것을 EC2 instance에 보안 그룹을 연결해 주는 것으로 한다.
+이미 원하는 접근 권한으로 보안 그룹이 만들어져 있다면 그것을 바로 해당 EC2 instance에 연결해 주면 되지만, 없다면 보안 그룹을 생성해야 한다.</p>
+
+<p>보안 그룹이 없다면 이렇게 생성할 수 있다.</p>
+
+<p>EC2 대시보드의 왼쪽에 있는 메뉴 중에서 <strong>네트워크 및 보안</strong> 아래에 있는 <strong>보안 그룹</strong>을 클릭한다.
+그러면 보안 그룹 화면이 뜨는데 거기에서 위쪽에 있는 파란색 버튼인 <strong>보안 그룹 생성</strong>을 클릭한다.
+‘보안 그룹 생성’이라는 창이 뜨게 된다.
+아래 그림과 같이 입력한다.</p>
+
+<figure>
+    <img src="https://drive.google.com/uc?id=139xTa31sSvykUosARhvOFvphFQkSzXts" alt="공개 웹 서버에 연결하기 위한 보안 그룹을 설정한다. SSH, HTTP, HTTPS의 인바운드를 열어 주면 된다." title="공개 웹 서버의 보안 그룹 설정" />
+    <figcaption>공개 웹 서버에 연결하기 위한 보안 그룹을 설정한다. SSH, HTTP, HTTPS의 인바운드를 열어 주면 된다.</figcaption>
+</figure>
+
+<p><strong>보안 그룹 이름</strong>과 <strong>설명</strong>에는 말 그대로 이름과 간단한 설명을 써 준다.
+그리고 하단에 있는 <strong>보안 그룹 규칙</strong>을 채워야 한다.
+아래에 있는 <strong>규칙 추가</strong> 버튼을 누르면 레코드가 생기는데, 여기에서 필요한 유형은 <strong>SSH</strong>, <strong>HTTP</strong>, <strong>HTTPS</strong>이다.
+오른쪽에 있는 항목들은 대부분 저절로 입력되는데, 혹시 자동으로 입력되지 않는 항목이 있다면 위 그림과 동일하게 채워 준다.
+내가 했을 때는 SSH의 소스가 자동으로 채워지지 않았던 것 같다.</p>
+
+<p>모두 입력했으면 오른쪽 하단의 <strong>생성</strong> 버튼을 클릭한다.
+이렇게 하면 웹서버를 공개할 수 있도록 보안 그룹을 생성한 것이다.</p>
+
+<p>이제는 EC2 instance에 보안 그룹을 연결해 주어야 한다.
+다시 인스턴스 화면으로 돌아가서, EC2 instance에서 마우스 우클릭을 하여 <strong>네트워킹</strong> → <strong>보안 그룹 변경</strong>을 클릭한다.</p>
+
+<figure>
+    <img src="https://drive.google.com/uc?id=10gGv9KW-_U7aykqXr-9AsSkMxMTQpsQ0" alt="보안 그룹을 생성했다면, 다음으로는 EC2 인스턴스에 보안 그룹을 연결해 주어야 한다." title="EC2 인스턴스에 보안 그룹 연결하기" />
+    <figcaption>보안 그룹을 생성했다면, 다음으로는 EC2 인스턴스에 보안 그룹을 연결해 주어야 한다.</figcaption>
+</figure>
+
+<p>그러면 ‘보안 그룹 변경’이라는 창이 뜬다.
+여기에서 아까 만들어 준 보안 그룹을 체크하고 <strong>보안 그룹 할당</strong> 버튼을 클릭하면 된다.</p>
+
+<h2 id="접속하기">접속하기</h2>
+<p>이제 EC2 instance는 웹서버로 동작할 것이다.
+웹서버에 접속할 주소는 EC2 instance를 클릭하면 하단에 나오는 정보 중에서 <strong>퍼블릭 DNS(IPv4)</strong> 또는 <strong>IPv4 퍼블릭 IP</strong>이다.</p>
+
+<figure>
+    <img src="https://drive.google.com/uc?id=1kN22n-pjLDAATzkMEd-QsccGDaggx0Cj" alt="EC2 인스턴스의 속성 중에서 **퍼블릭 DNS(IPv4)** 또는 **IPv4 퍼블릭 IP**이 주소가 된다." title="EC2 인스턴스의 속성" />
+    <figcaption>EC2 인스턴스의 속성 중에서 **퍼블릭 DNS(IPv4)** 또는 **IPv4 퍼블릭 IP**이 주소가 된다.</figcaption>
+</figure>
+
+<p>아래와 같은 화면이 나온다면 제대로 웹서버가 동작하고 있는 것이다.</p>
+
+<figure>
+    <img src="https://drive.google.com/uc?id=1wsWCqVB-yZf5PRDcoHeaadsy4sz3Zr5u" alt="Apache2를 설치하고 난 후 웹브라우저에서 접속하면 기본으로 설정된 페이지가 보인다." title="Apache2의 default index 페이지" />
+    <figcaption>Apache2를 설치하고 난 후 웹브라우저에서 접속하면 기본으로 설정된 페이지가 보인다.</figcaption>
+</figure>
+
+<p>만약에 안 된다면 EC2 instance를 재부팅해보면 될 것이다.
+그래도 안 된다면… 나도 잘 모르겠다. 하지만 아마 구글은 알겠지…</p>
+
+<p>위 화면은 <code class="highlighter-rouge">/var/www/html/</code> 아래에 있는 <code class="highlighter-rouge">index.html</code> 파일이다.
+이제 내가 만든 사이트를 위 디렉토리로 복사하면 된다.</p>
 
 
 
