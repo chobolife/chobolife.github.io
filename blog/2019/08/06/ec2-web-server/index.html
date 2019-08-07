@@ -168,8 +168,8 @@ EC2에 만들어 놓은 ubuntu에 ssh로 접속해서 Jekyll을 수행하고 있
 AWS의 결제 화면에 들어가서 보니 다른 건 문제가 안 되는데 PUT request가 2천회를 초과했다.</p>
 
 <figure>
-    <img src="https://drive.google.com/uc?id=14KsFo5AqGFVo_CV4Kisz1KorejPNAimC" alt="AWS 프리 티어를 초과했다는 메일을 받고 부랴부랴 결제 페이지에 들어가 보았다. AWS S#의 Put request가 프리 티어 제공량을 초과했다." title="AWS 프리 티어의 기본 제공량을 초과한 결제 화면" />
-    <figcaption>AWS 프리 티어를 초과했다는 메일을 받고 부랴부랴 결제 페이지에 들어가 보았다. AWS S#의 Put request가 프리 티어 제공량을 초과했다.</figcaption>
+    <img src="https://drive.google.com/uc?id=14KsFo5AqGFVo_CV4Kisz1KorejPNAimC" alt="AWS 프리 티어를 초과했다는 메일을 받고 부랴부랴 결제 페이지에 들어가 보았다. AWS S3의 Put request가 프리 티어 제공량을 초과했다." title="AWS 프리 티어의 기본 제공량을 초과한 결제 화면" />
+    <figcaption>AWS 프리 티어를 초과했다는 메일을 받고 부랴부랴 결제 페이지에 들어가 보았다. AWS S3의 Put request가 프리 티어 제공량을 초과했다.</figcaption>
 </figure>
 
 <p>테마마다 생성되는 파일이 많기 때문에 그런 것 같다.
@@ -183,15 +183,15 @@ Github pages에 파일을 올리면 웹서버에 반영되기까지 약간 딜�
 <p>마음에 드는 테마도 설치하고 Jekyll에 익숙해지다보니 Jekyll을 이용해서 다른 웹사이트도 만들어보고 싶다는 생각이 들었다.
 그런데 또 다시 고민이 생겼다.</p>
 <blockquote>
-  <p>호스팅을 어디에 할 것인가?
+  <p>호스팅을 어디에 할 건가?
 Github pages는 이미 내가 쓰고 있고, AWS S3는 요금이 발생하게 된다.
 물론 방법은 있지…
-다른 무료 호스팅을 제공하는 서비스를 찾아도 되고, github이나 AWS 계정을 새로 만들어도 된다.</p>
+다른 무료 호스팅을 제공하는 서비스를 찾아도 되고, github이나 AWS 계정을 새로 만들어도 되니까…</p>
 </blockquote>
 
 <p>하지만 문득 이런 생각이 들었다.</p>
 <blockquote>
-  <p>내가 지금 쓰고 있는 EC2 instace를 웹서버로 만들면 되잖아?</p>
+  <p>잠깐… 내가 지금 쓰고 있는 EC2 instace를 웹서버로 만들면 되잖아?</p>
 </blockquote>
 
 <p>도대체 왜 이 생각을 못했던 거지?
@@ -239,7 +239,7 @@ AWS EC2에서는 이것을 EC2 instance에 보안 그룹을 연결해 주는 것
 다시 인스턴스 화면으로 돌아가서, EC2 instance에서 마우스 우클릭을 하여 <strong>네트워킹</strong> → <strong>보안 그룹 변경</strong>을 클릭한다.</p>
 
 <figure>
-    <img src="https://drive.google.com/uc?id=10gGv9KW-_U7aykqXr-9AsSkMxMTQpsQ0" alt="보안 그룹을 생성했다면, 다음으로는 EC2 인스턴스에 보안 그룹을 연결해 주어야 한다." title="EC2 인스턴스에 보안 그룹 연결하기" />
+    <img src="https://drive.google.com/uc?id=1YIkic8eD1P3qKzhvHmW1JRGkz89Bwh_P" alt="보안 그룹을 생성했다면, 다음으로는 EC2 인스턴스에 보안 그룹을 연결해 주어야 한다." title="EC2 인스턴스에 보안 그룹 연결하기" />
     <figcaption>보안 그룹을 생성했다면, 다음으로는 EC2 인스턴스에 보안 그룹을 연결해 주어야 한다.</figcaption>
 </figure>
 

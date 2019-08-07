@@ -35,7 +35,7 @@ var store = [{
         "url": "https://chobolife.github.io/blog/2019/08/01/jekyll-draft/",
         "teaser":null},{
         "title": "EC2에서 S3에 접근하는 방법",
-        "excerpt":"약간의 삽질을 했지만 결국 AWS CLI를 이용하여 ubuntu에서 S3에 업로드하는 방법을 찾았다. 이번 포스팅에서는 그 방법을 정리해 두려고 한다. Jekyll 블로그의 초안을 AWS S3에 업로드 이전 포스팅(Jekyll 초안 관리에 대한 고민)에서 했던 고민의 결론은 ‘Jekyll 블로그의 초안을 github page에 commit하기 전에 AWS S3에 업로드해서 나만 먼저 확인해보겠다’는 것이었다. 참고로 Jekyll...","categories": [],
+        "excerpt":"약간의 삽질을 했지만 결국 AWS CLI를 이용하여 ubuntu에서 S3에 업로드하는 방법을 찾았다. 이번 포스팅에서는 그 방법을 정리해 두려고 한다. Jekyll 블로그의 초안을 AWS S3에 업로드 이전 포스팅(Jekyll 초안 관리에 대한 고민)에서 했던 고민의 결론은 이것이었다. Jekyll 블로그의 초안을 github page에 commit하기 전에 AWS S3에 업로드해서 나만 먼저 확인해보겠다. 참고로 Jekyll...","categories": [],
         "tags": ["블로그","jekyll","AWS"],
         "url": "https://chobolife.github.io/blog/2019/08/04/ec2-s3-authority/",
         "teaser":null},{
