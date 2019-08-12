@@ -43,4 +43,9 @@ var store = [{
         "excerpt":"지난 포스팅(EC2에서 S3에 접근하는 방법)에서는 EC2에서 만든 정적 웹사이트를 S3에 업로드했다. 그 작업의 목적은 내가 Jekyll을 통해 만든 웹사이트를 github을 통해 배포하기 전에 확인하기 위한 것이었다. 문제 발생 지난 포스트(나의 Jekyll 여행기 (2))를 보면 알겠지만 나는 내 작업 컴퓨터에서 Jekyll을 돌리고 있지 않다. EC2에 만들어 놓은 ubuntu에 ssh로 접속해서 Jekyll을...","categories": [],
         "tags": ["블로그","AWS"],
         "url": "https://chobolife.github.io/blog/2019/08/06/ec2-web-server/",
+        "teaser":null},{
+        "title": "Jekyll 테마 설정하기",
+        "excerpt":"Jekyll의 기본적인 사항들은 어느 정도 익혔다. 이제 본격적으로 Jekyll을 즐길 준비가 된 것인데, 그러기 위해서는 테마를 내가 원하는 대로 설정하는 일이 남았다. 지금은 Jekyll의 테마 설정을 다 하고 나서 포스팅을 쓰고 있다. 그런데 이전의 그 어떤 작업보다 테마 설정을 하는 것이 어려웠던 것 같다. 이런 줄 미리 알았다면 맨 처음에...","categories": [],
+        "tags": ["블로그","jekyll","jekyll theme","nokogiri 오류"],
+        "url": "https://chobolife.github.io/blog/2019/08/07/jekyll-theme/",
         "teaser":null}]
