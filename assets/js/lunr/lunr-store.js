@@ -47,5 +47,5 @@ var store = [{
         "title": "Jekyll 테마 설정하기",
         "excerpt":"Jekyll의 기본적인 사항들은 어느 정도 익혔다. 이제 본격적으로 Jekyll을 즐길 준비가 된 것인데, 그러기 위해서는 테마를 내가 원하는 대로 설정하는 일이 남았다. 지금은 Jekyll의 테마 설정을 다 하고 나서 포스팅을 쓰고 있다. 그런데 이전의 그 어떤 작업보다 테마 설정을 하는 것이 어려웠던 것 같다. 이런 줄 미리 알았다면 맨 처음에...","categories": [],
         "tags": ["블로그","jekyll","jekyll theme","nokogiri 오류"],
-        "url": "https://chobolife.github.io/blog/2019/08/07/jekyll-theme/",
+        "url": "https://chobolife.github.io/blog/2019/08/12/jekyll-theme/",
         "teaser":null}]
