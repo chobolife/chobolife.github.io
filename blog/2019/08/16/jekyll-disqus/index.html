@@ -308,22 +308,21 @@ defaults:
 내가 직접 jekyll의 소스 코드를 보며 따라가 보았다.</p>
 
 <p><code class="highlighter-rouge">_includes/comments.html</code>에 보면 이런 부분이 있다.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-    {% when "disqus" %}
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    {% when "disqus" %}
       &lt;h4 class="page__comments-title"&gt;{{ comments_label }}&lt;/h4&gt;
       &lt;section id="disqus_thread"&gt;&lt;/section&gt;
-
 </code></pre></div></div>
+
 <p>아마 여기에 disqus의 댓글 섹션이 들어가는 것 같다.
 그런데 크롬의 개발자 도구에서 보면 내가 만든 페이지에 <code class="highlighter-rouge">disqus_thread</code>라는 섹션이 없다.
 그러면 이 <code class="highlighter-rouge">comments.html</code>을 include하는 부분이 어디인지 다시 찾아보자.</p>
 
 <p>이것은 <code class="highlighter-rouge">_layout/single.html</code> 파일 안에 있다.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-    {% if jekyll.environment == 'production' and site.comments.provider and page.comments %}
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    {% if jekyll.environment == 'production' and site.comments.provider and page.comments %}
       {% include comments.html %}
     {% endif %}
-
 </code></pre></div></div>
 
 <p><code class="highlighter-rouge">comments.html</code>을 include하려면 세 개의 조건을 만족해야 하는데 뒤의 두 조건은 아까 <code class="highlighter-rouge">_config.yml</code>에서 설정했기 때문에 true가 된다.
@@ -342,11 +341,10 @@ defaults:
 <p>하지만 매번 저 명령을 치는 것은 귀찮을 것 같다.
 물론 저 명령을 shell script 파일로 만들고 그걸 exclude시키면 되긴 하지만…
 어차피 disqus를 다는 데에 성공했고, 앞으로 계속 이렇게 달 것이므로 해당 부분의 <code class="highlighter-rouge">if</code>문을 수정했다.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-    {% if site.comments.provider and page.comments %}
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    {% if site.comments.provider and page.comments %}
       {% include comments.html %}
     {% endif %}
-
 </code></pre></div></div>
 
 <p>이제 블로그에 댓글 시스템까지 붙였다.
