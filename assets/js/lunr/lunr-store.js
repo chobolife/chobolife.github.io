@@ -48,4 +48,9 @@ var store = [{
         "excerpt":"Jekyll의 기본적인 사항들은 어느 정도 익혔다. 이제 본격적으로 Jekyll을 즐길 준비가 된 것인데, 그러기 위해서는 테마를 내가 원하는 대로 설정하는 일이 남았다. 지금은 Jekyll의 테마 설정을 다 하고 나서 포스팅을 쓰고 있다. 그런데 이전의 그 어떤 작업보다 테마 설정을 하는 것이 어려웠던 것 같다. 이런 줄 미리 알았다면 맨 처음에...","categories": [],
         "tags": ["블로그","jekyll","jekyll theme","nokogiri 오류"],
         "url": "https://chobolife.github.io/blog/2019/08/12/jekyll-theme/",
+        "teaser":null},{
+        "title": "Jekyll에 disqus 연동하기",
+        "excerpt":"Jekyll에 테마를 설정한 후 이제 블로그답게 만드는 일은 하나 남았다. 그것은 바로 댓글이다. 사실 댓글 시스템이 꼭 필요한 블로그라면 이미 성공한 블로그일 것이다. 대부분의 개인 블로그에는 댓글 섹션이 있지만 유명무실하다. 방문자도 많지 않을 것이고, 방문자 중에서 작성자에게 피드백을 해 주는 사람은 그보다 훨씬 적을 것이기 때문이다. 단언컨대, 댓글로 의견이 활발하게...","categories": [],
+        "tags": ["블로그","jekyll","disqus"],
+        "url": "https://chobolife.github.io/blog/2019/08/16/jekyll-disqus/",
         "teaser":null}]
