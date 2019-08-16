@@ -201,7 +201,7 @@
 
 <h2 id="disqus-가입-및-사이트-생성">disqus 가입 및 사이트 생성</h2>
 <p><a href="https://disqus.com/">Disqus</a>는 구성이 직관적이고 간단하여 특별한 가이드가 없어도 쉽게 가입할 수 있다.
-초기화면에서 GET STARTED라는 버튼을 누르면 가입할 수 있는 화면이 나온다.</p>
+초기화면에서 “GET STARTED”라는 버튼을 누르면 가입할 수 있는 화면이 나온다.</p>
 
 <figure>
     <img src="https://drive.google.com/uc?id=1MdnMZTcgK_7PnplKe3kQvimYjZwnKJJg" alt="Facebook, Twitter, Google의 계정이 있으면 바로 시작할 수 있고, 계정이 없으면 disqus에 가입하여 서비스를 이용할 수 있다." title="Disqus의 가입 화면" />
@@ -223,8 +223,8 @@
 그러면 새로운 사이트를 만드는 다음 화면으로 넘어간다.</p>
 
 <figure>
-    <img src="https://drive.google.com/uc?id=12peK_ZIkrJmH0rm_VLIaMhoX-nUrVz1J" alt="본인의 사이트에 disqus를 설치하려면 처음으로 위와 같은 정보를 입력해야 한다." title="웹사이트에 disqus 설치하기" />
-    <figcaption>본인의 사이트에 disqus를 설치하려면 처음으로 위와 같은 정보를 입력해야 한다.</figcaption>
+    <img src="https://drive.google.com/uc?id=12peK_ZIkrJmH0rm_VLIaMhoX-nUrVz1J" alt="본인의 사이트에 disqus를 설치하려면 먼저 위와 같은 정보를 입력해야 한다." title="웹사이트에 disqus 설치하기" />
+    <figcaption>본인의 사이트에 disqus를 설치하려면 먼저 위와 같은 정보를 입력해야 한다.</figcaption>
 </figure>
 
 <p>이 화면에서는 웹사이트의 이름과 카테고리를 설정한다.
@@ -270,7 +270,7 @@ Billed Monthly, Billed Yearly 둘 중에 하나 선택하라는데…
 만약 아무 테마를 사용하지 않거나, 테마에서 별도로 제공하는 방법이 없다면 위의 그림대로 하면 된다.</p>
 
 <h2 id="minimal-mistakes에-disqus-달기">Minimal mistakes에 disqus 달기</h2>
-<p>내가 사용하는 <a href="/blog/2019/08/12/jekyll-theme/">Minimal mistakes 테마</a>)에는 disqus를 쉽게 달 수 있는 방법이 있다.
+<p>내가 사용하는 <a href="/blog/2019/08/12/jekyll-theme/">Minimal mistakes 테마</a>에는 disqus를 쉽게 달 수 있는 방법이 있다.
 먼저 <code class="highlighter-rouge">_config.yml</code> 파일을 열어서 <code class="highlighter-rouge">comments</code>를 찾으면 아래와 같은 부분이 있다.</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>comments:
   provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
@@ -283,7 +283,8 @@ Billed Monthly, Billed Yearly 둘 중에 하나 선택하라는데…
 나의 경우에는 <code class="highlighter-rouge">chobolife</code>라고 입력하였다.</p>
 
 <p>그리고 같은 파일에서 맨 아래쪽에 comments를 enable시켜주는 부분이 있다.
-아마 처음에는 여기에 아무 값도 들어가지 않는데, 아래와 같이 <code class="highlighter-rouge">true</code>로 입력시켜 주어야 한다.</p>
+아래와 같이 <code class="highlighter-rouge">defaults - values - comments</code>의 값을 <code class="highlighter-rouge">true</code>로 입력시켜 주어야 한다.
+다른 부분은 관계없다.</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Defaults
 defaults:
   # _posts
@@ -294,7 +295,7 @@ defaults:
       layout: single
       author_profile: false
       read_time: false
-      comments: true # true
+      comments: true
       share: false
       related: true
 </code></pre></div></div>
@@ -309,9 +310,9 @@ defaults:
 
 <p><code class="highlighter-rouge">_includes/comments.html</code>에 보면 이런 부분이 있다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    {% when "disqus" %}
-      &lt;h4 class="page__comments-title"&gt;{{ comments_label }}&lt;/h4&gt;
-      &lt;section id="disqus_thread"&gt;&lt;/section&gt;
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% when "disqus" %}
+  &lt;h4 class="page__comments-title"&gt;{{ comments_label }}&lt;/h4&gt;
+  &lt;section id="disqus_thread"&gt;&lt;/section&gt;
 </code></pre></div></div>
 
 <p>아마 여기에 disqus의 댓글 섹션이 들어가는 것 같다.
@@ -320,9 +321,9 @@ defaults:
 
 <p>이것은 <code class="highlighter-rouge">_layout/single.html</code> 파일 안에 있다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    {% if jekyll.environment == 'production' and site.comments.provider and page.comments %}
-      {% include comments.html %}
-    {% endif %}
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% if jekyll.environment == 'production' and site.comments.provider and page.comments %}
+  {% include comments.html %}
+{% endif %}
 </code></pre></div></div>
 
 <p><code class="highlighter-rouge">comments.html</code>을 include하려면 세 개의 조건을 만족해야 하는데 뒤의 두 조건은 아까 <code class="highlighter-rouge">_config.yml</code>에서 설정했기 때문에 true가 된다.
@@ -342,9 +343,9 @@ defaults:
 물론 저 명령을 shell script 파일로 만들고 그걸 exclude시키면 되긴 하지만…
 어차피 disqus를 다는 데에 성공했고, 앞으로 계속 이렇게 달 것이므로 해당 부분의 <code class="highlighter-rouge">if</code>문을 수정했다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    {% if site.comments.provider and page.comments %}
-      {% include comments.html %}
-    {% endif %}
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% if site.comments.provider and page.comments %}
+  {% include comments.html %}
+{% endif %}
 </code></pre></div></div>
 
 <p>이제 블로그에 댓글 시스템까지 붙였다.
