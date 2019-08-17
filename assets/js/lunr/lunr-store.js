@@ -51,6 +51,11 @@ var store = [{
         "teaser":null},{
         "title": "Jekyll에 disqus 연동하기",
         "excerpt":"Jekyll에 테마를 설정한 후 이제 블로그답게 만드는 일은 하나 남았다. 그것은 바로 댓글이다. 사실 댓글 시스템이 꼭 필요한 블로그라면 이미 성공한 블로그일 것이다. 대부분의 개인 블로그에는 댓글 섹션이 있지만 유명무실하다. 방문자도 많지 않을 것이고, 방문자 중에서 작성자에게 피드백을 해 주는 사람은 그보다 훨씬 적을 것이기 때문이다. 단언컨대, 댓글로 의견이 활발하게...","categories": [],
-        "tags": ["블로그","jekyll","disqus","댓글"],
+        "tags": ["블로그","jekyll","Minimal mistakes","disqus","댓글"],
         "url": "https://chobolife.github.io/blog/2019/08/16/jekyll-disqus/",
+        "teaser":null},{
+        "title": "Jekyll의 Minimal mistakes 테마에서 HTML 압축하기",
+        "excerpt":"Jekyll로 웹사이트를 만드는 것은 아주 만족스러웠다. 그리고 처음에는 이 블로그에서 시작했지만, 다른 사이트도 만들어보고 싶은 욕심이 생겨서 조금 해 보고 있다. HTML 압축이 필요한 이유 그런데 마크다운에서 HTML로 변환이 완료된 파일을 열어 보면 조금 마음에 안 들었다. 아래는 지난 포스팅(Jekyll에 disqus 연동하기)의 html 파일을 열어 본 것이다. Jekyll로 생성한 HTML...","categories": [],
+        "tags": ["블로그","jekyll","HTML 압축","Minimal mistakes"],
+        "url": "https://chobolife.github.io/blog/2019/08/17/jekyll-compress/",
         "teaser":null}]
