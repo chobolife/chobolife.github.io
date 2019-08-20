@@ -58,4 +58,9 @@ var store = [{
         "excerpt":"Jekyll로 웹사이트를 만드는 것은 아주 만족스러웠다. 그리고 처음에는 이 블로그에서 시작했지만, 다른 사이트도 만들어보고 싶은 욕심이 생겨서 조금 해 보고 있다. HTML 압축이 필요한 이유 그런데 마크다운에서 HTML로 변환이 완료된 파일을 열어 보면 조금 마음에 안 들었다. 아래는 지난 포스팅(Jekyll에 disqus 연동하기)의 html 파일을 열어 본 것이다. Jekyll로 생성한 HTML...","categories": [],
         "tags": ["블로그","jekyll","HTML 압축","Minimal mistakes"],
         "url": "https://chobolife.github.io/blog/2019/08/17/jekyll-compress/",
+        "teaser":null},{
+        "title": "수영을 배우기 위한 준비 1편",
+        "excerpt":"수영 강습을 한 번도 받아본 적이 없지만 수영을 배우기 위해 고민을 하고 있는 사람이라면 이 포스팅이 도움이 될 것 같습니다. 제가 그 때 했던 고민을 떠올리면서 써 보려고 하거든요. 수영과 관련된 블로그를 돌아다니다보면 자주 보이는 사진입니다. 저도 한 번 써보고 싶었어요. 이렇게 멋지게 수영할 수 있으면 얼마나 좋을까요. 수영 강습...","categories": [],
+        "tags": ["일상","수영","수영초보","팁"],
+        "url": "https://chobolife.github.io/blog/2019/08/20/swim-start-1/",
         "teaser":null}]
