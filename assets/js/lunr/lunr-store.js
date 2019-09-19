@@ -68,4 +68,9 @@ var store = [{
         "excerpt":"이번 포스팅에서는 수영을 배울 때 어떤 것이 필요한지 말씀드리려고 합니다. 사실 수영 초보자가 처음 수영을 하려고 할 때 많이 고민이 되는 것이거든요. 자주 써보지도 않은 것이고, 사 본 적도 거의 없는 물건들인데 어떻게 골라야 할지 잘 모르는 건 당연하겠죠. 저도 수영을 1년 이상 했지만 수영용품에는 별로 관심도 없고 이것저것 많이...","categories": [],
         "tags": ["일상","수영","수영초보","팁","수영용품"],
         "url": "https://chobolife.github.io/blog/2019/08/29/swim-start-2/",
+        "teaser":null},{
+        "title": "Verilog에서 사용한 배열을 simvision에서 확인하기",
+        "excerpt":"전통적인 배열 사용 방법 Verilog로 코드를 짜다보면 가끔 2차원 배열을 사용하고 싶을 때가 있다. 거의 대부분은 2차원 배열을 아래와 같이 선언한다. 아래 코드는 32-bit wire를 1024개짜리의 배열로 선언하고 사용하는 코드이다. wire [31:0] x_array [0:1023]; assign x_array[0] = 32'h01234567; assign x_array[1] = 32'h12345678; assign x_array[2] = 32'h23456789; ... assign x_array[1023] =...","categories": [],
+        "tags": ["코딩","Verilog","베릴로그","array","배열","simvision"],
+        "url": "https://chobolife.github.io/blog/2019/09/19/verilog-array-simvision/",
         "teaser":null}]
