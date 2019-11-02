@@ -69,11 +69,6 @@ var store = [{
         "tags": ["일상","수영","수영초보","팁","수영용품"],
         "url": "https://chobolife.github.io/blog/2019/08/29/swim-start-2/",
         "teaser":null},{
-        "title": "Verilog에서 사용한 배열을 simvision에서 확인하기",
-        "excerpt":"전통적인 배열 사용 방법 Verilog로 코드를 짜다보면 가끔 2차원 배열을 사용하고 싶을 때가 있다. 거의 대부분은 2차원 배열을 아래와 같이 선언한다. 아래 코드는 32-bit wire를 1024개짜리의 배열로 선언하고 사용하는 코드이다. wire [31:0] x_array [0:1023]; assign x_array[0] = 32'h01234567; assign x_array[1] = 32'h12345678; assign x_array[2] = 32'h23456789; ... assign x_array[1023] =...","categories": ["개발"],
-        "tags": ["코딩","Verilog","베릴로그","array","배열","simvision"],
-        "url": "https://chobolife.github.io/blog/2019/09/19/verilog-array-simvision/",
-        "teaser":null},{
         "title": "[수영고정관념 1] 수영은 관절에 무조건 좋을까?",
         "excerpt":"오늘의 주제는 이것입니다. 정말 수영은 관절에 무조건 좋을까? ‘수영고정관념’을 시작하며… 안녕하세요. 초보라이프입니다. 수영을 아주 잘 하지는 않지만 그래도 열심히, 꾸준히 수영을 하고 있습니다. 수영을 하면서 몸으로 느끼고 머리로 생각했던 것들을 말씀드리는 데에 어떤 방법이 좋을까 고민해 보았는데요. 수영에 대한 일반적인 인식을 중심으로 꼭 그것이 맞다, 틀리다는 것을 넘어서 제 생각을...","categories": ["수영"],
         "tags": ["일상","수영","수영초보","팁","무릎","허리","관절"],
