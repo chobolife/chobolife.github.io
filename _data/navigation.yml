@@ -1,0 +1,19 @@
+# main links
+main:
+  - title: "Tag"
+    url: /tags/
+  - title: "About"
+    url: /about/
+
+sidebar:
+  - title: "블로그"
+    url: /category/블로그
+  - title: "수영"
+    url: /category/수영
+  - title: "분당올림픽스포츠센터"
+    url: /category/분당올림픽스포츠센터
+  - title: "여행"
+    url: /category/여행
+  - title: "일상"
+    url: /category/일상
+
