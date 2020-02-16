@@ -20,12 +20,12 @@ var store = [{
         "url": "https://chobolife.github.io/blog/2019/07/28/jekyll-github/",
         "teaser":null},{
         "title": "Google drive에 공개 이미지 올리기",
-        "excerpt":"Jekyll에서 이미지를 올리는 방법에 대해서 찾아보았고, 코드조각이라는 것을 이용하여 나름의 방법을 구축했다. 그 방법을 소개하려고 하는데 그에 앞서 우선 이번 포스팅에서는 Google drive에 이미지 파일을 올리고 웹에 공개하는 방법까지만 작성했다. 그렇게 올린 이미지 파일을 Jekyll post에 표시하는 방법은 다음 포스팅에서 다룰 예정이다. 네이버와 워드프레스에서 이미지 관리 방법의 차이 일단 먼저...","categories": ["블로그"],
+        "excerpt":"Jekyll에서 이미지를 올리는 방법에 대해서 찾아보았고, 코드조각이라는 것을 이용하여 나름의 방법을 구축했다. 그 방법을 소개하려고 하는데 그에 앞서 우선 이번 포스팅에서는 Google drive에 이미지 파일을 올리고 웹에 공개하는 방법까지만 작성했다. 그렇게 올린 이미지 파일을 Jekyll post에 표시하는 방법은 다음 포스팅(Jekyll post에 이미지 첨부하기)에서 다룰 예정이다. 네이버와 워드프레스에서 이미지 관리 방법의...","categories": ["블로그"],
         "tags": ["블로그","jekyll","구글 드라이브","이미지","공개 설정"],
         "url": "https://chobolife.github.io/blog/2019/07/29/google-drive-image/",
         "teaser":null},{
         "title": "Jekyll post에 이미지 첨부하기",
-        "excerpt":"이전 포스팅 (Google drive에 공개 이미지 올리기)에서 구글 드라이브에 이미지 파일을 올리고 공개하는 방법을 소개했다. 이번 포스팅은 그렇게 올린 이미지 파일을 Jekyll에서 웹페이지에 포함시키는 방법에 대한 포스팅이다. 이미지를 표현하는 markdown 기본 문법 우선 Jekyll 공식 문서에 나와 있는 이미지 첨부 방법은 아래와 같다. 기본적인 syntax는 간단하다. ![alt-text-message](image-link) 이렇게 하면 이미지를...","categories": ["블로그"],
+        "excerpt":"이전 포스팅(Google drive에 공개 이미지 올리기)에서 구글 드라이브에 이미지 파일을 올리고 공개하는 방법을 소개했다. 이번 포스팅은 그렇게 올린 이미지 파일을 Jekyll에서 웹페이지에 포함시키는 방법에 대한 포스팅이다. 이미지를 표현하는 markdown 기본 문법 우선 Jekyll 공식 문서에 나와 있는 이미지 첨부 방법은 아래와 같다. 기본적인 syntax는 간단하다. ![alt-text-message](image-link) 이렇게 하면 이미지를 첨부할...","categories": ["블로그"],
         "tags": ["블로그","jekyll","구글 드라이브","이미지","include","조각파일"],
         "url": "https://chobolife.github.io/blog/2019/07/31/jekyll-image/",
         "teaser":null},{
@@ -36,7 +36,7 @@ var store = [{
         "teaser":null},{
         "title": "EC2에서 S3에 접근하는 방법",
         "excerpt":"약간의 삽질을 했지만 결국 AWS CLI를 이용하여 ubuntu에서 S3에 업로드하는 방법을 찾았다. 이번 포스팅에서는 그 방법을 정리해 두려고 한다. Jekyll 블로그의 초안을 AWS S3에 업로드 이전 포스팅(Jekyll 초안 관리에 대한 고민)에서 했던 고민의 결론은 이것이었다. Jekyll 블로그의 초안을 github page에 commit하기 전에 AWS S3에 업로드해서 나만 먼저 확인해보겠다. 참고로 Jekyll...","categories": ["블로그"],
-        "tags": ["블로그","jekyll","AWS","AWS S3","AWS CLI","AMI"],
+        "tags": ["블로그","jekyll","AWS","AWS S3","AWS CLI","AMI","IAM"],
         "url": "https://chobolife.github.io/blog/2019/08/04/ec2-s3-authority/",
         "teaser":null},{
         "title": "EC2에서 웹서버 구동하기",
@@ -138,4 +138,9 @@ var store = [{
         "excerpt":"한겨울 춘천 방문기: 소양호 유람선 &amp; 청평사 요즘은 어디든 사람이 밀집된 곳이나 실내는 되도록 피하는 시기입니다. 운동도 그만두었습니다. 그래서 한동안은 불금 불토도 집에서 시간을 보냈습니다. 그러다 ‘이번 주말에는 사람이 없는 야외로 가서 바람을 조금 쐬야겠다’는 생각을 했습니다. (그나마 야외가 안전하다는 기사를 보았습니다.) 어디가 좋을지 한참을 찾다 발견한 곳이 바로 춘천...","categories": ["여행"],
         "tags": ["일상","여행","국내여행","강원도","춘천","소양호","소양호유람선","청평사"],
         "url": "https://chobolife.github.io/blog/2020/02/12/chuncheon-in-winter/",
+        "teaser":null},{
+        "title": "Google Adsense와 쿠팡 파트너스 신청하다",
+        "excerpt":"구글 애드센스와 쿠팡 파트너스를 엉겁결에 신청했다. 결과는… 이미 보이다시피… 모두 승인되었다! 애드센스 이 글을 읽고 있는 사람이라면 애드센스가 뭔지 정도는 이미 알 것이라고 생각하지만 그래도 간단한 개념만 정리해 보자. 블로그, 웹사이트 등을 보다 보면 상단, 하단, 사이드바, 본문 중간 등의 위치에 배너광고 또는 텍스트광고가 달려 있는 것을 볼 수 있다....","categories": ["블로그"],
+        "tags": ["블로그","jekyll","구글 애드센스","애드센스","쿠팡 파트너스","파트너스"],
+        "url": "https://chobolife.github.io/blog/2020/02/15/google-adsense-coupang-partners/",
         "teaser":null}]
