@@ -244,6 +244,16 @@ Hello World를 출력해 보지는 않았지만 별다른 에러 메시지가 �
   {{ previous | markdownify }}
 </div>
 
+{% capture previous %}
+#### 다음 포스트
+
+* [나는 Jekyll을 잘못 사용하고 있었다]({{ site.baseurl }}{% link _posts/2020/2020-02-18-jekyll-new.md %})
+{% endcapture %}
+
+<div class="notice--primary">
+  {{ previous | markdownify }}
+</div>
+
 {% capture related %}
 #### 관련 포스트
 

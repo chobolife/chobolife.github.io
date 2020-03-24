@@ -145,6 +145,7 @@ Done installing documentation for bundler after 16 seconds
 #### 다음 포스트
 
 * [나의 Jekyll 여행기 (2)]({{ site.baseurl }}{% link _posts/2019/2019-07-27-start-jekyll-2.md %})
+* [나는 Jekyll을 잘못 사용하고 있었다]({{ site.baseurl }}{% link _posts/2020/2020-02-18-jekyll-new.md %})
 {% endcapture %}
 
 <div class="notice--primary">

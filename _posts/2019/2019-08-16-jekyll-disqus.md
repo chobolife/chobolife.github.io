@@ -195,6 +195,7 @@ Facebook, Twitter, Google 또는 Disqus 계정이 있으면 그것으로 로그�
 * [Jekyll post에 이미지 첨부하기]({{ site.baseurl }}{% link _posts/2019/2019-07-31-jekyll-image.md %})
 * [Jekyll로 만든 사이트를 github에 올리기]({{ site.baseurl }}{% link _posts/2019/2019-07-28-jekyll-github.md %})
 * [Jekyll 테마 설정하기]({{ site.baseurl }}{% link _posts/2019/2019-08-12-jekyll-theme.md %})
+* [Jekyll의 Minimal mistakes 테마에서 HTML 압축하기]({{ site.baseurl }}{% link _posts/2019/2019-08-17-jekyll-compress.md %})
 * [웹페이지에 지도 삽입하기]({{ site.baseurl }}{% link _posts/2019/2019-10-05-map-in-blog.md %})
 * [Google Analytics 설치하기]({{ site.baseurl }}{% link _posts/2020/2020-02-11-google-analytics.md %})
 {% endcapture %}
