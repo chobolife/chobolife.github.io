@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "부동산 공부를 시작하자"
-excerpt: "#슬럼프"
+excerpt: "#내집마련을위한 #최소한의부동산 #살기위해공부합시다"
 header:
   overlay_image: assets/images/money-2724248_1920.jpg
   overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
