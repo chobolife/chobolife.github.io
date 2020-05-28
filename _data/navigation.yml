@@ -6,6 +6,8 @@ main:
     url: /about/
 
 sidebar:
+  - title: "생존부동산"
+    url: /category/생존부동산
   - title: "블로그"
     url: /category/블로그
   - title: "수영"
