@@ -140,15 +140,15 @@ chobolife/2019/07 폴더 아래에 Grand Canyon 파일을 올렸다.
 위 툴팁 상자에서는 특별한 설정을 해 줄 것은 없으므로 무시하면 된다.
 클립보드에는 아래와 같은 주소가 복사되어 있다.
 ```
-https://drive.google.com/open?id=1fbAf4Hdbi5GZjeLVztTuhDpYDMVN_dCa
+https://drive.google.com/open?id=1L6TXwRoq0KKBREIrG385ckS33_K3YUxe
 ```
 
 그런데 클립보드에 복사된 주소를 웹브라우저에 입력해 보면 이미지가 그대로 표시되는 것이 아니라 구글의 이미지 뷰어를 통해서 보인다.
 아래 그림에서 이미지를 그대로 보여주는 것이 아니라 위와 아래에 별도의 컨트롤러가 있는 것을 볼 수 있다.
 
-{% include i-g.html id="1fbAf4Hdbi5GZjeLVztTuhDpYDMVN_dCa" alt="클립보드에 복사된 주소를 그대로 입력하면 구글 드라이브의 자체 뷰어를 통해 이미지가 보인다." title="구글 드라이브의 이미지 뷰어" %}
+{% include i-g.html id="1L6TXwRoq0KKBREIrG385ckS33_K3YUxe" alt="클립보드에 복사된 주소를 그대로 입력하면 구글 드라이브의 자체 뷰어를 통해 이미지가 보인다." title="구글 드라이브의 이미지 뷰어" %}
 
-직접 확인하려면 이 [링크][l-image-viewer]{:target='_blank'}를 클릭해도 된다.
+직접 확인하려면 이 [링크][l-image-direct]{:target='_blank'}를 클릭해도 된다.
 
 이렇게 되면 문제가 있다.
 이미지를 다른 사람에게 보여주기 위해 주소를 그대로 공유할 의도라면 모르겠지만 나는 웹페이지 안에서 이 이미지를 보여주려는 것이기 때문이다.
@@ -159,8 +159,8 @@ https://drive.google.com/open?id=1fbAf4Hdbi5GZjeLVztTuhDpYDMVN_dCa
 즉, 단순히 `open`을 `uc`로만 바꾸어 주면 되고 나머지 부분은 그대로 둔다.
 아래 code block에서 비교해 보자면 원래 클립보드에 복사된 것은 윗줄인데 그것을 아랫줄로 바꾸어 준 것이다.
 ```
-https://drive.google.com/open?id=1fbAf4Hdbi5GZjeLVztTuhDpYDMVN_dCa
-https://drive.google.com/uc?id=1fbAf4Hdbi5GZjeLVztTuhDpYDMVN_dCa
+https://drive.google.com/open?id=1L6TXwRoq0KKBREIrG385ckS33_K3YUxe
+https://drive.google.com/uc?id=1L6TXwRoq0KKBREIrG385ckS33_K3YUxe
 ```
 이렇게 하면 주소를 웹브라우저에 쳤을 때 이미지가 웹브라우저에 바로 표시된다.
 [링크][l-image-native]{:target='_blank'}를 클릭하여 확인할 수 있다.
@@ -197,7 +197,7 @@ https://drive.google.com/uc?id=1fbAf4Hdbi5GZjeLVztTuhDpYDMVN_dCa
 [l-google-drive]: https://www.google.com/drive/
 [l-aws-s3]: https://aws.amazon.com/ko/s3/
 [l-pixabay]: https://pixabay.com/
-[l-image-viewer]: https://drive.google.com/open?id=1fbAf4Hdbi5GZjeLVztTuhDpYDMVN_dCa
-[l-image-native]: https://drive.google.com/uc?id=1fbAf4Hdbi5GZjeLVztTuhDpYDMVN_dCa
+[l-image-direct]: https://drive.google.com/open?id=1L6TXwRoq0KKBREIrG385ckS33_K3YUxe
+[l-image-native]: https://drive.google.com/uc?id=1L6TXwRoq0KKBREIrG385ckS33_K3YUxe
 [l-image-hosting]: http://www.somanet.xyz/2017/06/blog-post_21.html
 
