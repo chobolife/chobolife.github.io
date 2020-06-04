@@ -146,7 +146,7 @@ https://drive.google.com/open?id=1L6TXwRoq0KKBREIrG385ckS33_K3YUxe
 그런데 클립보드에 복사된 주소를 웹브라우저에 입력해 보면 이미지가 그대로 표시되는 것이 아니라 구글의 이미지 뷰어를 통해서 보인다.
 아래 그림에서 이미지를 그대로 보여주는 것이 아니라 위와 아래에 별도의 컨트롤러가 있는 것을 볼 수 있다.
 
-{% include i-g.html id="1L6TXwRoq0KKBREIrG385ckS33_K3YUxe" alt="클립보드에 복사된 주소를 그대로 입력하면 구글 드라이브의 자체 뷰어를 통해 이미지가 보인다." title="구글 드라이브의 이미지 뷰어" %}
+{% include i-g.html id="1fbAf4Hdbi5GZjeLVztTuhDpYDMVN_dCa" alt="클립보드에 복사된 주소를 그대로 입력하면 구글 드라이브의 자체 뷰어를 통해 이미지가 보인다." title="구글 드라이브의 이미지 뷰어" %}
 
 직접 확인하려면 이 [링크][l-image-direct]{:target='_blank'}를 클릭해도 된다.
 
