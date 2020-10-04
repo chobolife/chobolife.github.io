@@ -62,15 +62,13 @@ tags:
 
 {% include i-g.html id="1Lkyz6LAR-976Ydbtqe6vozwAhVPgUtZi" alt="아쉬움을 뒤로한 채 배에 올라탔습니다. 등산로로 치면 아주 가벼운 등산인데도 다녀오니 허기가 져서 점심 식사 장소로 빠르게 이동했습니다." title="청평사에서 다시 선착장으로" %}
 
-{% comment %}
-{% capture next %}
-#### 다음 포스트
+{% capture related %}
+#### 관련 포스트
 
-* [나의 Jekyll 여행기 (2)]({{ site.baseurl }}{% link _posts/2019/2019-07-27-start-jekyll-2.md %})
+* [해미읍성 백종원 골목식당, 달인 맛집 4곳 탐방 (곱창, 꽈배기, 떡볶이, 호떡)]({{ site.baseurl }}{% link _posts/2020/2020-10-04-delicious-heami-eupseong.md %})
 {% endcapture %}
 
 <div class="notice--primary">
-  {{ next | markdownify }}
+  {{ related | markdownify }}
 </div>
-{% endcomment %}
 
