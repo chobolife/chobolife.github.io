@@ -27,7 +27,7 @@ EC2에 만들어 놓은 ubuntu에 ssh로 접속해서 Jekyll을 수행하고 있
 이것저것 테마를 깔아서 S3에 올리고 웹브라우저에서 다시 확인해보는 작업을 얼마 하지도 않았는데, AWS의 프리 티어를 소진했다는 메일이 왔다.
 AWS의 결제 화면에 들어가서 보니 다른 건 문제가 안 되는데 PUT request가 2천회를 초과했다.
 
-{% include i-g.html id="17TSBvgYAq6OpzW_Pq3mpi9bgh4g87Su6" alt="AWS 프리 티어를 초과했다는 메일을 받고 부랴부랴 결제 페이지에 들어가 보았다. AWS S3의 Put request가 프리 티어 제공량을 초과했다." title="AWS 프리 티어의 기본 제공량을 초과한 결제 화면" %}
+{% include i-g.html id="1WkGWysw_TALupGH-RyZ947PLwYdHb62Y" alt="AWS 프리 티어를 초과했다는 메일을 받고 부랴부랴 결제 페이지에 들어가 보았다. AWS S3의 Put request가 프리 티어 제공량을 초과했다." title="AWS 프리 티어의 기본 제공량을 초과한 결제 화면" %}
 
 테마마다 생성되는 파일이 많기 때문에 그런 것 같다.
 각 파일의 용량은 작을지라도 숫자 자체가 많은 건 어쩔 수 없다.
@@ -75,7 +75,7 @@ EC2 대시보드의 왼쪽에 있는 메뉴 중에서 **네트워크 및 보안*
 '보안 그룹 생성'이라는 창이 뜨게 된다.
 아래 그림과 같이 입력한다.
 
-{% include i-g.html id="1NyZxoicqlA9CCHdT9Fpe9npore0tQ79V" alt="공개 웹 서버에 연결하기 위한 보안 그룹을 설정한다. SSH, HTTP, HTTPS의 인바운드를 열어 주면 된다." title="공개 웹 서버의 보안 그룹 설정" %}
+{% include i-g.html id="17w2XaSlAXjZ553OXzrdd0vx018oTLa_Z" alt="공개 웹 서버에 연결하기 위한 보안 그룹을 설정한다. SSH, HTTP, HTTPS의 인바운드를 열어 주면 된다." title="공개 웹 서버의 보안 그룹 설정" %}
 
 **보안 그룹 이름**과 **설명**에는 말 그대로 이름과 간단한 설명을 써 준다.
 그리고 하단에 있는 **보안 그룹 규칙**을 채워야 한다.
@@ -89,7 +89,7 @@ EC2 대시보드의 왼쪽에 있는 메뉴 중에서 **네트워크 및 보안*
 이제는 EC2 instance에 보안 그룹을 연결해 주어야 한다.
 다시 인스턴스 화면으로 돌아가서, EC2 instance에서 마우스 우클릭을 하여 **네트워킹** → **보안 그룹 변경**을 클릭한다.
 
-{% include i-g.html id="19gXXlkgL2cqSYDtZClqXQv8WQfWAetrD" alt="보안 그룹을 생성했다면, 다음으로는 EC2 인스턴스에 보안 그룹을 연결해 주어야 한다." title="EC2 인스턴스에 보안 그룹 연결하기" %}
+{% include i-g.html id="1gszYTez1h0zIfQm9OGL2WB5tUl_yjPdZ" alt="보안 그룹을 생성했다면, 다음으로는 EC2 인스턴스에 보안 그룹을 연결해 주어야 한다." title="EC2 인스턴스에 보안 그룹 연결하기" %}
 
 그러면 '보안 그룹 변경'이라는 창이 뜬다.
 여기에서 아까 만들어 준 보안 그룹을 체크하고 **보안 그룹 할당** 버튼을 클릭하면 된다.
@@ -98,11 +98,11 @@ EC2 대시보드의 왼쪽에 있는 메뉴 중에서 **네트워크 및 보안*
 이제 EC2 instance는 웹서버로 동작할 것이다.
 웹서버에 접속할 주소는 EC2 instance를 클릭하면 하단에 나오는 정보 중에서 오른쪽 위에 있는 **퍼블릭 DNS(IPv4)** 또는 **IPv4 퍼블릭 IP**이다.
 
-{% include i-g.html id="17d8Hpjf-wldRMZR_zb4bdo3HwE3pgSQK" alt="EC2 인스턴스의 속성 중에서 '퍼블릭 DNS(IPv4)' 또는 'IPv4 퍼블릭 IP'이 주소가 된다." title="EC2 인스턴스의 속성" %}
+{% include i-g.html id="1pvB2YP5gSYQ1BchVlBUjfUJR5dTnOGUb" alt="EC2 인스턴스의 속성 중에서 '퍼블릭 DNS(IPv4)' 또는 'IPv4 퍼블릭 IP'이 주소가 된다." title="EC2 인스턴스의 속성" %}
 
 아래와 같은 화면이 나온다면 제대로 웹서버가 동작하고 있는 것이다.
 
-{% include i-g.html id="1950XW8vtHqIZT1dvyTZuNAUSB9EWt7nh" alt="Apache2를 설치하고 난 후 웹브라우저에서 접속하면 기본으로 설정된 페이지가 보인다." title="Apache2의 default index 페이지" %}
+{% include i-g.html id="10ZfCjmtWcmxt-9N4UH4z8NYfOLWZgxGm" alt="Apache2를 설치하고 난 후 웹브라우저에서 접속하면 기본으로 설정된 페이지가 보인다." title="Apache2의 default index 페이지" %}
 
 만약에 안 된다면 EC2 instance를 재부팅해보면 될 것이다.
 그래도 안 된다면... 나도 잘 모르겠다. 하지만 아마 구글은 알겠지...

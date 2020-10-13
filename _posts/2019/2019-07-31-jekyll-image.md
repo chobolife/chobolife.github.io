@@ -30,12 +30,12 @@ tags:
 
 예를 들어서 이전 포스팅에서 업로드했던 Grand Canyon의 이미지를 첨부하려면 이렇게 하면 된다.
 ```md
-![Grand Canyon](https://drive.google.com/uc?id=1fbAf4Hdbi5GZjeLVztTuhDpYDMVN_dCa)
+![Grand Canyon](https://drive.google.com/uc?id=1WnNM42a81mTEDyQFlFVyhwoWWZP_JoCx)
 ```
 위의 예시 코드에서 이미지의 주소는 이전 포스팅에 소개한 방법으로 얻어냈고, 대체 텍스트는 'Grand Canyon'으로 입력한 것이다.
 그리고 이 markdown을 문서에 삽입하고 `jekyll build`를 실행하면 그 부분에 아래와 같은 html 코드가 생긴다.
 ```html
-<img src="https://drive.google.com/uc?id=1fbAf4Hdbi5GZjeLVztTuhDpYDMVN_dCa" alt="Grand Canyon">
+<img src="https://drive.google.com/uc?id=1WnNM42a81mTEDyQFlFVyhwoWWZP_JoCx" alt="Grand Canyon">
 ```
 
 아주 간단하고 편한 방법이다.
@@ -102,7 +102,7 @@ tags:
 위와 같이 `i-g.html` 파일을 작성했다면 이미지 파일을 첨부하려는 곳에는 아래와 같이 입력한다.
 {% raw %}
 ```md
-{% include i-g.html id="1fbAf4Hdbi5GZjeLVztTuhDpYDMVN_dCa" alt="하늘과 Grand Canyon이 만나는 드넓은 곳에서 앞으로 열릴 탁 트인 미래를 상상하자." title="시원하게 열릴 내 미래" %}
+{% include i-g.html id="1WnNM42a81mTEDyQFlFVyhwoWWZP_JoCx" alt="하늘과 Grand Canyon이 만나는 드넓은 곳에서 앞으로 열릴 탁 트인 미래를 상상하자." title="시원하게 열릴 내 미래" %}
 ```
 {% endraw %}
 
@@ -113,7 +113,7 @@ tags:
 {% raw %}
 ```html
 <figure>
-    <img src="https://drive.google.com/uc?id="1fbAf4Hdbi5GZjeLVztTuhDpYDMVN_dCa
+    <img src="https://drive.google.com/uc?id="1WnNM42a81mTEDyQFlFVyhwoWWZP_JoCx
          alt="하늘과 Grand Canyon이 만나는 드넓은 곳에서 앞으로 열릴 탁 트인 미래를 상상하자."
          title="시원하게 열릴 내 미래"/>
     <figcaption>하늘과 Grand Canyon이 만나는 드넓은 곳에서 앞으로 열릴 탁 트인 미래를 상상하자.</figcaption>
@@ -123,7 +123,7 @@ tags:
 
 실제 웹페이지에 표시되는 모습은 아래와 같다.
 
-{% include i-g.html id="1K39Zz-BryUke96T0fOgGKWdHXqJAssCG" alt="하늘과 Grand Canyon이 만나는 드넓은 곳에서 앞으로 열릴 탁 트인 미래를 상상하자." title="시원하게 열릴 내 미래" %}
+{% include i-g.html id="1WnNM42a81mTEDyQFlFVyhwoWWZP_JoCx" alt="하늘과 Grand Canyon이 만나는 드넓은 곳에서 앞으로 열릴 탁 트인 미래를 상상하자." title="시원하게 열릴 내 미래" %}
 
 그림 위에 마우스 커서를 놓고 있으면 `title` 속성으로 지정한 문구가 툴팁으로 뜬다.
 이미지의 `title` 속성을 추가한 것은 SEO에 도움이 될까 싶어서였지 이 효과를 의도한 것은 아니다.

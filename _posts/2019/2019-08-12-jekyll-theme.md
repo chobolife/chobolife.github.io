@@ -78,7 +78,7 @@ Fork와 Star 갯수로 어떤 테마가 많이 쓰이는지 한 눈에 확인할
 내가 포스팅하고 있는 지금 기준으로 Star가 5511, Fork는 9274이며, 이는 jekyll 테마 중에서 가장 높다.
 아마도 굉장히 많이 쓰이는 테마인 것 같다.
 
-{% include i-g.html id="1CxLCQfuELSxq5_UGnf2eCPYU12UKY2w-" alt="Jekyll에서 사용할 수 있는 minimal mistakes 테마의 github repository 화면이다. 높은 수의 Star와 Fork를 자랑한다." title="Jekyll 테마의 절대강자인 minimal mistakes" %}
+{% include i-g.html id="1-lrTJnivYHGfnxkVauASzLgPpCC19qM-" alt="Jekyll에서 사용할 수 있는 minimal mistakes 테마의 github repository 화면이다. 높은 수의 Star와 Fork를 자랑한다." title="Jekyll 테마의 절대강자인 minimal mistakes" %}
 
 대부분 테마 홈페이지 또는 github repository에 설치 방법에 대한 안내가 있다.
 그런데 이 테마 설치가 정말 골치아프다.
@@ -309,7 +309,7 @@ https://github.com/jch/html-pipeline#dependencies
 알고 싶지도 않다.
 다만 나는 일단 지금의 목적을 달성했기 때문에 만족하며, 나의 정신건강을 위해 더 이상의 호기심은 차단하기로 했다.
 
-{% include i-g.html id="1lL9JvuOJx7A3NYQtm29zmJ7Ioe5FL9RV" alt="Minimal mistakes 테마를 적용한 후 아직 별도의 customization을 하지 않은 모습이다." title="Minimal mistakes 테마가 적용된 블로그" %}
+{% include i-g.html id="1XX3ZQhDkZmu68U-juYZNaxaKewrvZvWG" alt="Minimal mistakes 테마를 적용한 후 아직 별도의 customization을 하지 않은 모습이다." title="Minimal mistakes 테마가 적용된 블로그" %}
 
 {% capture related %}
 #### 관련 포스트

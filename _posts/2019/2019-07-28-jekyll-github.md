@@ -73,7 +73,7 @@ Github repository를 확인해보면 아래와 같다.
 Github repository에 파일은 바로 올라가지만 이것이 웹에 표시되기까지는 시간이 조금 걸리는 것 같다.
 잠시 후 주소를 찾아 들어와보니 이렇게 출력된다.
 
-{% include i-g.html id="1Vm8epjRHPsCsLXlPw9zraNIbOMuipSDS" alt="index.html 파일만 올리면 웹브라우저에는 볼품없이 표현된다." title="index.html만 올렸을 때 웹브라우저에 표현되는 화면" %}
+{% include i-g.html id="1jZluO9KXuIBGxTSfpUO-4SsdxAM67pXs" alt="index.html 파일만 올리면 웹브라우저에는 볼품없이 표현된다." title="index.html만 올렸을 때 웹브라우저에 표현되는 화면" %}
 
 `index.html` 파일 하나만 올린 상태이기 때문에 css 적용도 안 되어 있고 이래저래 볼품없는 디자인이긴 하다.
 하지만 우선 git으로 github에 제대로 올린 것 같다.
@@ -87,7 +87,7 @@ git push origin master
 
 잠시 후 확인해보니 이렇게 표시된다.
 
-{% include i-g.html id="17QUGDeaS_XZhlDZNlsizfaK4Nu7R3CJX" alt="site 폴더의 모든 파일을 올리고 Internet Explorer로 보면 그나마 아까보다는 나아진다." title="Jekyll을 build한 후 site 폴더의 모든 파일을 올린 뒤 Internet Explorer에 표현되는 첫 페이지" %}
+{% include i-g.html id="1Zgs90tEy9Meee5tUCPbG0ALDJZmElwre" alt="site 폴더의 모든 파일을 올리고 Internet Explorer로 보면 그나마 아까보다는 나아진다." title="Jekyll을 build한 후 site 폴더의 모든 파일을 올린 뒤 Internet Explorer에 표현되는 첫 페이지" %}
 
 잘 된다.
 그런데 레이아웃이 조금 겹치고 깨지는 듯한 모습이다.
@@ -96,7 +96,7 @@ git push origin master
 Internet Explorer 11에서 보면 레이아웃이 위 그림처럼 약간 깨진다.
 Chrome에서 보면 아래 그림처럼 잘 보인다.
 
-{% include i-g.html id="13kzd4B-zXN1gSQqyLZxUeJpiLpEuEnlS" alt="Jekyll의 기본 테마를 Chrome에 띄우고 보면 훨씬 낫다." title="Jekyll을 build한 후 site 폴더의 모든 파일을 올린 뒤 Chrome에서 보았을 때의 첫 페이지" %}
+{% include i-g.html id="1Es5B6c_91IAasLQLDrk0xrw2jAD0Ei3B" alt="Jekyll의 기본 테마를 Chrome에 띄우고 보면 훨씬 낫다." title="Jekyll을 build한 후 site 폴더의 모든 파일을 올린 뒤 Chrome에서 보았을 때의 첫 페이지" %}
 
 아마 Firefox나 Opera 등에서도 잘 보일 것 같다.
 Jekyll의 기본 테마는 Edge는 어떨지 모르겠지만 적어도 IE는 지원하지 않는 것 같다.

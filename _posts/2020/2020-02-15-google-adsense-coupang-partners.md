@@ -35,7 +35,7 @@ tags:
 그것이 구글 애드센스가 하는 일이다.
 이와 유사한 광고 플랫폼은 [쿠팡 파트너스][l-coupang-partners]{:target='_blank'}, [클릭몬][l-clickmon]{:target='_blank'}, [Taboola][l-taboola]{:target='_blank'}, [Criteo][l-criteo]{:target='_blank'} 등이 있다.
 
-{% include i-g.html id="1eQHiew2NpzbFC6Ih4EkzshMXapgI5pFz" alt="웹서핑을 하면 우리는 알게 모르게 많은 광고를 보게 된다. 사이트 상단, 사이드바, 본문 중간에 블록형 광고도 있고 피드 안에 일정한 크기로 들어간 인피드 광고도 있다. 그러한 광고를 쉽게 설치하고 관리할 수 있게 해 주는 플랫폼 중의 하나가 바로 애드센스이다." title="큰 웹 광고 시장" %}
+{% include i-g.html id="1vU3RSgY4fkNm-Iog8GCeA3nL2oSY0NZ-" alt="웹서핑을 하면 우리는 알게 모르게 많은 광고를 보게 된다. 사이트 상단, 사이드바, 본문 중간에 블록형 광고도 있고 피드 안에 일정한 크기로 들어간 인피드 광고도 있다. 그러한 광고를 쉽게 설치하고 관리할 수 있게 해 주는 플랫폼 중의 하나가 바로 애드센스이다." title="큰 웹 광고 시장" %}
 
 광고의 갯수, 위치, 크기는 사이트마다 제각각인데, 이것은 광고 회사의 정책이 아니라 사이트 관리자의 마음이다.
 광고 플랫폼에서 제공하는 것은 단지 한 줄 짜리 HTML 코드일 뿐이다.
@@ -147,7 +147,7 @@ Minimal mistakes 테마에서 `script` 태그 추가한 것밖에 없다.
 기다리면 답이 오겠지.
 이게 뭐라고... 대학입시 합격자 발표나 회사에 이력서 내고 결과 발표를 기다리는 것 같은 기분이 든다.
 
-{% include i-g.html id="1a_ml88yY0-rtqt6VRAzA4tryJhOTg-WA" alt="구글 애드센스를 시작하기 위해서는 먼저 관리하는 사이트에 추적 코드를 삽입해야 한다." title="애드센스 추적 코드 삽입" %}
+{% include i-g.html id="1d_OQqUDCfc5oDK04_ao7sdnmHALvZ-HB" alt="구글 애드센스를 시작하기 위해서는 먼저 관리하는 사이트에 추적 코드를 삽입해야 한다." title="애드센스 추적 코드 삽입" %}
 
 
 ## 쿠팡 파트너스도 도전! 그런데... 읭?
@@ -195,7 +195,7 @@ Minimal mistakes 테마에서 `script` 태그 추가한 것밖에 없다.
 이렇게 걱정을 시작하면 생각이 꼬리에 꼬리를 물고 끝도 없는 생각이 한참동안 이어지므로 그냥 _"될대로 되라지"_ 라고 생각하고 지내고 있었다.
 2월 7일 금요일 퇴근 길에 메일이 왔다.
 
-{% include i-g.html id="1TP1oE7QOGfslEzx7RpYzlNjdQh75kF96" alt="애드센스 광고 게재가 승인되면 메일을 통해서 알려준다." title="애드센스 승인 메일" %}
+{% include i-g.html id="1R4LR99Neh4ypaGlTaWWNDKufsgjTy53G" alt="애드센스 광고 게재가 승인되면 메일을 통해서 알려준다." title="애드센스 승인 메일" %}
 
 와!
 나도 드디어 승인이 되었구나!

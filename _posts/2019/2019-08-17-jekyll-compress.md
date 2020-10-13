@@ -21,7 +21,7 @@ Jekyll로 웹사이트를 만드는 것은 아주 만족스러웠다.
 그런데 마크다운에서 HTML로 변환이 완료된 파일을 열어 보면 조금 마음에 안 들었다.
 아래는 지난 포스팅([Jekyll에 disqus 연동하기]({{ site.baseurl }}{% link _posts/2019/2019-08-16-jekyll-disqus.md %}))의 html 파일을 열어 본 것이다.
 
-{% include i-g.html id="1OT8SjuEK1UEfsPtdIrNNpWCh9SmKAEJU" alt="Jekyll로 생성한 HTML 파일에 줄바꿈이 많이 들어 간 모습이다." title="Jekyll로 생성한 HTML 파일의 예 1" %}
+{% include i-g.html id="1lzVIUFj2bxBVweMh7KLW0joANwEpgD80" alt="Jekyll로 생성한 HTML 파일에 줄바꿈이 많이 들어 간 모습이다." title="Jekyll로 생성한 HTML 파일의 예 1" %}
 
 맨 윗 부분에 너무 많은 blank line이 있다.
 이것을 Jekyll의 layout 파일이나 include 파일을 따라가 보았는데, 그곳에서 줄이려면 굉장히 많은 수작업이 필요할 뿐 아니라 매우 비효율적일 것 같았다.
@@ -30,7 +30,7 @@ Jekyll로 웹사이트를 만드는 것은 아주 만족스러웠다.
 
 포스트의 아랫 부분에는 태그가 나열되는 부분도 있는데 그 곳의 html 코드는 아래와 같다.
 
-{% include i-g.html id="1Bz0HbHPuZa2TWlHQRLPBwp-Qet79EheW" alt="줄바꿈 뿐 아니라 공백도 많이 포함되어 있다. 이는 layout, include 등에 포함된 공백이 HTML로 그대로 옮겨지기 때문이다." title="Jekyll로 생성한 HTML 파일의 예 2" %}
+{% include i-g.html id="16no0viJkdHYippaHgIQH6wO2pnXUU1ys" alt="줄바꿈 뿐 아니라 공백도 많이 포함되어 있다. 이는 layout, include 등에 포함된 공백이 HTML로 그대로 옮겨지기 때문이다." title="Jekyll로 생성한 HTML 파일의 예 2" %}
 
 빈 줄도 문제지만, 쓸데없는 공백이 매우 많이 삽입되어 있다.
 이 html 파일의 크기는 25,383 byte이다.
@@ -110,7 +110,7 @@ layout: compress
 그리고 다시 `jekyll build`를 실행하였다.
 그랬더니 결과 html 파일은 다음과 같다.
 
-{% include i-g.html id="1fpsNnCNAKfhx9D1OkDE1-O06TtzARn9D" alt="HTML 압축을 하고 난 뒤의 파일을 열어 보면 이런 모습이다. 사람은 읽고 이해할 수 없을 정도로 가독성이 떨어진다." title="HTML compression 후의 HTML 파일" %}
+{% include i-g.html id="1R-hdhzga7OK0GIoeo0BuBZMP4ZCntxZN" alt="HTML 압축을 하고 난 뒤의 파일을 열어 보면 이런 모습이다. 사람은 읽고 이해할 수 없을 정도로 가독성이 떨어진다." title="HTML compression 후의 HTML 파일" %}
 
 내가 원하던 결과물이 나왔다.
 사실 처음 본 사람이라면, 이 파일을 HTML 코드로만 보면 이게 무슨 해괴망측한 것인지... 오히려 오류가 발생한 것 아닌지 의심할 수도 있겠다.
@@ -119,7 +119,7 @@ layout: compress
 이걸 웹브라우저에서 열어보면 알 수 있는데, 이전과 동일하게 잘 나온다.
 그런데 맨 밑으로 내려보니 이상한 게 하나 추가되었다.
 
-{% include i-g.html id="1UvaMGItWxk5-XbvItivIDu3Fq9PK4lQe" alt="포스트 하단에 위와 같은 표가 출력된다." title="얼마나 압축되었는지 알려주는 정보" %}
+{% include i-g.html id="1_F1dKf-3DtoIXuNdQqRM3f1zlYtxtzTn" alt="포스트 하단에 위와 같은 표가 출력된다." title="얼마나 압축되었는지 알려주는 정보" %}
 
 Compressor가 여러 단계에 걸쳐서 작업을 수행하는데, 그 단계마다 얼마나 줄였는지 알려주는 표인 것 같다.
 이걸 친절하다고 생각해야 하는건지, 자랑질이라고 생각해야 하는건지 헷갈린다.
@@ -191,12 +191,12 @@ Minimal mistakes 테마에서는 `_includes/comments-providers/disqus.html` 파�
 나의 추측을 뒷받침해주는 사실을 발견했다.
 아래 그림은 HTML compression을 하기 전, 그러니까 원래의 페이지를 크롬에서 불러올 때 개발자 도구의 Network 탭을 캡쳐한 것이다.
 
-{% include i-g.html id="1B-4QYzyxZmbA0-ZDb9VxzWdzB_8CnKuC" alt="크롬 개발자 도구의 Network를 보면 웹페이지를 읽어올 때 생기는 interaction을 확인할 수 있다. HTML 압축을 하기 전에는 disqus 서버로부터 embed.js 파일을 받아 왔다." title="개발자 도구에서 확인할 수 있는 embed.js 파일 다운" %}
+{% include i-g.html id="1IhJYqltz-qfq-oi-1-xfQpHJIjlrZE6-" alt="크롬 개발자 도구의 Network를 보면 웹페이지를 읽어올 때 생기는 interaction을 확인할 수 있다. HTML 압축을 하기 전에는 disqus 서버로부터 embed.js 파일을 받아 왔다." title="개발자 도구에서 확인할 수 있는 embed.js 파일 다운" %}
 
 파일 `embed.js`이 아까 `chobolife.disqus.com` 에서 가져오는 부분이다.
 그런데 HTML compression을 하고 난 페이지를 로드할 때는 아래와 같다.
 
-{% include i-g.html id="1P79H6pVKDWbf6bOkZAU0MOJmRZfjitRI" alt="HTML 압축을 하고 난 뒤에는 embed.js를 다운로드하지 않는다. 그 뿐 아니라 상당히 많은 interaction이 사라졌다." title="embed.js 파일을 더 이상 다운로드 하지 않는다" %}
+{% include i-g.html id="1an_kU1oXwZ7jNrL3eI4Erd5a-4dp4p6B" alt="HTML 압축을 하고 난 뒤에는 embed.js를 다운로드하지 않는다. 그 뿐 아니라 상당히 많은 interaction이 사라졌다." title="embed.js 파일을 더 이상 다운로드 하지 않는다" %}
 
 아까 있었던 `embed.js` 파일이 없다.
 Request 숫자도 76개에서 13개로 엄청나게 줄었다.
@@ -240,7 +240,7 @@ Javascript의 문법을 잘 알지는 못하지만 아까 `_includes/comments-pr
 
 위와 같이 하고 나서 동일한 포스팅을 로드했을 때 개발자 도구에서 보면 아래와 같다.
 
-{% include i-g.html id="1c4k6bv6wAZvsc9a_kQnrHeAnAXVVkr8N" alt="Javascript의 line comment를 삭제해 버리면 다시 embed.js 파일을 다운로드한다." title="HTML 압축을 하고 난 뒤 개발자 도구에서 확인" %}
+{% include i-g.html id="13Ft8C_5YSM791XaYmsi0nHSawk23MFi5" alt="Javascript의 line comment를 삭제해 버리면 다시 embed.js 파일을 다운로드한다." title="HTML 압축을 하고 난 뒤 개발자 도구에서 확인" %}
 
 HTML index page가 아까는 6.8KB였는데 6.3 KB로 줄었다.
 그러면서 javascript도 잘 동작하고, 별다른 문제는 없어보인다.

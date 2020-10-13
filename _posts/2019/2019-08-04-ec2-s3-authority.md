@@ -138,11 +138,11 @@ awscli를 설치했다고 해서 아무나 내 S3 버킷에 접근하면 안 되
 
 EC2 instance 위에서 오른쪽 버튼을 클릭하면 메뉴가 나오는데, 그 중에서 **인스턴스 설정** → **IAM 역할 연결/바꾸기**를 클릭한다.
 
-{% include i-g.html id="1m14IModjAT6zA9m4jGsoRUB6wzUfIEl0" alt="EC2 인스턴스에 S3의 접근 권한을 주기 위해서는 IAM 역할을 부여해 주어야 한다." title="EC2 인스턴스에서 IAM 설정하는 메뉴" %}
+{% include i-g.html id="1LJqr0Yvf6oliHJ7ApEUJhmwxodrzweup" alt="EC2 인스턴스에 S3의 접근 권한을 주기 위해서는 IAM 역할을 부여해 주어야 한다." title="EC2 인스턴스에서 IAM 설정하는 메뉴" %}
 
 그러면 새 탭이 뜨면서 아래와 같은 IAM 역할 연결/바꾸기 페이지가 연결된다.
 
-{% include i-g.html id="19uSZtlEcHGa8ixaB3MYLw8t_zB9N17aj" alt="EC2 인스턴스에 부여할 IAM 역할을 선택하는 탭이 뜬다." title="EC2 인스턴스에 연결할 IAM 역할 선택" %}
+{% include i-g.html id="1N-nvO_RRHabYgqNZOfnrulwcCNcLhJYG" alt="EC2 인스턴스에 부여할 IAM 역할을 선택하는 탭이 뜬다." title="EC2 인스턴스에 연결할 IAM 역할 선택" %}
 
 이 화면에서는 EC2 instance에 어떤 IAM 역할을 연결할지 선택할 수 있다.
 만약 이전에 S3에 접근할 수 있는 IAM 역할을 만든 적이 있다면 그 IAM 역할을 선택하면 된다.
@@ -153,27 +153,27 @@ EC2 instance 위에서 오른쪽 버튼을 클릭하면 메뉴가 나오는데, 
 파란색 글씨로 되어 있는 **새 IAM 역할 생성**을 클릭한다.
 그러면 이렇게 생긴 화면이 뜬다.
 
-{% include i-g.html id="1yYU-Hn18vXwjnv8fLhcxsqJ97IjqNR7Y" alt="새 IAM 역할 생성을 시작하는 페이지." title="IAM 역할 생성 페이지" %}
+{% include i-g.html id="1NGPAfBA3TTGJc2zlzSd6ISrSSBvRIoLe" alt="새 IAM 역할 생성을 시작하는 페이지." title="IAM 역할 생성 페이지" %}
 
 AWS의 EC2 서비스 페이지에서 IAM 서비스 페이지로 이동되었다.
 상단에 있는 **역할 만들기**라는 눈에 띄는 파란색 버튼을 클릭한다.
 
 그러면 아래와 같은 역할 만들기 페이지가 나온다.
 
-{% include i-g.html id="1lZrdbz66Zbl7jot_n4JyldBOac45l2gm" alt="IAM 역할 만들기의 첫 번째 단계에서는 만들 IAM 역할을 어떤 유형의 개체에서, 어떤 서비스에서 이용할지 정해 주어야 한다." title="IAM 역할 만들기 첫 번째 단계: 개체, 서비스 선택" %}
+{% include i-g.html id="1FsF9aszUJHZdg0ewQp_ViGnkG8CSTk7L" alt="IAM 역할 만들기의 첫 번째 단계에서는 만들 IAM 역할을 어떤 유형의 개체에서, 어떤 서비스에서 이용할지 정해 주어야 한다." title="IAM 역할 만들기 첫 번째 단계: 개체, 서비스 선택" %}
 
 여기에서 지금은 EC2 instance에서 S3 버킷에 접근할 수 있는 권한을 주려는 것이므로
 신뢰할 수 있는 유형의 개체 선택에서는 **AWS 서비스**, 이 역할을 사용할 서비스 선택에서는 **EC2**에 해당한다.
 **EC2**를 클릭한다.
 
-{% include i-g.html id="1Q5uUa341Qf9INZRuertEhnAbtKeDgjQj" alt="IAM 역할 만들기의 두 번째 단계에서는 해당 IAM 역할에서 어떤 권한을 줄 지 선택한다." title="IAM 역할 만들기 두 번째 단계: 연결 (선택 전)" %}
+{% include i-g.html id="1E4k40eo_J7d4Z-lKrI6F8gaYM8Lygcz3" alt="IAM 역할 만들기의 두 번째 단계에서는 해당 IAM 역할에서 어떤 권한을 줄 지 선택한다." title="IAM 역할 만들기 두 번째 단계: 연결 (선택 전)" %}
 
 이번에는 역할 만들기의 두 번째 페이지인데, 권한 정책 연결을 해 주어야 한다.
 이미 정의된 많은 정책 중에서 하나를 선택해 주면 된다.
 정책 필터에 's3'라고 입력하면 s3와 관련된 권한 정책만 볼 수 있다.
 **'AmazonS3FullAccess'의 체크박스**를 클릭하여 선택 상태로 만들어 준다.
 
-{% include i-g.html id="1bXumeIuIjvyyxT3Z8dMuRrcgQGaHkA1g" alt="지금은 S3의 접근 권한을 부여하는 것이 목적이므로 AmazonS3FullAccess에 체크한다." title="IAM 역할 만들기 두 번째 단계: 연결 (선택 후)" %}
+{% include i-g.html id="1ph5O78laBaYyBhfkY6LAufnr-KxdUtoK" alt="지금은 S3의 접근 권한을 부여하는 것이 목적이므로 AmazonS3FullAccess에 체크한다." title="IAM 역할 만들기 두 번째 단계: 연결 (선택 후)" %}
 
 지금은 S3에만 접근하면 되기 때문에 다른 정책은 필요가 없었지만, 여러 가지의 권한을 동시에 부여하는 것도 가능하다.
 AmazonS3FullAccess의 체크를 유지한 채로 다른 정책을 찾아서 선택해 주면 된다.
@@ -181,19 +181,19 @@ AmazonS3FullAccess의 체크를 유지한 채로 다른 정책을 찾아서 선�
 권한 정책의 선택이 완료되었으면 오른쪽 하단의 **다음:태그** 버튼을 클릭한다.
 이번에는 태그 추가(선택 사항) 페이지가 떴다.
 
-{% include i-g.html id="1zDBV_eyrE5jY4rUcnJ1-5xfIO1vgkgZ7" alt="IAM 권한의 태그를 추가할 수 있는 페이지가 나온다." title="IAM 역할 만들기 세 번째 단계: 태그" %}
+{% include i-g.html id="1KIRuvarjuTcU_Qds7DMQ5c_MDaet8j4G" alt="IAM 권한의 태그를 추가할 수 있는 페이지가 나온다." title="IAM 역할 만들기 세 번째 단계: 태그" %}
 
 여기서는 그냥 넘어가도 관계없지만, 나는 {Name: Jekyll}이라는 태그를 추가했다.
 그리고 오른쪽 하단의 **다음:검토** 버튼을 클릭한다.
 
-{% include i-g.html id="1myLA2nklR93cDhwlxhBCooJeLt7ir640" alt="마지막으로 IAM 역할의 이름을 설정하며 검토한 후 완료된다." title="IAM 역할 만들기 네 번째 단계: 검토" %}
+{% include i-g.html id="1iVBLrimON0Z-_xebEIDoczq6vc5aFczw" alt="마지막으로 IAM 역할의 이름을 설정하며 검토한 후 완료된다." title="IAM 역할 만들기 네 번째 단계: 검토" %}
 
 역할 만들기 페이지의 마지막, 검토 단계이다.
 역할 이름을 설정해 주어야 하는데, 이 이름을 Jekyll이라고 입력하였다.
 그리고 나서 오른쪽 하단의 **역할 만들기** 버튼을 클릭하면 된다.
 이렇게 하면 성공적으로 S3에 접근할 수 있는 IAM 역할을 만든 것이다.
 
-{% include i-g.html id="1vYD8tOGMi9L8vHb0QnwJ2Eb8CNxPhs73" alt="조금 전 추가한 IAM 역할이 추가된 모습을 확인할 수 있다." title="IAM 역할이 추가된 후" %}
+{% include i-g.html id="1NHDmVrj5K0Z2qWv0_Up7dqw-N9xR2tW0" alt="조금 전 추가한 IAM 역할이 추가된 모습을 확인할 수 있다." title="IAM 역할이 추가된 후" %}
 
 위와 같이 IAM 역할 리스트에 나온다.
 이 탭에서 해야 할 일은 끝났으므로 탭을 닫아주었다.
@@ -201,7 +201,7 @@ AmazonS3FullAccess의 체크를 유지한 채로 다른 정책을 찾아서 선�
 아까 **새 IAM 역할 생성**을 클릭했던 탭으로 돌아왔다.
 그 왼쪽에 있었던 새로고침 심볼을 클릭한 후, 현재 **역할 없음**으로 선택되어 있는 콤보박스를 클릭하여 조금 전에 만들었던 **Jekyll**을 선택한다.
 
-{% include i-g.html id="10vo5n-vr6YN4UiLuAUcG0hyCqcgyqOx-" alt="조금 전 추가한 IAM 역할을 선택해 준다." title="EC2 인스턴스에 IAM 역할을 부여하는 페이지" %}
+{% include i-g.html id="1ApxqKbDD8mQ7OQ2j1eWgSMGNxgW_DabL" alt="조금 전 추가한 IAM 역할을 선택해 준다." title="EC2 인스턴스에 IAM 역할을 부여하는 페이지" %}
 
 그리고 나서 오른쪽 하단의 적용 버튼을 클릭하면 된다.
 이렇게 하면 EC2 instance에서 S3에 접근할 수 있는 권한이 생긴다.
@@ -219,7 +219,7 @@ upload: ./test.txt to s3://chobolife-test/test.txt
 제대로 업로드가 된 것 같아 보인다.
 웹브라우저에서 AWS 콘솔에 들어가서 확인해 보았다.
 
-{% include i-g.html id="1bTQ5G5UH328zv_RnkoepLbXl5iizMV3F" alt="S3 버킷 생성과 테스트 파일 업로드가 잘 된 것을 알 수 있다." title="Ubuntu에서 S3 버킷을 만들고 테스트 파일을 올린 모습" %}
+{% include i-g.html id="1dPPbpx8qQyhkgsk7RR72t7k1pSqiGnXY" alt="S3 버킷 생성과 테스트 파일 업로드가 잘 된 것을 알 수 있다." title="Ubuntu에서 S3 버킷을 만들고 테스트 파일을 올린 모습" %}
 
 위 그림과 같이 `chobolife-test`라는 버킷 안에 `test.txt`라는 0바이트의 파일이 잘 업로드되었다.
 그런데 너 왜... 버지니아에 있니?
@@ -236,14 +236,14 @@ upload: ./test.txt to s3://chobolife-test/test.txt
 
 S3 서비스 페이지로 들어가서 **버킷 만들기** 버튼을 클릭하면 이렇게 생긴 상자가 뜬다.
 
-{% include i-g.html id="17E44fzUe_fFHgA3S65I-EcTNPQxXpnF7" alt="AWS 콘솔에서 S3 서비스 페이지에 들어온 후 버킷을 만드는 페이지에 들어왔다." title="S3 버킷 만들기: 이름 및 리전" %}
+{% include i-g.html id="1msCek3yVJQjziGSf5ZTI2z7cbaDuXxmg" alt="AWS 콘솔에서 S3 서비스 페이지에 들어온 후 버킷을 만드는 페이지에 들어왔다." title="S3 버킷 만들기: 이름 및 리전" %}
 
 여기에서 **버킷 이름**에 `chobolife-draft`라고 입력하였다.
 그리고 **다음** 버튼을 클릭한다.
 그러면 옵션 구성이라는 화면으로 넘어가는데 여기에서는 특별히 설정할 것이 없으므로 아무 작업도 없이 바로 **다음** 버튼을 클릭했다.
 그리고 나면 권한 설정이라는 화면이 나온다.
 
-{% include i-g.html id="1FnNd469k7g9Heg5GsB_xgbRRiqWmK2ZX" alt="정적 웹 호스팅을 위한 S3 버킷은 퍼블릭 액세스를 허용해 주어야 한다. 퍼블릭 액세스 차단을 설정하는 체크박스를 해제해 준다." title="S3 버킷 만들기: 권한 설정" %}
+{% include i-g.html id="1_xPOfukljqmSnaMbv_6sDVErxO98qkYd" alt="정적 웹 호스팅을 위한 S3 버킷은 퍼블릭 액세스를 허용해 주어야 한다. 퍼블릭 액세스 차단을 설정하는 체크박스를 해제해 준다." title="S3 버킷 만들기: 권한 설정" %}
 
 여기에서는 현재 버킷의 목적이 정적 웹 호스팅을 하기 위한 것이므로 모든 퍼블릭 액세스 차단을 풀어 주어야 한다.
 체크박스를 해제한 후 **다음** 버튼을 클릭한다.

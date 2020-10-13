@@ -33,7 +33,7 @@ Jekyll의 설치는 [Jekyll 공식 홈페이지][l-jekyll-docs]{:target='_blank'
 
 Cygwin 설치 파일을 실행하면 package list가 아래처럼 주르륵 나온다.
 
-{% include i-g.html id="1JO4Qx779S1xYN_QLlgd3nkNTV2TzUM0_" alt="Cygwin 설치 과정에서 package list를 만나게 된다." title="Cygwin 설치 과정의 package list" %}
+{% include i-g.html id="1NOyxYFusREbMq291ZIjnmt4KqMBaBbLd" alt="Cygwin 설치 과정에서 package list를 만나게 된다." title="Cygwin 설치 과정의 package list" %}
 
 위 그림은 category 기준으로 보이는데, 잘 보면 Ruby도 발견할 수 있다.
 그 중에서 이미 설치되어 있는 package를 찾아서 삭제할 수 있고 설치되어 있지 않는 package를 찾아서 새로 설치할 수도 있다.

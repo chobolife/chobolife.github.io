@@ -49,12 +49,12 @@ tags:
 
 먼저 첨부하고자 하는 장소를 검색하거나 지도에서 클릭하면 아래와 같은 툴팁이 뜬다.
 
-{% include i-g.html id="1zzulYa2T6dW_HvEIMBwiuWFK6wvg2VRO" alt="카카오맵에서 장소를 먼저 검색하고 공유, HTML 태그 복사를 클릭한다." title="카카오맵에서 지도 공유하는 방법" %}
+{% include i-g.html id="1hvYDZTn-unckTMxIQcKrTJXKpxPFtpc7" alt="카카오맵에서 장소를 먼저 검색하고 공유, HTML 태그 복사를 클릭한다." title="카카오맵에서 지도 공유하는 방법" %}
 
 거기에서 공유 버튼, HTML 태그 복사 버튼을 차례로 클릭한다.
 그러면 작은 박스가 뜬다.
 
-{% include i-g.html id="1GL1tjfWgdRUka-vNS1Uw_VwNTgGlmos0" alt="카카오맵에서 HTML 태그 복사를 위한 단계로, 설정을 확인하는 박스가 뜬다." title="카카오맵에서 지도를 HTML 태그 복사로 공유하기" %}
+{% include i-g.html id="1NYmryWwa2d0kOcJtaWf5pGDJW41Hbrk3" alt="카카오맵에서 HTML 태그 복사를 위한 단계로, 설정을 확인하는 박스가 뜬다." title="카카오맵에서 지도를 HTML 태그 복사로 공유하기" %}
 
 이 박스에서는 첨부하려는 지도의 포커싱을 확인하고 지도 크기 설정, 아이콘 변경을 할 수 있다.
 적당히 마음에 들게 선택하고 나서 아래에 있는 소스 생성하기를 클릭한다.
@@ -62,7 +62,7 @@ tags:
 그러면 소스코드가 생성된다.
 이 소스코드를 복사한 후 지도를 삽입하고자 하는 곳에 붙여넣으면 된다.
 
-{% include i-g.html id="14MFyTmzdCV_PoEjyDyHnsdvW3BSeBVzb" alt="HTML 소스코드가 생성되었다. 생성된 소스코드를 복사하여 삽입하고자 하는 곳에 붙이면 된다." title="카카오맵에서 생성된 HTML 소스코드" %}
+{% include i-g.html id="19h-L4gWNEngUNfL0wflgOtVR9-undbdV" alt="HTML 소스코드가 생성되었다. 생성된 소스코드를 복사하여 삽입하고자 하는 곳에 붙이면 된다." title="카카오맵에서 생성된 HTML 소스코드" %}
 
 생성된 소스코드를 자세히 보면 아래와 같다.
 
@@ -92,7 +92,7 @@ tags:
 지도를 넣고 싶은 곳에 위와 같이 생성된 코드를 삽입하기만 하면 된다.
 그러면 블로그 포스팅에 아래 그림처럼 지도가 나타난다.
 
-{% include i-g.html id="1kT62UqQh9I25IFYzyNjRQwZbLpmNYtOy" alt="카카오맵에서 생성된 HTML 소스코드를 삽입한 부분에 카카오맵이 삽입되었다." title="웹사이트에 카카오맵 첨부" %}
+{% include i-g.html id="1gInLkd6HJMe7uUSO7463tbyIgwSLA6cU" alt="카카오맵에서 생성된 HTML 소스코드를 삽입한 부분에 카카오맵이 삽입되었다." title="웹사이트에 카카오맵 첨부" %}
 
 간단한 방법으로 이렇게 근사하게 지도를 추가했다!
 
@@ -100,7 +100,7 @@ tags:
 화면이 넓은 PC에서 보면 깔끔하지만 이걸 모바일에서 보면 마음에 안 든다.
 가로 길이 640 pixel이 너무 크기 때문에 화면 오른쪽으로 넘어가게 되는 것이다.
 
-{% include i-g.html id="1rczXVGRvEt9ebrg2tZlpRq2nr8O_t3Kr" alt="카카오맵의 기본 설정대로 웹페이지에 삽입하고, 이를 모바일에서 열어보면 이렇게 표시된다. 모바일 화면의 가로폭보다 표시되는 지도가 더 길어서 오른쪽으로 넘어갔다." title="첨부한 카카오맵이 오른쪽으로 넘어가 버린 모습" %}
+{% include i-g.html id="1G_MRLJ1PkxmiIzlx-Orl_CyPEX71LfmD" alt="카카오맵의 기본 설정대로 웹페이지에 삽입하고, 이를 모바일에서 열어보면 이렇게 표시된다. 모바일 화면의 가로폭보다 표시되는 지도가 더 길어서 오른쪽으로 넘어갔다." title="첨부한 카카오맵이 오른쪽으로 넘어가 버린 모습" %}
 
 모바일에서는 위 그림처럼 표시되는데, 화면 가로길이보다 지도가 더 크게 표시되어 오른쪽의 일부가 잘린 것이 보인다.
 화면을 좌우로 스크롤하면 지도를 볼 수는 있지만 별로 깔끔하지 않다.
@@ -113,16 +113,16 @@ tags:
 우선 구글 지도에서 원하는 장소를 검색한다.
 그리고 나오는 왼쪽의 메뉴 중에서 공유 버튼을 클릭한다.
 
-{% include i-g.html id="1dBr-HZLZmH4_SlNkrji1noPlvQbZGYhf" alt="원하는 장소를 구글 지도에서 검색한다. 왼쪽에 나오는 메뉴 중에서 공유 버튼을 클릭한다." title="구글 지도에서 공유 기능 이용하기" %}
+{% include i-g.html id="1l5MPKk-816Rf6lpGlhHKbhyp_YBHWirP" alt="원하는 장소를 구글 지도에서 검색한다. 왼쪽에 나오는 메뉴 중에서 공유 버튼을 클릭한다." title="구글 지도에서 공유 기능 이용하기" %}
 
 그러면 아래와 같은 박스가 뜬다.
 여기에서 기본으로는 '링크 보내기'라는 탭이 뜨는데 '지도 퍼가기'를 클릭한다.
 
-{% include i-g.html id="1eSaA7DJasrUZMwloWThpKkLeIBpX6Eap" alt="구글 지도의 공유는 링크 보내기가 기본적으로 선택되어 있다. HTML 소스코드 생성을 위해 두 번째 탭인 지도 퍼가기를 클릭한다." title="구글 지도 퍼가기" %}
+{% include i-g.html id="1Ctc0ZInTYkc1bT-lziIN7Y5lih9ZWgby" alt="구글 지도의 공유는 링크 보내기가 기본적으로 선택되어 있다. HTML 소스코드 생성을 위해 두 번째 탭인 지도 퍼가기를 클릭한다." title="구글 지도 퍼가기" %}
 
 그러면 아래와 같은 박스가 뜬다.
 
-{% include i-g.html id="1k1dEmX3T0q1MHhXLL7HDRefigYPN4fit" alt="지도 퍼가기를 클릭하면 HTML 소스코드가 생성된다. 크기를 설정할 수도 있다." title="구글 지도에서 HTML 소스코드로 지도 퍼가기" %}
+{% include i-g.html id="1HGG_NJKfk0n6cXTRybhGIeRdZB1NEjtG" alt="지도 퍼가기를 클릭하면 HTML 소스코드가 생성된다. 크기를 설정할 수도 있다." title="구글 지도에서 HTML 소스코드로 지도 퍼가기" %}
 
 위 그림에서 블록 설정 되어 있는 부분이 삽입할 소스코드이다.
 카카오맵을 첨부할 때와 마찬가지로 저 부분을 복사한 후 원하는 곳에 붙여넣으면 된다.
@@ -136,7 +136,7 @@ tags:
 이것을 모바일에서 보면 카카오맵과 마찬가지로 화면 영역 바깥쪽으로 지도가 넘어갈 것이 뻔하다.
 어차피 뻔하지만 혹시 모르니까 모바일에서 한번 확인해 보자.
 
-{% include i-g.html id="1Iz0_SxK7_1nT9lMtWNsdoD0KuGQekPbJ" alt="구글 지도를 첨부해도 모바일에서 페이지를 열어 보면 화면 오른쪽으로 넘어가는 현상은 동일하다." title="첨부한 구글 지도가 오른쪽으로 넘어가 버린 모습" %}
+{% include i-g.html id="1-zuYgOFLa7gUEko5Nxym7pXzsrgRcZYZ" alt="구글 지도를 첨부해도 모바일에서 페이지를 열어 보면 화면 오른쪽으로 넘어가는 현상은 동일하다." title="첨부한 구글 지도가 오른쪽으로 넘어가 버린 모습" %}
 
 위 그림처럼 나온다.
 단지 지도 배경만 바뀌었을 뿐 카카오맵이나 구글 지도나 문제가 되는 상황은 똑같다.
@@ -170,7 +170,7 @@ tags:
 이제 위 HTML 코드를 원하는 곳에 삽입하면 된다.
 그렇게 했을 때 모바일에서 페이지를 열어 보면 아래 그림과 같이 표시된다.
 
-{% include i-g.html id="1iU_jtOHqc2JAgq2ZnGmHrBnshwn6f-M6" alt="width 속성의 값을 변경하면 화면의 가로폭이 좁은 모바일에서 열어도 더 이상 화면 오른쪽으로 넘어가지 않게 할 수 있다." title="width 속성값을 변경하여 화면 크기에 맞게 지도가 생성된 모습" %}
+{% include i-g.html id="1tAP1_Ho_v-VljAR41GQgkBV8yLwSOtWi" alt="width 속성의 값을 변경하면 화면의 가로폭이 좁은 모바일에서 열어도 더 이상 화면 오른쪽으로 넘어가지 않게 할 수 있다." title="width 속성값을 변경하여 화면 크기에 맞게 지도가 생성된 모습" %}
 
 이제는 지도의 가로폭이 화면을 넘어가지 않는다.
 내가 원하는 대로 표시되었다.

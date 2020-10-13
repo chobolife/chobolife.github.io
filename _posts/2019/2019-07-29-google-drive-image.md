@@ -78,7 +78,7 @@ github, dropbox, AWS S3 모두 저장 공간 또는 발생된 트래픽에 따�
 블로깅을 오래 하다보면 이미지 파일도 많아질 것이므로 업로드한 시기에 대한 정보로 폴더를 만들면 관리하기 편할 것 같아서 그렇게 만들었다.
 아래 그림과 같은 구조가 생겼다.
 
-{% include i-g.html id="15gGdSU9GkjuDwlojojH7N17YOFS8FWM6" alt="구글 드라이브에 블로그의 이미지 저장소 역할을 할 폴더를 만들었다." title="구글 드라이브에 생성한 폴더" %}
+{% include i-g.html id="1fs6Gvnmc_zwoQJkoIVSkSbVa1UOHarh1" alt="구글 드라이브에 블로그의 이미지 저장소 역할을 할 폴더를 만들었다." title="구글 드라이브에 생성한 폴더" %}
 
 그리고 테스트를 위해 무료 이미지 저장소인 [pixabay][l-pixabay]{:target='_blank'}에서 임의의 사진을 하나 다운받았다.
 맨 앞 페이지에 탁 트인 Grand Canyon 사진이 있길래 **시원하게 열릴 내 미래**를 상상하며 그 사진을 받았다.
@@ -90,22 +90,22 @@ github, dropbox, AWS S3 모두 저장 공간 또는 발생된 트래픽에 따�
 
 먼저 폴더를 우클릭해서 나오는 메뉴 중에서 **공유**를 클릭한다.
 
-{% include i-g.html id="1pib57QSv3f8YGxS1762drZz6Oj75sUSe" alt="공개하고 싶은 폴더를 우클릭하고 공유를 선택한다." title="구글 드라이브에서 폴더를 공개하기 위한 설정" %}
+{% include i-g.html id="1nMSrECJpQG-5n2l3RtCQAIL2tjP6cwgv" alt="공개하고 싶은 폴더를 우클릭하고 공유를 선택한다." title="구글 드라이브에서 폴더를 공개하기 위한 설정" %}
 
 그러면 아래와 같은 '다른 사용자와 공유'라는 제목의 박스가 뜬다.
 
-{% include i-g.html id="109IKsqmv4P5_-igYm5ejZZcyiSI6D7cd" alt="공유를 선택하면 '다른 사용자와 공유'라는 박스가 뜬다." title="구글 드라이브에서 폴더를 공개하기 위한 설정: 다른 사용자와 공유" %}
+{% include i-g.html id="1PgeCMUi-H16SF23Z4RgusmsOuJuZr47e" alt="공유를 선택하면 '다른 사용자와 공유'라는 박스가 뜬다." title="구글 드라이브에서 폴더를 공개하기 위한 설정: 다른 사용자와 공유" %}
 
 이 박스 오른쪽 하단에 작게 쓰여 있는 **고급**을 클릭한다.
 그러면 이번에는 다시 이렇게 생긴 '공유 설정'이라는 제목의 박스가 뜬다.
 
-{% include i-g.html id="1WtszGBcf84uU6U-MSzMQtvAdhAzD39MY" alt="고급을 클릭하면 '공유 설정'이라는 박스로 바뀐다." title="구글 드라이브에서 폴더를 공개하기 위한 설정: 공유 설정 이전" %}
+{% include i-g.html id="1ngIXGe2CM4WnFrXNZNxv_B8gejuZtGgQ" alt="고급을 클릭하면 '공유 설정'이라는 박스로 바뀐다." title="구글 드라이브에서 폴더를 공개하기 위한 설정: 공유 설정 이전" %}
 
 여기에서는 가운데에 있는 **비공개 - 나만 액세스할 수 있습니다.** 옆에 있는 **변경**을 클릭한다.
 지금은 인증된 기관의 계정으로 로그인된 상태라서 항목의 제목이 **비공개 - 나만 액세스할 수 있습니다.**라고 표시되었지만 다른 구글 계정에서는 다르게 나타날 수 있다.
 어쨌든 **변경**을 클릭한다.
 
-{% include i-g.html id="1Co23pALV7t2zhXYL9BnA96Zbt9uLIPWR" alt="이어서 뜨는 '링크 공유' 상자에서는 가장 위의 항목을 선택한다." title="구글 드라이브에서 폴더를 공개하기 위한 설정: 링크 공유" %}
+{% include i-g.html id="1OHTtwG843GfceDd5BGAGM4fhphUUhPI9" alt="이어서 뜨는 '링크 공유' 상자에서는 가장 위의 항목을 선택한다." title="구글 드라이브에서 폴더를 공개하기 위한 설정: 링크 공유" %}
 
 그러면 이번에는 '링크 공유'라는 이름의 박스가 뜬다.
 *'창도 많이 뜨고 뭐가 이렇게 복잡하냐'* 생각하겠지만 이게 폴더 공개 설정을 위한 마지막 창이니까 여기까지만 하면 된다.
@@ -116,7 +116,7 @@ github, dropbox, AWS S3 모두 저장 공간 또는 발생된 트래픽에 따�
 그러면 다시 '공유 설정' 박스로 되돌아오게 되는데 아까와는 달리 아래 그림처럼 설정이 바뀌어 있음을 확인할 수 있다.
 **웹에 공개 - 인터넷의 모든 사용자가 찾아서 볼 수 있습니다.**라는 제목으로 변경되었다.
 
-{% include i-g.html id="1FMDDVrfxHB3sGzRxRXsU9BGVxbY3BZtK" alt="다시 '공유 설정' 상자로 돌아왔는데 액세스 권한이 설정이 바뀌어 있음을 알 수 있다." title="구글 드라이브에서 폴더를 공개하기 위한 설정: 공유 설정 이후" %}
+{% include i-g.html id="1Kn9U6z-k_MxLAUUdR8Thn-oo1rpirNlY" alt="다시 '공유 설정' 상자로 돌아왔는데 액세스 권한이 설정이 바뀌어 있음을 알 수 있다." title="구글 드라이브에서 폴더를 공개하기 위한 설정: 공유 설정 이후" %}
 
 여기에서 **완료**를 클릭해 주면 폴더의 공개를 위한 설정이 모두 끝난다.
 
@@ -129,24 +129,24 @@ chobolife/2019/07 폴더 아래에 Grand Canyon 파일을 올렸다.
 파일을 업로드하려면 탐색기에서 파일을 드래그하여 웹브라우저에 올리면 된다.
 그렇게 했더니 아래와 같이 제대로 업로드가 되었다.
 
-{% include i-g.html id="1_EygBhHu5JtxkCVV_1rvPnwmPt4dSOA8" alt="공유 설정을 마치고 이미지 파일을 올린 모습이다." title="구글 드라이브에 이미지 파일을 업로드한 모습" %}
+{% include i-g.html id="1B5DQRxM0DFDBQgiZWhxRnuDykaLOVqtD" alt="공유 설정을 마치고 이미지 파일을 올린 모습이다." title="구글 드라이브에 이미지 파일을 업로드한 모습" %}
 
 이제 이 이미지 파일의 주소를 얻으면 된다.
 이미지 파일 위에서 우클릭한 후 **공유 가능한 링크 가져오기** 메뉴를 클릭한다.
 그러면 이미지 파일 아래에 아래와 같은 툴팁 상자가 생김과 동시에 이미지의 주소가 자동으로 클립보드에 복사된다.
 
-{% include i-g.html id="119N1cstj4Jl-VxA50w9PdYZMXYtJFGOM" alt="공유 가능한 링크 가져오기를 클릭하면 위와 같이 표시되며 저절로 클립보드에 이미지의 주소가 복사된다." title="구글 드라이브에서 이미지 공유하고 링크 가져오기" %}
+{% include i-g.html id="1kkMkjtZDqkak87Q5Ci3kUNdbOQtwMIh0" alt="공유 가능한 링크 가져오기를 클릭하면 위와 같이 표시되며 저절로 클립보드에 이미지의 주소가 복사된다." title="구글 드라이브에서 이미지 공유하고 링크 가져오기" %}
 
 위 툴팁 상자에서는 특별한 설정을 해 줄 것은 없으므로 무시하면 된다.
 클립보드에는 아래와 같은 주소가 복사되어 있다.
 ```
-https://drive.google.com/open?id=1L6TXwRoq0KKBREIrG385ckS33_K3YUxe
+https://drive.google.com/open?id=1WnNM42a81mTEDyQFlFVyhwoWWZP_JoCx
 ```
 
 그런데 클립보드에 복사된 주소를 웹브라우저에 입력해 보면 이미지가 그대로 표시되는 것이 아니라 구글의 이미지 뷰어를 통해서 보인다.
 아래 그림에서 이미지를 그대로 보여주는 것이 아니라 위와 아래에 별도의 컨트롤러가 있는 것을 볼 수 있다.
 
-{% include i-g.html id="1fbAf4Hdbi5GZjeLVztTuhDpYDMVN_dCa" alt="클립보드에 복사된 주소를 그대로 입력하면 구글 드라이브의 자체 뷰어를 통해 이미지가 보인다." title="구글 드라이브의 이미지 뷰어" %}
+{% include i-g.html id="1K3xKmCqan-ha9jXwF1S_TJNQ9eP79J1P" alt="클립보드에 복사된 주소를 그대로 입력하면 구글 드라이브의 자체 뷰어를 통해 이미지가 보인다." title="구글 드라이브의 이미지 뷰어" %}
 
 직접 확인하려면 이 [링크][l-image-direct]{:target='_blank'}를 클릭해도 된다.
 
@@ -159,8 +159,8 @@ https://drive.google.com/open?id=1L6TXwRoq0KKBREIrG385ckS33_K3YUxe
 즉, 단순히 `open`을 `uc`로만 바꾸어 주면 되고 나머지 부분은 그대로 둔다.
 아래 code block에서 비교해 보자면 원래 클립보드에 복사된 것은 윗줄인데 그것을 아랫줄로 바꾸어 준 것이다.
 ```
-https://drive.google.com/open?id=1L6TXwRoq0KKBREIrG385ckS33_K3YUxe
-https://drive.google.com/uc?id=1L6TXwRoq0KKBREIrG385ckS33_K3YUxe
+https://drive.google.com/open?id=1WnNM42a81mTEDyQFlFVyhwoWWZP_JoCx
+https://drive.google.com/uc?id=1WnNM42a81mTEDyQFlFVyhwoWWZP_JoCx
 ```
 이렇게 하면 주소를 웹브라우저에 쳤을 때 이미지가 웹브라우저에 바로 표시된다.
 [링크][l-image-native]{:target='_blank'}를 클릭하여 확인할 수 있다.
@@ -197,7 +197,7 @@ https://drive.google.com/uc?id=1L6TXwRoq0KKBREIrG385ckS33_K3YUxe
 [l-google-drive]: https://www.google.com/drive/
 [l-aws-s3]: https://aws.amazon.com/ko/s3/
 [l-pixabay]: https://pixabay.com/
-[l-image-direct]: https://drive.google.com/open?id=1L6TXwRoq0KKBREIrG385ckS33_K3YUxe
-[l-image-native]: https://drive.google.com/uc?id=1L6TXwRoq0KKBREIrG385ckS33_K3YUxe
+[l-image-direct]: https://drive.google.com/open?id=1WnNM42a81mTEDyQFlFVyhwoWWZP_JoCx
+[l-image-native]: https://drive.google.com/uc?id=1WnNM42a81mTEDyQFlFVyhwoWWZP_JoCx
 [l-image-hosting]: http://www.somanet.xyz/2017/06/blog-post_21.html
 
