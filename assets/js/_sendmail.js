@@ -1,10 +1,9 @@
 function sendmail() {
   var btn = document.getElementById("send-btn");
-  fetch("https://dwcre12gt6.execute-api.ap-northeast-2.amazonaws.com/run/MailSend", {
+  fetch("https://dwcre12gt6.execute-api.ap-northeast-2.amazonaws.com/run/mail_chobolife", {
     method: "post",
     headers: {"Content-Type": "application/json; charset=utf-8"},
     body: JSON.stringify({
-      src: "chobolife",
       txt: document.getElementById("send-input").value
     })
   }).then(function(res) {
